@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89A0DDFB17E0813400980812 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFA17E0813400980812 /* UIKit.framework */; };
+		89A0DDFD17E0813400980812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFC17E0813400980812 /* Foundation.framework */; };
+		89A0DDFF17E0813400980812 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFE17E0813400980812 /* CoreGraphics.framework */; };
+		89A0DE0517E0813400980812 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE0317E0813400980812 /* InfoPlist.strings */; };
+		89A0DE0717E0813400980812 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE0617E0813400980812 /* main.m */; };
+		89A0DE0B17E0813400980812 /* ISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE0A17E0813400980812 /* ISAppDelegate.m */; };
+		89A0DE0D17E0813400980812 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE0C17E0813400980812 /* Default.png */; };
+		89A0DE0F17E0813400980812 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE0E17E0813400980812 /* Default@2x.png */; };
+		89A0DE1117E0813400980812 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE1017E0813400980812 /* Default-568h@2x.png */; };
+		89A0DE1417E0813400980812 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE1217E0813400980812 /* MainStoryboard.storyboard */; };
+		89A0DE1717E0813400980812 /* ISViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE1617E0813400980812 /* ISViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		89A0DDF717E0813400980812 /* newGummer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newGummer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89A0DDFA17E0813400980812 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		89A0DDFC17E0813400980812 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		89A0DDFE17E0813400980812 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		89A0DE0217E0813400980812 /* newGummer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "newGummer-Info.plist"; sourceTree = "<group>"; };
+		89A0DE0417E0813400980812 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		89A0DE0617E0813400980812 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		89A0DE0817E0813400980812 /* newGummer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "newGummer-Prefix.pch"; sourceTree = "<group>"; };
+		89A0DE0917E0813400980812 /* ISAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISAppDelegate.h; sourceTree = "<group>"; };
+		89A0DE0A17E0813400980812 /* ISAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISAppDelegate.m; sourceTree = "<group>"; };
+		89A0DE0C17E0813400980812 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		89A0DE0E17E0813400980812 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		89A0DE1017E0813400980812 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		89A0DE1317E0813400980812 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		89A0DE1517E0813400980812 /* ISViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISViewController.h; sourceTree = "<group>"; };
+		89A0DE1617E0813400980812 /* ISViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89A0DDF417E0813400980812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A0DDFB17E0813400980812 /* UIKit.framework in Frameworks */,
+				89A0DDFD17E0813400980812 /* Foundation.framework in Frameworks */,
+				89A0DDFF17E0813400980812 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89A0DDEE17E0813400980812 = {
+			isa = PBXGroup;
+			children = (
+				89A0DE0017E0813400980812 /* newGummer */,
+				89A0DDF917E0813400980812 /* Frameworks */,
+				89A0DDF817E0813400980812 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89A0DDF817E0813400980812 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89A0DDF717E0813400980812 /* newGummer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89A0DDF917E0813400980812 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89A0DDFA17E0813400980812 /* UIKit.framework */,
+				89A0DDFC17E0813400980812 /* Foundation.framework */,
+				89A0DDFE17E0813400980812 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89A0DE0017E0813400980812 /* newGummer */ = {
+			isa = PBXGroup;
+			children = (
+				89A0DE0917E0813400980812 /* ISAppDelegate.h */,
+				89A0DE0A17E0813400980812 /* ISAppDelegate.m */,
+				89A0DE1217E0813400980812 /* MainStoryboard.storyboard */,
+				89A0DE1517E0813400980812 /* ISViewController.h */,
+				89A0DE1617E0813400980812 /* ISViewController.m */,
+				89A0DE0117E0813400980812 /* Supporting Files */,
+			);
+			path = newGummer;
+			sourceTree = "<group>";
+		};
+		89A0DE0117E0813400980812 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89A0DE0217E0813400980812 /* newGummer-Info.plist */,
+				89A0DE0317E0813400980812 /* InfoPlist.strings */,
+				89A0DE0617E0813400980812 /* main.m */,
+				89A0DE0817E0813400980812 /* newGummer-Prefix.pch */,
+				89A0DE0C17E0813400980812 /* Default.png */,
+				89A0DE0E17E0813400980812 /* Default@2x.png */,
+				89A0DE1017E0813400980812 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89A0DDF617E0813400980812 /* newGummer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89A0DE1A17E0813400980812 /* Build configuration list for PBXNativeTarget "newGummer" */;
+			buildPhases = (
+				89A0DDF317E0813400980812 /* Sources */,
+				89A0DDF417E0813400980812 /* Frameworks */,
+				89A0DDF517E0813400980812 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = newGummer;
+			productName = newGummer;
+			productReference = 89A0DDF717E0813400980812 /* newGummer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89A0DDEF17E0813400980812 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "IPLAB-Kanno";
+			};
+			buildConfigurationList = 89A0DDF217E0813400980812 /* Build configuration list for PBXProject "newGummer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 89A0DDEE17E0813400980812;
+			productRefGroup = 89A0DDF817E0813400980812 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89A0DDF617E0813400980812 /* newGummer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89A0DDF517E0813400980812 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A0DE0517E0813400980812 /* InfoPlist.strings in Resources */,
+				89A0DE0D17E0813400980812 /* Default.png in Resources */,
+				89A0DE0F17E0813400980812 /* Default@2x.png in Resources */,
+				89A0DE1117E0813400980812 /* Default-568h@2x.png in Resources */,
+				89A0DE1417E0813400980812 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89A0DDF317E0813400980812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A0DE0717E0813400980812 /* main.m in Sources */,
+				89A0DE0B17E0813400980812 /* ISAppDelegate.m in Sources */,
+				89A0DE1717E0813400980812 /* ISViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		89A0DE0317E0813400980812 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89A0DE0417E0813400980812 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		89A0DE1217E0813400980812 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89A0DE1317E0813400980812 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89A0DE1817E0813400980812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		89A0DE1917E0813400980812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89A0DE1B17E0813400980812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
+				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		89A0DE1C17E0813400980812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
+				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89A0DDF217E0813400980812 /* Build configuration list for PBXProject "newGummer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89A0DE1817E0813400980812 /* Debug */,
+				89A0DE1917E0813400980812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89A0DE1A17E0813400980812 /* Build configuration list for PBXNativeTarget "newGummer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89A0DE1B17E0813400980812 /* Debug */,
+				89A0DE1C17E0813400980812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89A0DDEF17E0813400980812 /* Project object */;
+}
