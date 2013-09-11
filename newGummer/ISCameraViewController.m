@@ -315,8 +315,8 @@
     UIColor *color = [UIColor blackColor];
     UIColor *alphaColor = [color colorWithAlphaComponent:0.0];
     self.saveMenuView.backgroundColor = alphaColor;
-    self.saveBtn.alpha = 0.4;
-    self.undoBtn.alpha = 0.4;
+    self.saveBtn.alpha = 0.5;
+    self.undoBtn.alpha = 0.5;
     
     self.videoPlayer.view.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);  // 90度回転
     
