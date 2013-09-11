@@ -25,6 +25,7 @@
 @property (strong, nonatomic) AVPlayer*     videoPlayer;
 @property (strong, nonatomic) AVPlayer*     videoSecondPlayer;
 @property (nonatomic, assign) id    playTimeObserver; //! 再生位置の更新タイマー通知ハンドラ
+@property (nonatomic, assign) id    playTimeObserver_2;
 @property (strong, nonatomic) IBOutlet UISlider *movieSlider_1;
 @property (strong, nonatomic) IBOutlet UISlider *movieSlider_2;
 

@@ -44,6 +44,10 @@
 		89A0DE9E17E0859200980812 /* tutorial_background_02@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE9917E0859200980812 /* tutorial_background_02@2x.jpg */; };
 		89A0DE9F17E0859200980812 /* tutorial_background_03@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE9A17E0859200980812 /* tutorial_background_03@2x.jpg */; };
 		89A0DEA017E0859200980812 /* tutorial_background_04@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE9B17E0859200980812 /* tutorial_background_04@2x.jpg */; };
+		89A0DEA817E0DB1800980812 /* greenbutton_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEA417E0DB1700980812 /* greenbutton_off.png */; };
+		89A0DEA917E0DB1800980812 /* greenbutton_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEA517E0DB1800980812 /* greenbutton_off@2x.png */; };
+		89A0DEAA17E0DB1800980812 /* greenbutton_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEA617E0DB1800980812 /* greenbutton_on.png */; };
+		89A0DEAB17E0DB1800980812 /* greenbutton_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEA717E0DB1800980812 /* greenbutton_on@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +105,10 @@
 		89A0DE9917E0859200980812 /* tutorial_background_02@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tutorial_background_02@2x.jpg"; sourceTree = "<group>"; };
 		89A0DE9A17E0859200980812 /* tutorial_background_03@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tutorial_background_03@2x.jpg"; sourceTree = "<group>"; };
 		89A0DE9B17E0859200980812 /* tutorial_background_04@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tutorial_background_04@2x.jpg"; sourceTree = "<group>"; };
+		89A0DEA417E0DB1700980812 /* greenbutton_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbutton_off.png; sourceTree = "<group>"; };
+		89A0DEA517E0DB1800980812 /* greenbutton_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenbutton_off@2x.png"; sourceTree = "<group>"; };
+		89A0DEA617E0DB1800980812 /* greenbutton_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbutton_on.png; sourceTree = "<group>"; };
+		89A0DEA717E0DB1800980812 /* greenbutton_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenbutton_on@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +179,10 @@
 		89A0DE0117E0813400980812 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				89A0DEA417E0DB1700980812 /* greenbutton_off.png */,
+				89A0DEA517E0DB1800980812 /* greenbutton_off@2x.png */,
+				89A0DEA617E0DB1800980812 /* greenbutton_on.png */,
+				89A0DEA717E0DB1800980812 /* greenbutton_on@2x.png */,
 				89A0DE1D17E0835200980812 /* ichiro.png */,
 				89A0DE1E17E0835200980812 /* icon.png */,
 				89A0DE0217E0813400980812 /* newGummer-Info.plist */,
@@ -304,6 +316,10 @@
 				89A0DE9E17E0859200980812 /* tutorial_background_02@2x.jpg in Resources */,
 				89A0DE9F17E0859200980812 /* tutorial_background_03@2x.jpg in Resources */,
 				89A0DEA017E0859200980812 /* tutorial_background_04@2x.jpg in Resources */,
+				89A0DEA817E0DB1800980812 /* greenbutton_off.png in Resources */,
+				89A0DEA917E0DB1800980812 /* greenbutton_off@2x.png in Resources */,
+				89A0DEAA17E0DB1800980812 /* greenbutton_on.png in Resources */,
+				89A0DEAB17E0DB1800980812 /* greenbutton_on@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,10 +429,13 @@
 		89A0DE1B17E0813400980812 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -424,10 +443,13 @@
 		89A0DE1C17E0813400980812 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F8B3DFF3-A1DD-4625-AE8B-E19F31CABF1F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

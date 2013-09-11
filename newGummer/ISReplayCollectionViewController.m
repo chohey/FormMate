@@ -142,7 +142,7 @@
     }
     
     //    cell.movieImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.jpg"]];
-    cell.label.text = @"何を書こうか";
+    cell.label.text = @"　";
     // cell.cellBackgroundView.backgroundColor = [UIColor orangeColor];
     return cell;
 }

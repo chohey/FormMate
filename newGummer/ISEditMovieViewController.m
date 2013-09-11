@@ -131,7 +131,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 }
 - (void)playerDidPlayToEndTime_2:(NSNotification *)notification
 {
-	[self.videoPlayer seekToTime:kCMTimeZero];
+	[self.videoSecondPlayer seekToTime:kCMTimeZero];
     NSLog(@"セカンド停止");
     
     // リピートする場合は再生を実行する
@@ -223,6 +223,21 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
                                                                       usingBlock:^( CMTime time ) { [self syncSeekBar]; }];
     
     self.durationLabel_1.text = [self timeToString:self.movieSlider_1.maximumValue];
+    
+//------------------------------
+    self.movieSlider_2.minimumValue = 0;
+	self.movieSlider_2.maximumValue = CMTimeGetSeconds( self.playerSecondItem.duration );
+	self.movieSlider_2.value        = 0;
+    
+	// 再生時間とシークバー位置を連動させるためのタイマー
+	const double interval_2 = ( 0.5f * self.movieSlider_2.maximumValue ) / self.movieSlider_2.bounds.size.width;
+	const CMTime time_2     = CMTimeMakeWithSeconds( interval_2, NSEC_PER_SEC );
+	self.playTimeObserver_2 = [self.videoSecondPlayer addPeriodicTimeObserverForInterval:time_2
+                                                                           queue:NULL
+                                                                      usingBlock:^( CMTime time_2 ) { [self syncSeekBar]; }];
+    
+    self.durationLabel_2.text = [self timeToString:self.movieSlider_2.maximumValue];
+    
 }
 - (NSString* )timeToString:(float)value
 {
@@ -240,6 +255,14 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     
 	[self.movieSlider_1 setValue:value];
     self.currentTimeLabel_1.text = [self timeToString:self.movieSlider_1.value];
+    
+//----------------------------------
+    const double duration_2 = CMTimeGetSeconds( [self.videoSecondPlayer.currentItem duration] );
+	const double time_2     = CMTimeGetSeconds([self.videoSecondPlayer currentTime]);
+	const float  value_2    = ( self.movieSlider_2.maximumValue - self.movieSlider_2.minimumValue ) * time_2 / duration_2 + self.movieSlider_2.minimumValue;
+    
+	[self.movieSlider_2 setValue:value_2];
+    self.currentTimeLabel_2.text = [self timeToString:self.movieSlider_2.value];
 }
 
 - (IBAction)changeSlider_1:(id)sender {
@@ -248,5 +271,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 }
 
 - (IBAction)changeSlider_2:(id)sender {
+    UISlider *slider = (UISlider *)sender;
+    [self.videoSecondPlayer seekToTime:CMTimeMakeWithSeconds( slider.value, NSEC_PER_SEC )];
 }
 @end

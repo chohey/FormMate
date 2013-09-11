@@ -17,6 +17,9 @@
 @property (strong, nonatomic) UIView *previewView;
 @property (strong, nonatomic) UIImageView *imageView;
 
+@property (strong, nonatomic) NSURL *outputURL;
+@property (strong, nonatomic) NSTimer *recBlink;
+
 @property (strong, nonatomic) MPMoviePlayerController *videoPlayer;
 @property (strong, nonatomic) MPMoviePlayerController *videoPlayer_2;
 
@@ -104,6 +107,9 @@
     self.takeMovieBtn.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
     self.addBtn.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
     self.recLabel.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
+    
+    self.undoBtn.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
+    self.saveBtn.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
 }
 
 - (void)setupAVCapture
@@ -223,8 +229,8 @@
 }
 - (void)setRecBlinkTimer
 {
-    NSTimer *recBlink = [NSTimer scheduledTimerWithTimeInterval:0.8f target:self selector:@selector(recBlinker) userInfo:nil repeats:YES];
-    [recBlink fire];
+    self.recBlink = [NSTimer scheduledTimerWithTimeInterval:0.8f target:self selector:@selector(recBlinker) userInfo:nil repeats:YES];
+    [self.recBlink fire];
 }
 
 - (void)recBlinker
@@ -275,27 +281,8 @@
         }
         // 以下でチェック
         recordedSuccessfully ? NSLog(@"アプリ内保存成功"):NSLog(@"アプリ内保存失敗");
-        //書き込んだのは/tmp以下なのでカメラーロールの下に書き出す
-        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-        if ([library videoAtPathIsCompatibleWithSavedPhotosAlbum:outputFileURL])
-        {
-            [library writeVideoAtPathToSavedPhotosAlbum:outputFileURL
-                                        completionBlock:^(NSURL *assetURL, NSError *error)
-             {
-                 if (error)
-                 {
-                     NSLog(@"カメラロール保存失敗");
-                 }else{
-                     NSLog(@"カメラロール保存成功");
-//                     [self.previewView removeFromSuperview];
-                     [self.imageView removeFromSuperview];
-                     [self.recLabel removeFromSuperview];
-                     
-                     [self play:outputFileURL];
-                     
-                 }
-             }];
-        }
+        self.outputURL = outputFileURL;
+        [self play:self.outputURL];
     }
 }
 
@@ -324,29 +311,12 @@
     [self.videoPlayer prepareToPlay];
     [self.view addSubview:self.videoPlayer.view];
     
-    // ボタン作成
-//    UIView *buttonView = [[UIView alloc] initWithFrame:CGRectMake(270-150, 0, 50+150, self.view.bounds.size.height)];
-//    UIColor *color = [UIColor blackColor];
-//    UIColor *alphaColor = [color colorWithAlphaComponent:0.0];
-//    buttonView.backgroundColor = [UIColor redColor];//alphaColor;
-//    [self.view addSubview:buttonView];
-//    UIButton *dismissBtn, *saveBtn;
-//    dismissBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    dismissBtn.frame = CGRectMake(280, 50, 73, 44);
-//    [dismissBtn setTitle:@"撮り直す" forState:UIControlStateNormal];
-//    dismissBtn.titleLabel.textColor = [UIColor whiteColor];
-//    
-//    saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    saveBtn.frame = CGRectMake(80, 30, 73, 44);
-//    saveBtn.titleLabel.text = @"保存";
-//    saveBtn.titleLabel.textColor = [UIColor whiteColor];
-//    
-//    [buttonView addSubview:dismissBtn];
-//    [buttonView addSubview:saveBtn];
-//    NSLog(@"dismissButton%@",dismissBtn);
-//    NSLog(@"saveButton:%@",saveBtn);
-//    [self.view bringSubviewToFront:self.dismissBtn];    // frontView を最前面に移動
-//    [self.view bringSubviewToFront:self.saveBtn];
+    [self.view insertSubview:self.saveMenuView aboveSubview:self.videoPlayer.view];
+    UIColor *color = [UIColor blackColor];
+    UIColor *alphaColor = [color colorWithAlphaComponent:0.0];
+    self.saveMenuView.backgroundColor = alphaColor;
+    self.saveBtn.alpha = 0.4;
+    self.undoBtn.alpha = 0.4;
     
     self.videoPlayer.view.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);  // 90度回転
     
@@ -358,6 +328,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)removeView
+{
+    [self.previewView removeFromSuperview];
+    [self.imageView removeFromSuperview];
+    [self.layoutView removeFromSuperview];
+    [self.session stopRunning];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 - (void)viewDidUnload {
     [self setCancelBtn:nil];
     [self setTakeMovieBtn:nil];
@@ -366,12 +345,40 @@
     [self setLayoutView:nil];
     [super viewDidUnload];
 }
+- (IBAction)pushUndoBtn:(id)sender {
+    [self.videoPlayer.view removeFromSuperview];
+    // NStimer の停止 本来は録画終了時にやるべきだけど終了がわからない
+    [self.recBlink invalidate];
+    self.recLabel.text = @"　";
+    [self.view insertSubview:self.saveMenuView belowSubview:self.previewView];
+//    self.saveMenuView.backgroundColor = [UIColor whiteColor];
+    // 撮影開始
+    [self setupAVCapture];
+    WeAreRecording = NO;
+}
+
+- (IBAction)pushSaveBtn:(id)sender {
+    //書き込んだのは/tmp以下なのでカメラーロールの下に書き出す
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    if ([library videoAtPathIsCompatibleWithSavedPhotosAlbum:self.outputURL])
+    {
+        [library writeVideoAtPathToSavedPhotosAlbum:self.outputURL
+                                    completionBlock:^(NSURL *assetURL, NSError *error)
+         {
+             if (error)
+             {
+                 NSLog(@"カメラロール保存失敗");
+             }else{
+                 NSLog(@"カメラロール保存成功");
+                 [self removeView];
+                 
+             }
+         }];
+    }
+}
+
 - (IBAction)pushCancelBtn:(id)sender {
-    [self.previewView removeFromSuperview];
-    [self.imageView removeFromSuperview];
-    [self.layoutView removeFromSuperview];
-    [self.session stopRunning];
-    [self dismissModalViewControllerAnimated:YES];
+    [self removeView];
 }
 
 - (IBAction)pushTakeMoviewBtn:(id)sender {

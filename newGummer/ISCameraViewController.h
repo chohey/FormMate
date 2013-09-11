@@ -25,6 +25,12 @@
 @property (strong, nonatomic) IBOutlet UIButton *addBtn;
 @property (strong, nonatomic) IBOutlet UILabel *recLabel;
 
+@property (strong, nonatomic) IBOutlet UIView *saveMenuView;
+- (IBAction)pushUndoBtn:(id)sender;
+- (IBAction)pushSaveBtn:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *undoBtn;
+@property (strong, nonatomic) IBOutlet UIButton *saveBtn;
+
 - (IBAction)pushCancelBtn:(id)sender;
 - (IBAction)pushTakeMoviewBtn:(id)sender;
 - (IBAction)pushAddBtn:(id)sender;
