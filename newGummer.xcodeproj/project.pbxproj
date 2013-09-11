@@ -125,11 +125,6 @@
 		89A0DDEE17E0813400980812 = {
 			isa = PBXGroup;
 			children = (
-				89A0DE9517E084C300980812 /* CoreVideo.framework */,
-				89A0DE9317E084BB00980812 /* CoreMedia.framework */,
-				89A0DE9117E084B400980812 /* AssetsLibrary.framework */,
-				89A0DE8F17E084AE00980812 /* MediaPlayer.framework */,
-				89A0DE8D17E0849A00980812 /* AVFoundation.framework */,
 				89A0DE0017E0813400980812 /* newGummer */,
 				89A0DDF917E0813400980812 /* Frameworks */,
 				89A0DDF817E0813400980812 /* Products */,
@@ -147,6 +142,11 @@
 		89A0DDF917E0813400980812 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89A0DE9517E084C300980812 /* CoreVideo.framework */,
+				89A0DE9317E084BB00980812 /* CoreMedia.framework */,
+				89A0DE9117E084B400980812 /* AssetsLibrary.framework */,
+				89A0DE8F17E084AE00980812 /* MediaPlayer.framework */,
+				89A0DE8D17E0849A00980812 /* AVFoundation.framework */,
 				89A0DDFA17E0813400980812 /* UIKit.framework */,
 				89A0DDFC17E0813400980812 /* Foundation.framework */,
 				89A0DDFE17E0813400980812 /* CoreGraphics.framework */,
@@ -155,6 +155,36 @@
 			sourceTree = "<group>";
 		};
 		89A0DE0017E0813400980812 /* newGummer */ = {
+			isa = PBXGroup;
+			children = (
+				89A0DEA117E0922500980812 /* Library */,
+				89A0DE0917E0813400980812 /* ISAppDelegate.h */,
+				89A0DE0A17E0813400980812 /* ISAppDelegate.m */,
+				89A0DE1217E0813400980812 /* MainStoryboard.storyboard */,
+				89A0DEA217E0924600980812 /* View */,
+				89A0DEA317E0925D00980812 /* Controller */,
+				89A0DE0117E0813400980812 /* Supporting Files */,
+			);
+			path = newGummer;
+			sourceTree = "<group>";
+		};
+		89A0DE0117E0813400980812 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89A0DE1D17E0835200980812 /* ichiro.png */,
+				89A0DE1E17E0835200980812 /* icon.png */,
+				89A0DE0217E0813400980812 /* newGummer-Info.plist */,
+				89A0DE0317E0813400980812 /* InfoPlist.strings */,
+				89A0DE0617E0813400980812 /* main.m */,
+				89A0DE0817E0813400980812 /* newGummer-Prefix.pch */,
+				89A0DE0C17E0813400980812 /* Default.png */,
+				89A0DE0E17E0813400980812 /* Default@2x.png */,
+				89A0DE1017E0813400980812 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89A0DEA117E0922500980812 /* Library */ = {
 			isa = PBXGroup;
 			children = (
 				89A0DE9717E0859100980812 /* tutorial_background_00@2x.jpg */,
@@ -168,50 +198,44 @@
 				89A0DE4A17E0839000980812 /* ICETutorialController.m */,
 				89A0DE4B17E0839000980812 /* ICETutorialPage.h */,
 				89A0DE4C17E0839000980812 /* ICETutorialPage.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		89A0DEA217E0924600980812 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				89A0DE4D17E0839000980812 /* ISAVPlayerSecondView.h */,
 				89A0DE4E17E0839000980812 /* ISAVPlayerSecondView.m */,
 				89A0DE4F17E0839000980812 /* ISAVPlayerView.h */,
 				89A0DE5017E0839000980812 /* ISAVPlayerView.m */,
+				89A0DE5917E0839000980812 /* ISMovieCollectionCellView.h */,
+				89A0DE5A17E0839000980812 /* ISMovieCollectionCellView.m */,
+				89A0DE6117E0839100980812 /* ISReplayCollectionViewCell.h */,
+				89A0DE6217E0839100980812 /* ISReplayCollectionViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		89A0DEA317E0925D00980812 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89A0DE1517E0813400980812 /* ISViewController.h */,
+				89A0DE1617E0813400980812 /* ISViewController.m */,
 				89A0DE5317E0839000980812 /* ISCameraViewController.h */,
 				89A0DE5417E0839000980812 /* ISCameraViewController.m */,
 				89A0DE5517E0839000980812 /* ISEditMovieViewController.h */,
 				89A0DE5617E0839000980812 /* ISEditMovieViewController.m */,
 				89A0DE5717E0839000980812 /* ISFullPlayViewController.h */,
 				89A0DE5817E0839000980812 /* ISFullPlayViewController.m */,
-				89A0DE5917E0839000980812 /* ISMovieCollectionCellView.h */,
-				89A0DE5A17E0839000980812 /* ISMovieCollectionCellView.m */,
 				89A0DE5B17E0839100980812 /* ISMovieCollectionViewController.h */,
 				89A0DE5C17E0839100980812 /* ISMovieCollectionViewController.m */,
 				89A0DE5D17E0839100980812 /* ISMovieEncodeViewController.h */,
 				89A0DE5E17E0839100980812 /* ISMovieEncodeViewController.m */,
-				89A0DE6117E0839100980812 /* ISReplayCollectionViewCell.h */,
-				89A0DE6217E0839100980812 /* ISReplayCollectionViewCell.m */,
 				89A0DE6317E0839100980812 /* ISReplayCollectionViewController.h */,
 				89A0DE6417E0839100980812 /* ISReplayCollectionViewController.m */,
-				89A0DE1D17E0835200980812 /* ichiro.png */,
-				89A0DE1E17E0835200980812 /* icon.png */,
-				89A0DE0917E0813400980812 /* ISAppDelegate.h */,
-				89A0DE0A17E0813400980812 /* ISAppDelegate.m */,
-				89A0DE1217E0813400980812 /* MainStoryboard.storyboard */,
-				89A0DE1517E0813400980812 /* ISViewController.h */,
-				89A0DE1617E0813400980812 /* ISViewController.m */,
-				89A0DE0117E0813400980812 /* Supporting Files */,
 			);
-			path = newGummer;
-			sourceTree = "<group>";
-		};
-		89A0DE0117E0813400980812 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				89A0DE0217E0813400980812 /* newGummer-Info.plist */,
-				89A0DE0317E0813400980812 /* InfoPlist.strings */,
-				89A0DE0617E0813400980812 /* main.m */,
-				89A0DE0817E0813400980812 /* newGummer-Prefix.pch */,
-				89A0DE0C17E0813400980812 /* Default.png */,
-				89A0DE0E17E0813400980812 /* Default@2x.png */,
-				89A0DE1017E0813400980812 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
