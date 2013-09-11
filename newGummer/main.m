@@ -1,8 +1,8 @@
 //
 //  main.m
-//  newGummer
+//  Gummer
 //
-//  Created by 閑野 伊織 on 13/09/11.
+//  Created by 閑野 伊織 on 13/09/05.
 //  Copyright (c) 2013年 IPLAB-Kanno. All rights reserved.
 //
 

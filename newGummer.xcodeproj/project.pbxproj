@@ -18,6 +18,32 @@
 		89A0DE1117E0813400980812 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE1017E0813400980812 /* Default-568h@2x.png */; };
 		89A0DE1417E0813400980812 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE1217E0813400980812 /* MainStoryboard.storyboard */; };
 		89A0DE1717E0813400980812 /* ISViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE1617E0813400980812 /* ISViewController.m */; };
+		89A0DE1F17E0835200980812 /* ichiro.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE1D17E0835200980812 /* ichiro.png */; };
+		89A0DE2017E0835200980812 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE1E17E0835200980812 /* icon.png */; };
+		89A0DE7D17E0839100980812 /* ICETutorialController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE4717E0839000980812 /* ICETutorialController_iPad.xib */; };
+		89A0DE7E17E0839100980812 /* ICETutorialController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE4817E0839000980812 /* ICETutorialController_iPhone.xib */; };
+		89A0DE7F17E0839100980812 /* ICETutorialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE4A17E0839000980812 /* ICETutorialController.m */; };
+		89A0DE8017E0839100980812 /* ICETutorialPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE4C17E0839000980812 /* ICETutorialPage.m */; };
+		89A0DE8117E0839100980812 /* ISAVPlayerSecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE4E17E0839000980812 /* ISAVPlayerSecondView.m */; };
+		89A0DE8217E0839100980812 /* ISAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5017E0839000980812 /* ISAVPlayerView.m */; };
+		89A0DE8417E0839100980812 /* ISCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5417E0839000980812 /* ISCameraViewController.m */; };
+		89A0DE8517E0839100980812 /* ISEditMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5617E0839000980812 /* ISEditMovieViewController.m */; };
+		89A0DE8617E0839100980812 /* ISFullPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5817E0839000980812 /* ISFullPlayViewController.m */; };
+		89A0DE8717E0839100980812 /* ISMovieCollectionCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5A17E0839000980812 /* ISMovieCollectionCellView.m */; };
+		89A0DE8817E0839100980812 /* ISMovieCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5C17E0839100980812 /* ISMovieCollectionViewController.m */; };
+		89A0DE8917E0839100980812 /* ISMovieEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5E17E0839100980812 /* ISMovieEncodeViewController.m */; };
+		89A0DE8B17E0839100980812 /* ISReplayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE6217E0839100980812 /* ISReplayCollectionViewCell.m */; };
+		89A0DE8C17E0839100980812 /* ISReplayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE6417E0839100980812 /* ISReplayCollectionViewController.m */; };
+		89A0DE8E17E0849A00980812 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DE8D17E0849A00980812 /* AVFoundation.framework */; };
+		89A0DE9017E084AE00980812 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DE8F17E084AE00980812 /* MediaPlayer.framework */; };
+		89A0DE9217E084B400980812 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DE9117E084B400980812 /* AssetsLibrary.framework */; };
+		89A0DE9417E084BB00980812 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DE9317E084BB00980812 /* CoreMedia.framework */; };
+		89A0DE9617E084C300980812 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DE9517E084C300980812 /* CoreVideo.framework */; };
+		89A0DE9C17E0859200980812 /* tutorial_background_00@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE9717E0859100980812 /* tutorial_background_00@2x.jpg */; };
+		89A0DE9D17E0859200980812 /* tutorial_background_01@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE9817E0859100980812 /* tutorial_background_01@2x.jpg */; };
+		89A0DE9E17E0859200980812 /* tutorial_background_02@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE9917E0859200980812 /* tutorial_background_02@2x.jpg */; };
+		89A0DE9F17E0859200980812 /* tutorial_background_03@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE9A17E0859200980812 /* tutorial_background_03@2x.jpg */; };
+		89A0DEA017E0859200980812 /* tutorial_background_04@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE9B17E0859200980812 /* tutorial_background_04@2x.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +63,44 @@
 		89A0DE1317E0813400980812 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		89A0DE1517E0813400980812 /* ISViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISViewController.h; sourceTree = "<group>"; };
 		89A0DE1617E0813400980812 /* ISViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISViewController.m; sourceTree = "<group>"; };
+		89A0DE1D17E0835200980812 /* ichiro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ichiro.png; sourceTree = "<group>"; };
+		89A0DE1E17E0835200980812 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		89A0DE4717E0839000980812 /* ICETutorialController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ICETutorialController_iPad.xib; sourceTree = "<group>"; };
+		89A0DE4817E0839000980812 /* ICETutorialController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ICETutorialController_iPhone.xib; sourceTree = "<group>"; };
+		89A0DE4917E0839000980812 /* ICETutorialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICETutorialController.h; sourceTree = "<group>"; };
+		89A0DE4A17E0839000980812 /* ICETutorialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICETutorialController.m; sourceTree = "<group>"; };
+		89A0DE4B17E0839000980812 /* ICETutorialPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICETutorialPage.h; sourceTree = "<group>"; };
+		89A0DE4C17E0839000980812 /* ICETutorialPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICETutorialPage.m; sourceTree = "<group>"; };
+		89A0DE4D17E0839000980812 /* ISAVPlayerSecondView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISAVPlayerSecondView.h; sourceTree = "<group>"; };
+		89A0DE4E17E0839000980812 /* ISAVPlayerSecondView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISAVPlayerSecondView.m; sourceTree = "<group>"; };
+		89A0DE4F17E0839000980812 /* ISAVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISAVPlayerView.h; sourceTree = "<group>"; };
+		89A0DE5017E0839000980812 /* ISAVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISAVPlayerView.m; sourceTree = "<group>"; };
+		89A0DE5317E0839000980812 /* ISCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISCameraViewController.h; sourceTree = "<group>"; };
+		89A0DE5417E0839000980812 /* ISCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISCameraViewController.m; sourceTree = "<group>"; };
+		89A0DE5517E0839000980812 /* ISEditMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISEditMovieViewController.h; sourceTree = "<group>"; };
+		89A0DE5617E0839000980812 /* ISEditMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISEditMovieViewController.m; sourceTree = "<group>"; };
+		89A0DE5717E0839000980812 /* ISFullPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISFullPlayViewController.h; sourceTree = "<group>"; };
+		89A0DE5817E0839000980812 /* ISFullPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISFullPlayViewController.m; sourceTree = "<group>"; };
+		89A0DE5917E0839000980812 /* ISMovieCollectionCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMovieCollectionCellView.h; sourceTree = "<group>"; };
+		89A0DE5A17E0839000980812 /* ISMovieCollectionCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMovieCollectionCellView.m; sourceTree = "<group>"; };
+		89A0DE5B17E0839100980812 /* ISMovieCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMovieCollectionViewController.h; sourceTree = "<group>"; };
+		89A0DE5C17E0839100980812 /* ISMovieCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMovieCollectionViewController.m; sourceTree = "<group>"; };
+		89A0DE5D17E0839100980812 /* ISMovieEncodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMovieEncodeViewController.h; sourceTree = "<group>"; };
+		89A0DE5E17E0839100980812 /* ISMovieEncodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMovieEncodeViewController.m; sourceTree = "<group>"; };
+		89A0DE6117E0839100980812 /* ISReplayCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISReplayCollectionViewCell.h; sourceTree = "<group>"; };
+		89A0DE6217E0839100980812 /* ISReplayCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISReplayCollectionViewCell.m; sourceTree = "<group>"; };
+		89A0DE6317E0839100980812 /* ISReplayCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISReplayCollectionViewController.h; sourceTree = "<group>"; };
+		89A0DE6417E0839100980812 /* ISReplayCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISReplayCollectionViewController.m; sourceTree = "<group>"; };
+		89A0DE8D17E0849A00980812 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		89A0DE8F17E084AE00980812 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		89A0DE9117E084B400980812 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		89A0DE9317E084BB00980812 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		89A0DE9517E084C300980812 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		89A0DE9717E0859100980812 /* tutorial_background_00@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tutorial_background_00@2x.jpg"; sourceTree = "<group>"; };
+		89A0DE9817E0859100980812 /* tutorial_background_01@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tutorial_background_01@2x.jpg"; sourceTree = "<group>"; };
+		89A0DE9917E0859200980812 /* tutorial_background_02@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tutorial_background_02@2x.jpg"; sourceTree = "<group>"; };
+		89A0DE9A17E0859200980812 /* tutorial_background_03@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tutorial_background_03@2x.jpg"; sourceTree = "<group>"; };
+		89A0DE9B17E0859200980812 /* tutorial_background_04@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tutorial_background_04@2x.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +108,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89A0DE9617E084C300980812 /* CoreVideo.framework in Frameworks */,
+				89A0DE9417E084BB00980812 /* CoreMedia.framework in Frameworks */,
+				89A0DE9217E084B400980812 /* AssetsLibrary.framework in Frameworks */,
+				89A0DE9017E084AE00980812 /* MediaPlayer.framework in Frameworks */,
+				89A0DE8E17E0849A00980812 /* AVFoundation.framework in Frameworks */,
 				89A0DDFB17E0813400980812 /* UIKit.framework in Frameworks */,
 				89A0DDFD17E0813400980812 /* Foundation.framework in Frameworks */,
 				89A0DDFF17E0813400980812 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +125,11 @@
 		89A0DDEE17E0813400980812 = {
 			isa = PBXGroup;
 			children = (
+				89A0DE9517E084C300980812 /* CoreVideo.framework */,
+				89A0DE9317E084BB00980812 /* CoreMedia.framework */,
+				89A0DE9117E084B400980812 /* AssetsLibrary.framework */,
+				89A0DE8F17E084AE00980812 /* MediaPlayer.framework */,
+				89A0DE8D17E0849A00980812 /* AVFoundation.framework */,
 				89A0DE0017E0813400980812 /* newGummer */,
 				89A0DDF917E0813400980812 /* Frameworks */,
 				89A0DDF817E0813400980812 /* Products */,
@@ -83,6 +157,39 @@
 		89A0DE0017E0813400980812 /* newGummer */ = {
 			isa = PBXGroup;
 			children = (
+				89A0DE9717E0859100980812 /* tutorial_background_00@2x.jpg */,
+				89A0DE9817E0859100980812 /* tutorial_background_01@2x.jpg */,
+				89A0DE9917E0859200980812 /* tutorial_background_02@2x.jpg */,
+				89A0DE9A17E0859200980812 /* tutorial_background_03@2x.jpg */,
+				89A0DE9B17E0859200980812 /* tutorial_background_04@2x.jpg */,
+				89A0DE4717E0839000980812 /* ICETutorialController_iPad.xib */,
+				89A0DE4817E0839000980812 /* ICETutorialController_iPhone.xib */,
+				89A0DE4917E0839000980812 /* ICETutorialController.h */,
+				89A0DE4A17E0839000980812 /* ICETutorialController.m */,
+				89A0DE4B17E0839000980812 /* ICETutorialPage.h */,
+				89A0DE4C17E0839000980812 /* ICETutorialPage.m */,
+				89A0DE4D17E0839000980812 /* ISAVPlayerSecondView.h */,
+				89A0DE4E17E0839000980812 /* ISAVPlayerSecondView.m */,
+				89A0DE4F17E0839000980812 /* ISAVPlayerView.h */,
+				89A0DE5017E0839000980812 /* ISAVPlayerView.m */,
+				89A0DE5317E0839000980812 /* ISCameraViewController.h */,
+				89A0DE5417E0839000980812 /* ISCameraViewController.m */,
+				89A0DE5517E0839000980812 /* ISEditMovieViewController.h */,
+				89A0DE5617E0839000980812 /* ISEditMovieViewController.m */,
+				89A0DE5717E0839000980812 /* ISFullPlayViewController.h */,
+				89A0DE5817E0839000980812 /* ISFullPlayViewController.m */,
+				89A0DE5917E0839000980812 /* ISMovieCollectionCellView.h */,
+				89A0DE5A17E0839000980812 /* ISMovieCollectionCellView.m */,
+				89A0DE5B17E0839100980812 /* ISMovieCollectionViewController.h */,
+				89A0DE5C17E0839100980812 /* ISMovieCollectionViewController.m */,
+				89A0DE5D17E0839100980812 /* ISMovieEncodeViewController.h */,
+				89A0DE5E17E0839100980812 /* ISMovieEncodeViewController.m */,
+				89A0DE6117E0839100980812 /* ISReplayCollectionViewCell.h */,
+				89A0DE6217E0839100980812 /* ISReplayCollectionViewCell.m */,
+				89A0DE6317E0839100980812 /* ISReplayCollectionViewController.h */,
+				89A0DE6417E0839100980812 /* ISReplayCollectionViewController.m */,
+				89A0DE1D17E0835200980812 /* ichiro.png */,
+				89A0DE1E17E0835200980812 /* icon.png */,
 				89A0DE0917E0813400980812 /* ISAppDelegate.h */,
 				89A0DE0A17E0813400980812 /* ISAppDelegate.m */,
 				89A0DE1217E0813400980812 /* MainStoryboard.storyboard */,
@@ -164,6 +271,15 @@
 				89A0DE0F17E0813400980812 /* Default@2x.png in Resources */,
 				89A0DE1117E0813400980812 /* Default-568h@2x.png in Resources */,
 				89A0DE1417E0813400980812 /* MainStoryboard.storyboard in Resources */,
+				89A0DE1F17E0835200980812 /* ichiro.png in Resources */,
+				89A0DE2017E0835200980812 /* icon.png in Resources */,
+				89A0DE7D17E0839100980812 /* ICETutorialController_iPad.xib in Resources */,
+				89A0DE7E17E0839100980812 /* ICETutorialController_iPhone.xib in Resources */,
+				89A0DE9C17E0859200980812 /* tutorial_background_00@2x.jpg in Resources */,
+				89A0DE9D17E0859200980812 /* tutorial_background_01@2x.jpg in Resources */,
+				89A0DE9E17E0859200980812 /* tutorial_background_02@2x.jpg in Resources */,
+				89A0DE9F17E0859200980812 /* tutorial_background_03@2x.jpg in Resources */,
+				89A0DEA017E0859200980812 /* tutorial_background_04@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +293,18 @@
 				89A0DE0717E0813400980812 /* main.m in Sources */,
 				89A0DE0B17E0813400980812 /* ISAppDelegate.m in Sources */,
 				89A0DE1717E0813400980812 /* ISViewController.m in Sources */,
+				89A0DE7F17E0839100980812 /* ICETutorialController.m in Sources */,
+				89A0DE8017E0839100980812 /* ICETutorialPage.m in Sources */,
+				89A0DE8117E0839100980812 /* ISAVPlayerSecondView.m in Sources */,
+				89A0DE8217E0839100980812 /* ISAVPlayerView.m in Sources */,
+				89A0DE8417E0839100980812 /* ISCameraViewController.m in Sources */,
+				89A0DE8517E0839100980812 /* ISEditMovieViewController.m in Sources */,
+				89A0DE8617E0839100980812 /* ISFullPlayViewController.m in Sources */,
+				89A0DE8717E0839100980812 /* ISMovieCollectionCellView.m in Sources */,
+				89A0DE8817E0839100980812 /* ISMovieCollectionViewController.m in Sources */,
+				89A0DE8917E0839100980812 /* ISMovieEncodeViewController.m in Sources */,
+				89A0DE8B17E0839100980812 /* ISReplayCollectionViewCell.m in Sources */,
+				89A0DE8C17E0839100980812 /* ISReplayCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
