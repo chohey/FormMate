@@ -265,4 +265,64 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
 - (IBAction)pushPlayBtn:(id)sender {
     [self play:nil];
 }
+
+- (IBAction)pushSaveBtn:(id)sender {
+    //表示メッセージを空けたAlertを作成
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"名前を入力"
+                                                    message:@"\n"
+                                                   delegate:self
+                                          cancelButtonTitle:@"Cancel"
+                                          otherButtonTitles:@"OK", nil];
+    
+    //Alertに乗せる入力テキストを作成
+    UITextField *text = [[UITextField alloc] initWithFrame:CGRectMake(20.0, 46.0, 245.0, 25.0)];
+    text.backgroundColor=[UIColor whiteColor];
+    [alert addSubview:text];
+    
+    //Alertを表示
+    [alert show];
+    
+    //Responderをセット
+    [text becomeFirstResponder];
+    text.delegate = self;
+}
+
+//OKボタンが押されたときのメソッド
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    //OKボタンの処理（Cancelボタンの処理は標準でAlertを終了する処理が設定されている）
+    if (buttonIndex == 1) {
+        /*Okボタンの処理*/
+        NSLog(@"OK !!");
+        [self removePlayerTimeObserver];
+        [self removeSecondPlayerTimeObserver];
+        
+        NSTimer *backTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(backRoot) userInfo:nil repeats:NO];
+        [backTimer fire];
+        
+    }
+}
+- (void)backRoot
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"保存しました！！"
+                                                    message:self.titleStr
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+//    [self.navigationController popToViewController: [self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+//    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    self.titleStr = [textField.text mutableCopy];
+    [self.titleStr replaceCharactersInRange:range withString:string];
+    NSLog(@"入力：%@",self.titleStr);
+    return YES;
+}
+- (void)viewDidUnload {
+    [self setVideoPlayerView:nil];
+    [self setVideoPlayerSecondView:nil];
+    
+}
+
 @end

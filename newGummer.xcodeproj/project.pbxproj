@@ -65,6 +65,7 @@
 		89A0DECB17E15F4300980812 /* video_play_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEC917E15F4100980812 /* video_play_64.png */; };
 		89A0DECE17E15FE200980812 /* ISCheckMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DECD17E15FE100980812 /* ISCheckMotionViewController.m */; };
 		89A0DED117E1919700980812 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DED017E1919500980812 /* button.png */; };
+		89A0DED317E199A100980812 /* button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DED217E199A000980812 /* button2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,7 @@
 		89A0DECC17E15FE100980812 /* ISCheckMotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISCheckMotionViewController.h; sourceTree = "<group>"; };
 		89A0DECD17E15FE100980812 /* ISCheckMotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISCheckMotionViewController.m; sourceTree = "<group>"; };
 		89A0DED017E1919500980812 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		89A0DED217E199A000980812 /* button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +289,7 @@
 		89A0DEAD17E151FD00980812 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				89A0DED217E199A000980812 /* button2.png */,
 				89A0DED017E1919500980812 /* button.png */,
 				89A0DEC817E15F4000980812 /* help_64.png */,
 				89A0DEC917E15F4100980812 /* video_play_64.png */,
@@ -397,6 +400,7 @@
 				89A0DECA17E15F4300980812 /* help_64.png in Resources */,
 				89A0DECB17E15F4300980812 /* video_play_64.png in Resources */,
 				89A0DED117E1919700980812 /* button.png in Resources */,
+				89A0DED317E199A100980812 /* button2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,15 +511,15 @@
 		89A0DE1B17E0813400980812 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "266FEA73-A10C-45FC-B366-A2BD60B2FF21";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "266FEA73-A10C-45FC-B366-A2BD60B2FF21";
+				PROVISIONING_PROFILE = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -523,14 +527,14 @@
 		89A0DE1C17E0813400980812 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "266FEA73-A10C-45FC-B366-A2BD60B2FF21";
+				PROVISIONING_PROFILE = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "266FEA73-A10C-45FC-B366-A2BD60B2FF21";
 				WRAPPER_EXTENSION = app;
 			};
