@@ -296,9 +296,9 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
         [self removePlayerTimeObserver];
         [self removeSecondPlayerTimeObserver];
         
-        NSTimer *backTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(backRoot) userInfo:nil repeats:NO];
-        [backTimer fire];
-        
+//        NSTimer *backTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(backRoot) userInfo:nil repeats:NO];
+//        [backTimer fire];
+        [self backRoot];
     }
 }
 - (void)backRoot

@@ -103,6 +103,7 @@
         [self.imageView removeFromSuperview];
         UIImage *image = [dic.dictionary objectForKey:@"thumbnail"];
         self.imageView = [[UIImageView alloc] initWithImage:image];
+        self.imageView.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
         NSLog(@"thumbnail");
     }
     
