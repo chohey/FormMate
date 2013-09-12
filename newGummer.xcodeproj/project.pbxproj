@@ -67,6 +67,8 @@
 		89A0DECE17E15FE200980812 /* ISCheckMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DECD17E15FE100980812 /* ISCheckMotionViewController.m */; };
 		89A0DED117E1919700980812 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DED017E1919500980812 /* button.png */; };
 		89A0DED317E199A100980812 /* button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DED217E199A000980812 /* button2.png */; };
+		89A0DED917E1DC2600980812 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DED617E1DC2600980812 /* SVProgressHUD.bundle */; };
+		89A0DEDA17E1DC2600980812 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DED817E1DC2600980812 /* SVProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +151,9 @@
 		89A0DECD17E15FE100980812 /* ISCheckMotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISCheckMotionViewController.m; sourceTree = "<group>"; };
 		89A0DED017E1919500980812 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		89A0DED217E199A000980812 /* button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button2.png; sourceTree = "<group>"; };
+		89A0DED617E1DC2600980812 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		89A0DED717E1DC2600980812 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		89A0DED817E1DC2600980812 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,17 +243,8 @@
 		89A0DEA117E0922500980812 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				89A0DE9717E0859100980812 /* tutorial_background_00@2x.jpg */,
-				89A0DE9817E0859100980812 /* tutorial_background_01@2x.jpg */,
-				89A0DE9917E0859200980812 /* tutorial_background_02@2x.jpg */,
-				89A0DE9A17E0859200980812 /* tutorial_background_03@2x.jpg */,
-				89A0DE9B17E0859200980812 /* tutorial_background_04@2x.jpg */,
-				89A0DE4717E0839000980812 /* ICETutorialController_iPad.xib */,
-				89A0DE4817E0839000980812 /* ICETutorialController_iPhone.xib */,
-				89A0DE4917E0839000980812 /* ICETutorialController.h */,
-				89A0DE4A17E0839000980812 /* ICETutorialController.m */,
-				89A0DE4B17E0839000980812 /* ICETutorialPage.h */,
-				89A0DE4C17E0839000980812 /* ICETutorialPage.m */,
+				89A0DED517E1DC2600980812 /* SVProgressHUD */,
+				89A0DED417E1DBF500980812 /* ICETutorial */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -317,6 +313,34 @@
 				89A0DEA717E0DB1800980812 /* greenbutton_on@2x.png */,
 			);
 			name = image;
+			sourceTree = "<group>";
+		};
+		89A0DED417E1DBF500980812 /* ICETutorial */ = {
+			isa = PBXGroup;
+			children = (
+				89A0DE9717E0859100980812 /* tutorial_background_00@2x.jpg */,
+				89A0DE9817E0859100980812 /* tutorial_background_01@2x.jpg */,
+				89A0DE9917E0859200980812 /* tutorial_background_02@2x.jpg */,
+				89A0DE9A17E0859200980812 /* tutorial_background_03@2x.jpg */,
+				89A0DE9B17E0859200980812 /* tutorial_background_04@2x.jpg */,
+				89A0DE4717E0839000980812 /* ICETutorialController_iPad.xib */,
+				89A0DE4817E0839000980812 /* ICETutorialController_iPhone.xib */,
+				89A0DE4917E0839000980812 /* ICETutorialController.h */,
+				89A0DE4A17E0839000980812 /* ICETutorialController.m */,
+				89A0DE4B17E0839000980812 /* ICETutorialPage.h */,
+				89A0DE4C17E0839000980812 /* ICETutorialPage.m */,
+			);
+			name = ICETutorial;
+			sourceTree = "<group>";
+		};
+		89A0DED517E1DC2600980812 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				89A0DED617E1DC2600980812 /* SVProgressHUD.bundle */,
+				89A0DED717E1DC2600980812 /* SVProgressHUD.h */,
+				89A0DED817E1DC2600980812 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +430,7 @@
 				89A0DECB17E15F4300980812 /* video_play_64.png in Resources */,
 				89A0DED117E1919700980812 /* button.png in Resources */,
 				89A0DED317E199A100980812 /* button2.png in Resources */,
+				89A0DED917E1DC2600980812 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +458,7 @@
 				89A0DE8C17E0839100980812 /* ISReplayCollectionViewController.m in Sources */,
 				89A0DECE17E15FE200980812 /* ISCheckMotionViewController.m in Sources */,
 				43BE688917E1AD7100D5CD5F /* GapDictionary.m in Sources */,
+				89A0DEDA17E1DC2600980812 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
