@@ -63,6 +63,7 @@
 		89A0DEC717E15A4A00980812 /* video_next_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEC617E15A4A00980812 /* video_next_48.png */; };
 		89A0DECA17E15F4300980812 /* help_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEC817E15F4000980812 /* help_64.png */; };
 		89A0DECB17E15F4300980812 /* video_play_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEC917E15F4100980812 /* video_play_64.png */; };
+		89A0DECE17E15FE200980812 /* ISCheckMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DECD17E15FE100980812 /* ISCheckMotionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,8 @@
 		89A0DEC617E15A4A00980812 /* video_next_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_next_48.png; sourceTree = "<group>"; };
 		89A0DEC817E15F4000980812 /* help_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_64.png; sourceTree = "<group>"; };
 		89A0DEC917E15F4100980812 /* video_play_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_play_64.png; sourceTree = "<group>"; };
+		89A0DECC17E15FE100980812 /* ISCheckMotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISCheckMotionViewController.h; sourceTree = "<group>"; };
+		89A0DECD17E15FE100980812 /* ISCheckMotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISCheckMotionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,8 +266,6 @@
 				89A0DE1617E0813400980812 /* ISViewController.m */,
 				89A0DE5317E0839000980812 /* ISCameraViewController.h */,
 				89A0DE5417E0839000980812 /* ISCameraViewController.m */,
-				89A0DE5517E0839000980812 /* ISEditMovieViewController.h */,
-				89A0DE5617E0839000980812 /* ISEditMovieViewController.m */,
 				89A0DE5717E0839000980812 /* ISFullPlayViewController.h */,
 				89A0DE5817E0839000980812 /* ISFullPlayViewController.m */,
 				89A0DE5B17E0839100980812 /* ISMovieCollectionViewController.h */,
@@ -273,6 +274,10 @@
 				89A0DE5E17E0839100980812 /* ISMovieEncodeViewController.m */,
 				89A0DE6317E0839100980812 /* ISReplayCollectionViewController.h */,
 				89A0DE6417E0839100980812 /* ISReplayCollectionViewController.m */,
+				89A0DE5517E0839000980812 /* ISEditMovieViewController.h */,
+				89A0DE5617E0839000980812 /* ISEditMovieViewController.m */,
+				89A0DECC17E15FE100980812 /* ISCheckMotionViewController.h */,
+				89A0DECD17E15FE100980812 /* ISCheckMotionViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				89A0DE8917E0839100980812 /* ISMovieEncodeViewController.m in Sources */,
 				89A0DE8B17E0839100980812 /* ISReplayCollectionViewCell.m in Sources */,
 				89A0DE8C17E0839100980812 /* ISReplayCollectionViewController.m in Sources */,
+				89A0DECE17E15FE200980812 /* ISCheckMotionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

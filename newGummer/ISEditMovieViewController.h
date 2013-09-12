@@ -29,10 +29,17 @@
 @property (strong, nonatomic) IBOutlet UISlider *movieSlider_1;
 @property (strong, nonatomic) IBOutlet UISlider *movieSlider_2;
 
+@property (nonatomic, assign) CMTime timer_1, timer_2;
+@property UILabel *naviTitleLabel;
+
+- (IBAction)pushCheckBtn:(id)sender;
 - (IBAction)changeSlider_1:(id)sender;
 - (IBAction)changeSlider_2:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *durationLabel_1;
 @property (strong, nonatomic) IBOutlet UILabel *durationLabel_2;
 @property (strong, nonatomic) IBOutlet UILabel *currentTimeLabel_1;
 @property (strong, nonatomic) IBOutlet UILabel *currentTimeLabel_2;
+
++ (UIColor*) hexToUIColor: (NSString *)hex alpha: (CGFloat)a;
+
 @end
