@@ -199,10 +199,9 @@
              選択された動画のURLを渡してあちらの再生画面に飛べるようにしておけば良い。
              */
             
-        
             cell.selected = NO;
             cell.cellBackgroundView.backgroundColor = [UIColor whiteColor];
-            
+            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
             
             break;
             
