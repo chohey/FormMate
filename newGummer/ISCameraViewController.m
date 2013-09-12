@@ -45,6 +45,10 @@
     self.recLabel.text = @"　";
     // 撮影開始
     [self setupAVCapture];
+    
+    [self setLayout];
+    
+    NSLog(@"view will apaer");
 }
 
 - (void)viewDidLoad
@@ -55,6 +59,8 @@
 //    [self testPlay];
 
     [self setLayout];
+    
+    NSLog(@"view did load");
 
 }
 
@@ -90,7 +96,17 @@
 
     [self.view insertSubview:self.previewView belowSubview:self.layoutView];
     
-    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ichiro.png"]];
+    //self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ichiro.png"]];
+    
+    GapDictionary *dic = [GapDictionary sharedGapDictionary];
+    if ([dic.dictionary objectForKey:@"thumbnail"]) {
+        [self.imageView removeFromSuperview];
+        UIImage *image = [dic.dictionary objectForKey:@"thumbnail"];
+        self.imageView = [[UIImageView alloc] initWithImage:image];
+        self.imageView.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
+        NSLog(@"thumbnail");
+    }
+    
     [self.imageView setFrame:CGRectMake(0,
                                         0,
                                         self.view.bounds.size.width,
@@ -264,8 +280,10 @@
 #pragma mark
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSLog(@"segue identfier: %@", segue.identifier);
+    
     if([segue.identifier isEqualToString:@"modalToCollectionMovieView"]) {
-        
+        NSLog(@"%@", [[segue destinationViewController] class]);
     }
 }
 
@@ -430,6 +448,7 @@
 }
 
 - (IBAction)pushAddBtn:(id)sender {
-    [self performSegueWithIdentifier:@"modalToCollectionMovieView" sender:self];
+    //[self performSegueWithIdentifier:@"modalToCollectionMovieView" sender:self];
 }
+
 @end

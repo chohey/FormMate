@@ -12,6 +12,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 
+#import "GapDictionary.h"
+
 #import <AssetsLibrary/AssetsLibrary.h>
 #define CAPTURE_FRAMES_PER_SECOND       20
 

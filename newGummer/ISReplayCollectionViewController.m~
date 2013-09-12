@@ -169,8 +169,11 @@
 
 -(void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)buttonIndex {
     ISReplayCollectionViewCell *cell = (ISReplayCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:cellindex];
+<<<<<<< HEAD
 
     GapDictionary *dic = [GapDictionary sharedGapDictionary];
+=======
+>>>>>>> c38a0c5fb908dfe14a904fdbd7eaa08ca868fef7
     
     switch (buttonIndex) {
         case 0:
