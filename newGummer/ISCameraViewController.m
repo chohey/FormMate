@@ -57,7 +57,8 @@
 	// Do any additional setup after loading the view.
     
 //    [self testPlay];
-
+    self.imageView =nil;
+    
     [self setLayout];
     
     NSLog(@"view did load");
@@ -397,6 +398,11 @@
 
 - (IBAction)pushCancelBtn:(id)sender {
     [self removeView];
+    self.imageView =nil;
+    GapDictionary *dic = [GapDictionary sharedGapDictionary];
+    
+[dic.dictionary removeAllObjects];
+
 }
 
 - (IBAction)pushTakeMoviewBtn:(id)sender {

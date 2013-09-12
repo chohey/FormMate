@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *processingBtn;
 //@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
 
+@property UILabel *navititle;
 
 + (ALAssetsLibrary *)defaultAssetsLibrary;
 @end

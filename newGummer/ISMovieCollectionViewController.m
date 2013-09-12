@@ -67,6 +67,16 @@
     if([[UINavigationBar class] respondsToSelector:@selector(appearance)]) {
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_top.png"] forBarMetrics:UIBarMetricsDefault];
     }
+    self.navititle = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.navititle.font = [UIFont boldSystemFontOfSize:17.0];
+    self.navititle.textColor = [UIColor colorWithRed:0.8f green:0.2f blue:0.2f alpha:1.0]; // 好きな文字色にする
+    self.navititle.backgroundColor = [UIColor clearColor];
+    self.navigationItem.titleView = self.navititle;
+    self.navititle.text = @"再生モード"; //好きな文字を入れる
+    [self.navititle sizeToFit];
+
+    
+    
     [selectedMovies removeAllObjects];
     [self refreshSelectedCell];
     // collect the photos
@@ -185,14 +195,14 @@
      if (processingEnabled) {
         [self refreshSelectedCell];
    // self.processingbutton.style = UIBarButtonItemStyleDone;
-    
+     self.navititle.text = @"再生モード"; //好きな文字を入れる
     }
     
     processingEnabled = !processingEnabled;
     self.collectionView.allowsMultipleSelection = processingEnabled;
    // self.processingbutton.style = UIBarButtonItemStyleDone;
-    if (!processingEnabled) {
-        
+    if (processingEnabled) {
+         self.navititle.text = @"編集モード"; //好きな文字を入れる
     }
 
 }
