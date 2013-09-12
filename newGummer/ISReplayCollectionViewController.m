@@ -203,7 +203,7 @@
 -(void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)buttonIndex {
     ISReplayCollectionViewCell *cell = (ISReplayCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:cellindex];
 
-    
+    GapDictionary *dic = [GapDictionary sharedGapDictionary];
     
     switch (buttonIndex) {
         case 0:
@@ -219,14 +219,18 @@
             //2番目のボタンが押されたときのアクション
             NSLog(@"重ねる");
             
-            
+            //GapDictionary *dic = [GapDictionary sharedGapDictionary];
+            [dic.dictionary removeAllObjects];
+            [dic.dictionary setObject:cell.replayImageView.image forKey:@"thumbnail"];
             /*
              この部分の処理はこれからかく。
              選択された動画のURLを渡してあちらの再生画面に飛べるようにしておけば良い。
              */
+            
+        
             cell.selected = NO;
             cell.cellBackgroundView.backgroundColor = [UIColor whiteColor];
-
+            
             
             break;
             

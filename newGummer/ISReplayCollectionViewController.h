@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "ISReplayCollectionViewCell.h"
+#import "GapDictionary.h"
 
 @interface ISReplayCollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>{
     NSArray *processingMovies;
     BOOL processingEnabled;
     NSMutableArray *selectedMovies;
     NSIndexPath *cellindex;
+    NSURL *selectedurl;
 }
 
 

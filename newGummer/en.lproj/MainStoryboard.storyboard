@@ -162,6 +162,7 @@
                                         </state>
                                         <connections>
                                             <action selector="pushAddBtn:" destination="3OT-fu-ulv" eventType="touchUpInside" id="CzR-6n-GxD"/>
+                                            <segue destination="3vN-Cv-cW8" kind="modal" identifier="modalToCollectionMovieView" id="let-h5-OXW"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="● REC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rbO-N3-nKo">
@@ -186,12 +187,26 @@
                         <outlet property="saveMenuView" destination="7yv-2M-lsv" id="J5s-vp-uuF"/>
                         <outlet property="takeMovieBtn" destination="WGb-Am-tkR" id="kpt-GB-64z"/>
                         <outlet property="undoBtn" destination="cDJ-Wa-qqW" id="AcP-lT-8Iz"/>
-                        <segue destination="dvZ-jx-VJx" kind="modal" identifier="modalToCollectionMovieView" id="g8v-jq-Ot8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="to3-V7-gT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="573" y="-56"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QCP-Po-I5S">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="3vN-Cv-cW8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cG5-l3-3uN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xWH-tn-lzu" kind="relationship" relationship="rootViewController" id="uIw-fw-206"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLB-mj-WJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="-56"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GfD-aP-zOL">
@@ -587,22 +602,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFZ-VM-HGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1476" y="-44"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="TUf-bu-eCV">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="dvZ-jx-VJx" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="stq-77-OsB">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="xWH-tn-lzu" kind="relationship" relationship="rootViewController" id="Hnp-mI-N6Y"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="04S-5E-XAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1036" y="-49"/>
+            <point key="canvasLocation" x="1631" y="-56"/>
         </scene>
         <!--Movie Encode View Controller-->
         <scene sceneID="hO4-fL-rCn">
