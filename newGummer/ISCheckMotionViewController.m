@@ -46,6 +46,10 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
     
     NSArray *arr = @[@"並べて再生", @"重ねて再生"];
     UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:arr];
+    [seg setBackgroundImage:[UIImage imageNamed:@"btn.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+     //[UIImage imageNamed:@"segBtnLeft.png"] forSegmentAtIndex:0];
+    //[seg setImage:[UIImage imageNamed:@"segBtnRight.png"] forSegmentAtIndex:1];
     seg.segmentedControlStyle = UISegmentedControlStyleBar;
     seg.selectedSegmentIndex = 0;
     [seg addTarget:self action:@selector(changeSeg:) forControlEvents:UIControlEventValueChanged];
