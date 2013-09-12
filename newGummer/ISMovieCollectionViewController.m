@@ -131,7 +131,7 @@
         cell.url = url;
         NSLog(@"url: %@", [url absoluteString]);
             
-        [cell.movieImageView setImage:[UIImage imageWithCGImage:[asset thumbnail]]];
+        [cell.movieImageView setImage:[UIImage imageWithCGImage:[asset aspectRatioThumbnail]]];
     } else {
         NSLog(@"not found");
         [cell.movieImageView setImage:nil];

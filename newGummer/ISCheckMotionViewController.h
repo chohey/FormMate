@@ -12,7 +12,7 @@
 #import "ISAVPlayerView.h"
 #import "ISAVPlayerSecondView.h"
 
-@interface ISCheckMotionViewController : UIViewController <UITextFieldDelegate>
+@interface ISCheckMotionViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet ISAVPlayerView *videoPlayerView;
 @property (strong, nonatomic) IBOutlet ISAVPlayerSecondView *videoPlayerSecondView;
@@ -33,5 +33,6 @@
 
 @property (strong, nonatomic) NSArray *playStartPointArr;
 @property (strong, nonatomic) NSMutableString *titleStr;
+@property (strong, nonatomic) UITextField *text;
 
 @end

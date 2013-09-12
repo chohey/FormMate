@@ -275,16 +275,17 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
                                           otherButtonTitles:@"OK", nil];
     
     //Alertに乗せる入力テキストを作成
-    UITextField *text = [[UITextField alloc] initWithFrame:CGRectMake(20.0, 46.0, 245.0, 25.0)];
-    text.backgroundColor=[UIColor whiteColor];
-    [alert addSubview:text];
-    
+    self.text = [[UITextField alloc] initWithFrame:CGRectMake(20.0, 46.0, 245.0, 25.0)];
+    self.text.backgroundColor=[UIColor whiteColor];
+    [alert addSubview:self.text];
+
     //Alertを表示
     [alert show];
+//    [alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
     
     //Responderをセット
-    [text becomeFirstResponder];
-    text.delegate = self;
+    [self.text becomeFirstResponder];
+    self.text.delegate = self;
 }
 
 //OKボタンが押されたときのメソッド
@@ -293,12 +294,11 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
     if (buttonIndex == 1) {
         /*Okボタンの処理*/
         NSLog(@"OK !!");
-        [self removePlayerTimeObserver];
-        [self removeSecondPlayerTimeObserver];
-        
-//        NSTimer *backTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(backRoot) userInfo:nil repeats:NO];
-//        [backTimer fire];
-        [self backRoot];
+//        self.text.delegate = nil;
+        NSTimer *backTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(backRoot) userInfo:nil repeats:NO];
+        [backTimer fire];
+//        [self setText:nil];
+//        [self backRoot];
     }
 }
 - (void)backRoot
@@ -309,6 +309,7 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
+//    self.text.delegate = nil;
 //    [self.navigationController popToViewController: [self.navigationController.viewControllers objectAtIndex:1] animated:YES];
 //    [self.navigationController popToRootViewControllerAnimated:YES];
 }
@@ -319,10 +320,21 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
     NSLog(@"入力：%@",self.titleStr);
     return YES;
 }
-- (void)viewDidUnload {
-    [self setVideoPlayerView:nil];
-    [self setVideoPlayerSecondView:nil];
-    
-}
+//- (void)viewDidUnload {
+//    [self setVideoPlayerView:nil];
+//    [self setVideoPlayerSecondView:nil];
+//    [self setCurrentTimeLabel:nil];
+//    [self setDurationLabel:nil];
+//    [self setPlayBtn:nil];
+//    [self setPlayerItem:nil];
+//    [self setPlayerSecondItem:nil];
+//    [self setText:nil];
+//    [self setTitleStr:nil];
+//    [self setVideoPlayer:nil];
+//    [self setVideoPlayerSecondView:nil];
+//    [self setVideoPlayerView:nil];
+//    [self setVideoSecondPlayer:nil];
+//    [super viewDidUnload];
+//}
 
 @end
