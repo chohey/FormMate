@@ -507,13 +507,15 @@
 		89A0DE1B17E0813400980812 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
+				PROVISIONING_PROFILE = "266FEA73-A10C-45FC-B366-A2BD60B2FF21";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "266FEA73-A10C-45FC-B366-A2BD60B2FF21";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -521,13 +523,15 @@
 		89A0DE1C17E0813400980812 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "F8B3DFF3-A1DD-4625-AE8B-E19F31CABF1F";
+				PROVISIONING_PROFILE = "266FEA73-A10C-45FC-B366-A2BD60B2FF21";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "266FEA73-A10C-45FC-B366-A2BD60B2FF21";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -551,6 +555,7 @@
 				89A0DE1C17E0813400980812 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

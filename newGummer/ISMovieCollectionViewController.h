@@ -19,6 +19,7 @@
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 - (IBAction)processingButtonTouched:(id)sender;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *processingBtn;
+//@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
 
 
 + (ALAssetsLibrary *)defaultAssetsLibrary;
