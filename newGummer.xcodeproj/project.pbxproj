@@ -60,6 +60,7 @@
 		89A0DEC317E1521F00980812 /* video_pause_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEB717E1521F00980812 /* video_pause_48.png */; };
 		89A0DEC417E1521F00980812 /* video_previous_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEB817E1521F00980812 /* video_previous_48.png */; };
 		89A0DEC517E1521F00980812 /* video_rec_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEB917E1521F00980812 /* video_rec_64.png */; };
+		89A0DEC717E15A4A00980812 /* video_next_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEC617E15A4A00980812 /* video_next_48.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +134,7 @@
 		89A0DEB717E1521F00980812 /* video_pause_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_pause_48.png; sourceTree = "<group>"; };
 		89A0DEB817E1521F00980812 /* video_previous_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_previous_48.png; sourceTree = "<group>"; };
 		89A0DEB917E1521F00980812 /* video_rec_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_rec_64.png; sourceTree = "<group>"; };
+		89A0DEC617E15A4A00980812 /* video_next_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_next_48.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 		89A0DEAD17E151FD00980812 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				89A0DEC617E15A4A00980812 /* video_next_48.png */,
 				89A0DEAE17E1521F00980812 /* bg_white.png */,
 				89A0DEAF17E1521F00980812 /* bg_white@2x.png */,
 				89A0DEB017E1521F00980812 /* btn_back.png */,
@@ -376,6 +379,7 @@
 				89A0DEC317E1521F00980812 /* video_pause_48.png in Resources */,
 				89A0DEC417E1521F00980812 /* video_previous_48.png in Resources */,
 				89A0DEC517E1521F00980812 /* video_rec_64.png in Resources */,
+				89A0DEC717E15A4A00980812 /* video_next_48.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
