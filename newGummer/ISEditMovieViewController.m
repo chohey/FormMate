@@ -7,6 +7,7 @@
 //
 
 #import "ISEditMovieViewController.h"
+#import "ISCheckMotionViewController.h"
 
 NSString* const kStatusKey = @"status";
 static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewControllerStatusObservationContext;
@@ -16,6 +17,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 @end
 
 @implementation ISEditMovieViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,14 +39,6 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     UIColor *alphaColor = [color colorWithAlphaComponent:0.0];
     self.videoPlayerView.backgroundColor = alphaColor;
     self.videoPlayerSecondView.backgroundColor = alphaColor;
-    
-    
-    NSArray *arr = @[@"並べて再生", @"重ねて再生"];
-    UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:arr];
-    seg.segmentedControlStyle = UISegmentedControlStyleBar;
-    seg.selectedSegmentIndex = 0;
-    [seg addTarget:self action:@selector(changeSeg:) forControlEvents:UIControlEventValueChanged];
-    self.navigationItem.titleView = seg;
     
     
     NSLog(@"===================\n%@",self.url);
@@ -96,6 +90,18 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     if([[UINavigationBar class] respondsToSelector:@selector(appearance)]) {
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_top.png"] forBarMetrics:UIBarMetricsDefault];
     }
+    self.naviTitleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.naviTitleLabel.font = [UIFont boldSystemFontOfSize:17.0];
+    self.naviTitleLabel.textColor = [UIColor colorWithRed:0.8f green:0.2f blue:0.2f alpha:1.0]; // 好きな文字色にする
+    self.naviTitleLabel.backgroundColor = [UIColor clearColor];
+    self.navigationItem.titleView = self.naviTitleLabel;
+    self.naviTitleLabel.text = @"再生位置の調整"; //好きな文字を入れる
+    [self.naviTitleLabel sizeToFit];
+    
+    
+    // 遷移前に保存した再生位置をセット たぶん向こうで再生すると変わってしまうと思うので
+//    NSLog(@"seekTime:\n%@",self.timer_1);
+    
     [self setupSeekBar];
 }
 
@@ -146,8 +152,19 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
  */
 - (void)removePlayerTimeObserver
 {
+    if( self.playTimeObserver == nil ) { return; }
     
+    [self.videoPlayer removeTimeObserver:self.playTimeObserver];
+    self.playTimeObserver = nil;
 }
+- (void)removeSecondPlayerTimeObserver
+{
+    if( self.playTimeObserver_2 == nil ) { return; }
+    
+    [self.videoSecondPlayer removeTimeObserver:self.playTimeObserver_2];
+    self.playTimeObserver_2 = nil;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -268,6 +285,12 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     self.currentTimeLabel_2.text = [self timeToString:self.movieSlider_2.value];
 }
 
+- (IBAction)pushCheckBtn:(id)sender {
+    // 2つの動画の現在の再生位置とview2つを渡す
+    
+    [self performSegueWithIdentifier:@"pushToCheckMotionView" sender:nil];
+}
+
 - (IBAction)changeSlider_1:(id)sender {
     UISlider *slider = (UISlider *)sender;
     [self.videoPlayer seekToTime:CMTimeMakeWithSeconds( slider.value, NSEC_PER_SEC )];
@@ -277,4 +300,33 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     UISlider *slider = (UISlider *)sender;
     [self.videoSecondPlayer seekToTime:CMTimeMakeWithSeconds( slider.value, NSEC_PER_SEC )];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"pushToCheckMotionView"]) {
+        self.timer_1 = self.playerItem.currentTime;
+        self.timer_2 = self.playerSecondItem.currentTime;
+        ISCheckMotionViewController *cv = (ISCheckMotionViewController *)[segue destinationViewController];
+        [self removePlayerTimeObserver];
+        [self removeSecondPlayerTimeObserver];
+        cv.videoPlayerView = self.videoPlayerView;
+        cv.videoPlayerSecondView = self.videoPlayerSecondView;
+        cv.videoPlayer = self.videoPlayer;
+        cv.videoSecondPlayer = self.videoSecondPlayer;
+        cv.playerItem = self.playerItem;
+        cv.playerSecondItem = self.playerSecondItem;
+    }
+}
+
++ (UIColor*) hexToUIColor: (NSString *)hex alpha: (CGFloat)a
+{
+    NSScanner *colorScanner = [NSScanner scannerWithString: hex];
+    unsigned int color;
+    [colorScanner scanHexInt: &color];
+    CGFloat r = ((color & 0xFF0000) >> 16) / 255.0f;
+    CGFloat g = ((color & 0x00FF00) >> 8) / 255.0f;
+    CGFloat b =  (color & 0x0000FF) / 255.0f;
+    return [UIColor colorWithRed: r green: g blue: b alpha: a];
+}
+
 @end

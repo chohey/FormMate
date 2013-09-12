@@ -60,6 +60,12 @@
 		89A0DEC317E1521F00980812 /* video_pause_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEB717E1521F00980812 /* video_pause_48.png */; };
 		89A0DEC417E1521F00980812 /* video_previous_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEB817E1521F00980812 /* video_previous_48.png */; };
 		89A0DEC517E1521F00980812 /* video_rec_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEB917E1521F00980812 /* video_rec_64.png */; };
+		89A0DEC717E15A4A00980812 /* video_next_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEC617E15A4A00980812 /* video_next_48.png */; };
+		89A0DECA17E15F4300980812 /* help_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEC817E15F4000980812 /* help_64.png */; };
+		89A0DECB17E15F4300980812 /* video_play_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DEC917E15F4100980812 /* video_play_64.png */; };
+		89A0DECE17E15FE200980812 /* ISCheckMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DECD17E15FE100980812 /* ISCheckMotionViewController.m */; };
+		89A0DED117E1919700980812 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DED017E1919500980812 /* button.png */; };
+		89A0DED317E199A100980812 /* button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DED217E199A000980812 /* button2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +139,13 @@
 		89A0DEB717E1521F00980812 /* video_pause_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_pause_48.png; sourceTree = "<group>"; };
 		89A0DEB817E1521F00980812 /* video_previous_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_previous_48.png; sourceTree = "<group>"; };
 		89A0DEB917E1521F00980812 /* video_rec_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_rec_64.png; sourceTree = "<group>"; };
+		89A0DEC617E15A4A00980812 /* video_next_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_next_48.png; sourceTree = "<group>"; };
+		89A0DEC817E15F4000980812 /* help_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_64.png; sourceTree = "<group>"; };
+		89A0DEC917E15F4100980812 /* video_play_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_play_64.png; sourceTree = "<group>"; };
+		89A0DECC17E15FE100980812 /* ISCheckMotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISCheckMotionViewController.h; sourceTree = "<group>"; };
+		89A0DECD17E15FE100980812 /* ISCheckMotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISCheckMotionViewController.m; sourceTree = "<group>"; };
+		89A0DED017E1919500980812 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		89A0DED217E199A000980812 /* button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,8 +270,6 @@
 				89A0DE1617E0813400980812 /* ISViewController.m */,
 				89A0DE5317E0839000980812 /* ISCameraViewController.h */,
 				89A0DE5417E0839000980812 /* ISCameraViewController.m */,
-				89A0DE5517E0839000980812 /* ISEditMovieViewController.h */,
-				89A0DE5617E0839000980812 /* ISEditMovieViewController.m */,
 				89A0DE5717E0839000980812 /* ISFullPlayViewController.h */,
 				89A0DE5817E0839000980812 /* ISFullPlayViewController.m */,
 				89A0DE5B17E0839100980812 /* ISMovieCollectionViewController.h */,
@@ -267,6 +278,10 @@
 				89A0DE5E17E0839100980812 /* ISMovieEncodeViewController.m */,
 				89A0DE6317E0839100980812 /* ISReplayCollectionViewController.h */,
 				89A0DE6417E0839100980812 /* ISReplayCollectionViewController.m */,
+				89A0DE5517E0839000980812 /* ISEditMovieViewController.h */,
+				89A0DE5617E0839000980812 /* ISEditMovieViewController.m */,
+				89A0DECC17E15FE100980812 /* ISCheckMotionViewController.h */,
+				89A0DECD17E15FE100980812 /* ISCheckMotionViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -274,6 +289,11 @@
 		89A0DEAD17E151FD00980812 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				89A0DED217E199A000980812 /* button2.png */,
+				89A0DED017E1919500980812 /* button.png */,
+				89A0DEC817E15F4000980812 /* help_64.png */,
+				89A0DEC917E15F4100980812 /* video_play_64.png */,
+				89A0DEC617E15A4A00980812 /* video_next_48.png */,
 				89A0DEAE17E1521F00980812 /* bg_white.png */,
 				89A0DEAF17E1521F00980812 /* bg_white@2x.png */,
 				89A0DEB017E1521F00980812 /* btn_back.png */,
@@ -376,6 +396,11 @@
 				89A0DEC317E1521F00980812 /* video_pause_48.png in Resources */,
 				89A0DEC417E1521F00980812 /* video_previous_48.png in Resources */,
 				89A0DEC517E1521F00980812 /* video_rec_64.png in Resources */,
+				89A0DEC717E15A4A00980812 /* video_next_48.png in Resources */,
+				89A0DECA17E15F4300980812 /* help_64.png in Resources */,
+				89A0DECB17E15F4300980812 /* video_play_64.png in Resources */,
+				89A0DED117E1919700980812 /* button.png in Resources */,
+				89A0DED317E199A100980812 /* button2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +426,7 @@
 				89A0DE8917E0839100980812 /* ISMovieEncodeViewController.m in Sources */,
 				89A0DE8B17E0839100980812 /* ISReplayCollectionViewCell.m in Sources */,
 				89A0DE8C17E0839100980812 /* ISReplayCollectionViewController.m in Sources */,
+				89A0DECE17E15FE200980812 /* ISCheckMotionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

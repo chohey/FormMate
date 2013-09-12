@@ -114,17 +114,10 @@
 {
     //self.collectionView.allowsMultipleSelection = YES;
     NSString* identifier = @"ReplayCell";
-    
-    
-    
     ISReplayCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
 
-    
-    
     if (!cell) {
         NSLog(@"Not exist");
-    }else{
-        NSLog(@"Cell exist:%d",indexPath.row);
     }
     
     ALAsset *asset = [self.photos objectAtIndex:indexPath.row];
@@ -140,11 +133,9 @@
     } else {
         NSLog(@"not found");
         [cell.replayImageView setImage:nil];
-    }
-    
-    //    cell.movieImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.jpg"]];
+    }    
     cell.label.text = @"　";
-    // cell.cellBackgroundView.backgroundColor = [UIColor orangeColor];
+
     return cell;
 }
 
@@ -162,48 +153,22 @@
     ISReplayCollectionViewCell *cell = (ISReplayCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:cellindex];
     
            
-        NSLog(@"else");
-        cell.selected = YES;
-        cell.cellBackgroundView.backgroundColor = [UIColor blueColor];
-        [selectedMovies addObject:@"1"];
+    NSLog(@"else");
+    cell.selected = YES;
+    cell.cellBackgroundView.backgroundColor = [UIColor blueColor];
+    [selectedMovies addObject:@"1"];
     
-    /*
-        if ([selectedMovies count] == 2) {
-            ISMovieCollectionCellView *cell = (ISMovieCollectionCellView *)[self.collectionView cellForItemAtIndexPath:indexPath];
-            NSIndexPath *nextPath = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:indexPath.section];
-            ISMovieCollectionCellView *nextCell = (ISMovieCollectionCellView *)[self.collectionView cellForItemAtIndexPath:nextPath];
-            NSArray *urlArray = @[cell.url, nextCell.url];
-            
-            [self performSegueWithIdentifier:@"pushToAVPlayerView" sender:urlArray];
-            //            [self performSegueWithIdentifier:@"pushToAVPlayerView" sender:cell.url];
-            
-     
-     }
-     */
     NSString *selectmsg = @"この動画を重ねますか？";
     UIAlertView *alert;
     alert = [[UIAlertView alloc] initWithTitle:@"処理を選択" message:selectmsg delegate:self cancelButtonTitle:@"キャンセル" otherButtonTitles:@"重ねる", nil];
     [alert addButtonWithTitle:@"再生"];
     [alert show];
     
-    /*
-    alert = [[UIAlertView alloc] init];
-    alert.delegate = self;
-    alert.title = @"確認";
-    alert.message = selectmsg;
-    [alert addButtonWithTitle:@"重ねる"];
-    [alert addButtonWithTitle:@"動画を確認"];
-    [alert addButtonWithTitle:@"キャンセル"];
-    [alert show];
-    */
-    
 }
 
 
 -(void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)buttonIndex {
     ISReplayCollectionViewCell *cell = (ISReplayCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:cellindex];
-
-    
     
     switch (buttonIndex) {
         case 0:
@@ -233,9 +198,6 @@
         case 2:
             //3番目のボタンが押されたときのアクション
             NSLog(@"3番目");
-
-
-                       //self.view.backgroundColor = [UIColor redColor];
             NSLog(@"decell: %@",cell.url);
             
             //[self performSegueWithIdentifier:@"pushToFullPlayView" sender:cell.url];
@@ -256,29 +218,8 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    //    if([segue.identifier isEqualToString:@"pushToFullPlayView"]) {
-    //
-    //        ISFullPlayViewController *fv = (ISFullPlayViewController *)[segue destinationViewController];
-    //        fv.url = sender;
-    //        NSLog(@"################\nurl:%@",sender);
-    //    }
-//    if([segue.identifier isEqualToString:@"pushToAVPlayerView"]) {
-//        ISAVPlayerViewController *av = (ISAVPlayerViewController *)[segue destinationViewController];
-//        //        av.url = sender;
-//        NSURL *url = [sender objectAtIndex:0];
-//        av.url = url;
-//        url = [sender objectAtIndex:1];
-//        av.urlSecond = url;
-//        NSLog(@"起動しました");
-//    
-//    
-//    }
+
 }
-
-
-
-
-
 
 
 - (void)viewDidUnload {
