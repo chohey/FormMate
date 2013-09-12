@@ -12,7 +12,7 @@
 #import "ISAVPlayerView.h"
 #import "ISAVPlayerSecondView.h"
 
-@interface ISCheckMotionViewController : UIViewController
+@interface ISCheckMotionViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet ISAVPlayerView *videoPlayerView;
 @property (strong, nonatomic) IBOutlet ISAVPlayerSecondView *videoPlayerSecondView;
@@ -29,7 +29,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *playBtn;
 @property (nonatomic, assign) BOOL isPlaying;
 - (IBAction)pushPlayBtn:(id)sender;
+- (IBAction)pushSaveBtn:(id)sender;
 
 @property (strong, nonatomic) NSArray *playStartPointArr;
+@property (strong, nonatomic) NSMutableString *titleStr;
 
 @end
