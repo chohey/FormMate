@@ -16,6 +16,8 @@
     NSArray *processingMovies;
     BOOL processingEnabled;
     NSMutableArray *selectedMovies;
+    NSMutableArray *selectedMoviesIndex;
+    
 }
 
 
@@ -26,6 +28,7 @@
 
 
 @synthesize photos = _photos;
+
 
 + (ALAssetsLibrary *)defaultAssetsLibrary {
     static dispatch_once_t pred = 0;
@@ -56,7 +59,7 @@
     
     //これは複数選択をするためのもの
     selectedMovies = [[NSMutableArray alloc] init];
-    
+    selectedMoviesIndex = [[NSMutableArray alloc] init];
     
 }
 
@@ -134,6 +137,21 @@
         [cell.movieImageView setImage:nil];
     }
     
+    
+    
+    //for(int i=0;i<self.photos.count;i++){
+    NSLog(@"selectedMovieIndex %@", selectedMoviesIndex);
+    for (NSIndexPath *ip in selectedMoviesIndex) {
+        if ([ip isEqual:indexPath]) {
+            NSLog(@"selected indexpath");
+            cell.cellBackgroundView.backgroundColor = [UIColor orangeColor];
+            break;
+        }
+        else {
+             NSLog(@"unselected indexpath");
+            cell.cellBackgroundView.backgroundColor = [UIColor whiteColor];
+        }
+    }
     cell.movieNameLabel.text = @"　";
     return cell;
 }
@@ -156,13 +174,23 @@
 
 - (IBAction)processingButtonTouched:(id)sender{
     //画像のバックグラウンドをかえる
-    if (processingEnabled) {
+    //[self.processingbutton setTitle:@"編集中"];
+    UIColor *color = [UIColor blueColor];
+ //   self.navigationItem.rightBarButtonItem.tintColor = color;
+
+    //[self.processingbutton style:UIBarButtonItemStyleDone];
+    
+    //[self.processingbutton style:UIBarButtonItemStyleDone];
+     self.processingbutton.style = UIBarButtonItemStyleDone;
+     if (processingEnabled) {
         [self refreshSelectedCell];
+   // self.processingbutton.style = UIBarButtonItemStyleDone;
+    
     }
     
     processingEnabled = !processingEnabled;
     self.collectionView.allowsMultipleSelection = processingEnabled;
-    
+   // self.processingbutton.style = UIBarButtonItemStyleDone;
     if (!processingEnabled) {
         
     }
@@ -205,7 +233,10 @@
         NSLog(@"else");
         cell.selected = YES;
         cell.cellBackgroundView.backgroundColor = [UIColor orangeColor];
+       // [selectedMoviesIndex addObject:]
         [selectedMovies addObject:cell.url];
+        [selectedMoviesIndex addObject:indexPath];
+        NSLog(@"indexpathを書かせる%@",indexPath);
         if ([selectedMovies count] >= 2) {
 //            ISMovieCollectionCellView *cell = (ISMovieCollectionCellView *)[self.collectionView cellForItemAtIndexPath:indexPath];
 //            NSIndexPath *nextPath = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:indexPath.section];
@@ -213,10 +244,16 @@
 //            NSArray *urlArray = @[cell.url, nextCell.url];
             
         //    [self performSegueWithIdentifier:@"pushToAVPlayerView" sender:selectedMovies];
-            [self performSegueWithIdentifier:@"pushToEditMovieView" sender:selectedMovies];
+          selectedMoviesIndex = nil;
+           // selectedMovies = nil;
             
+            
+            
+            [self performSegueWithIdentifier:@"pushToEditMovieView" sender:selectedMovies];
+            processingEnabled = !processingEnabled;
         }
     }
+
 }
 
 
