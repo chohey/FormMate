@@ -9,6 +9,7 @@
 #import "ISReplayCollectionViewController.h"
 #import "ISFullPlayViewController.h"
 //#import "ISAVPlayerViewController.h"
+#import "SVProgressHUD.h"
 
 @interface ISReplayCollectionViewController ()
 
@@ -56,6 +57,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [SVProgressHUD showWithStatus:@"ロード中..."];
     if([[UINavigationBar class] respondsToSelector:@selector(appearance)]) {
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_top.png"] forBarMetrics:UIBarMetricsDefault];
     }
@@ -88,7 +90,10 @@
 }
 
 
-
+- (void)viewDidAppear:(BOOL)animated
+{
+    [SVProgressHUD dismiss];
+}
 
 
 - (void)didReceiveMemoryWarning
@@ -194,10 +199,9 @@
              選択された動画のURLを渡してあちらの再生画面に飛べるようにしておけば良い。
              */
             
-        
             cell.selected = NO;
             cell.cellBackgroundView.backgroundColor = [UIColor whiteColor];
-            
+            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
             
             break;
             

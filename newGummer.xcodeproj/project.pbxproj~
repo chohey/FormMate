@@ -433,10 +433,11 @@
 				89A0DECB17E15F4300980812 /* video_play_64.png in Resources */,
 				89A0DED117E1919700980812 /* button.png in Resources */,
 				89A0DED317E199A100980812 /* button2.png in Resources */,
-
+<<<<<<< HEAD
 				43BE688B17E1E88E00D5CD5F /* 原案１.png in Resources */,
-
+=======
 				89A0DED917E1DC2600980812 /* SVProgressHUD.bundle in Resources */,
+>>>>>>> 287f8e61f279a0e905a6aa88721d122cf2f616b4
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

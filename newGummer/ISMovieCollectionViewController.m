@@ -10,6 +10,7 @@
 #import "ISFullPlayViewController.h"
 //#import "ISAVPlayerViewController.h"
 #import "ISEditMovieViewController.h"
+#import "SVProgressHUD.h"
 
 
 @interface ISMovieCollectionViewController (){
@@ -64,6 +65,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [SVProgressHUD showWithStatus:@"ロード中..."];
     if([[UINavigationBar class] respondsToSelector:@selector(appearance)]) {
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_top.png"] forBarMetrics:UIBarMetricsDefault];
     }
@@ -75,7 +77,6 @@
     self.navititle.text = @"再生モード"; //好きな文字を入れる
     [self.navititle sizeToFit];
 
-    
     
     [selectedMovies removeAllObjects];
     [self refreshSelectedCell];
@@ -103,6 +104,11 @@
                     failureBlock:^(NSError *error) { NSLog(@"ERROR!!!");}
      ];
     [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [SVProgressHUD dismiss];
 }
 
 - (void)didReceiveMemoryWarning
@@ -141,7 +147,7 @@
         cell.url = url;
         NSLog(@"url: %@", [url absoluteString]);
             
-        [cell.movieImageView setImage:[UIImage imageWithCGImage:[asset thumbnail]]];
+        [cell.movieImageView setImage:[UIImage imageWithCGImage:[asset aspectRatioThumbnail]]];
     } else {
         NSLog(@"not found");
         [cell.movieImageView setImage:nil];
