@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43BE688917E1AD7100D5CD5F /* GapDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BE688817E1AD7000D5CD5F /* GapDictionary.m */; };
+		43BE688B17E1E88E00D5CD5F /* 原案１.png in Resources */ = {isa = PBXBuildFile; fileRef = 43BE688A17E1E88E00D5CD5F /* 原案１.png */; };
 		89A0DDFB17E0813400980812 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFA17E0813400980812 /* UIKit.framework */; };
 		89A0DDFD17E0813400980812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFC17E0813400980812 /* Foundation.framework */; };
 		89A0DDFF17E0813400980812 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFE17E0813400980812 /* CoreGraphics.framework */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		43BE688717E1AD6F00D5CD5F /* GapDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GapDictionary.h; sourceTree = "<group>"; };
 		43BE688817E1AD7000D5CD5F /* GapDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GapDictionary.m; sourceTree = "<group>"; };
+		43BE688A17E1E88E00D5CD5F /* 原案１.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "原案１.png"; sourceTree = "<group>"; };
 		89A0DDF717E0813400980812 /* newGummer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newGummer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A0DDFA17E0813400980812 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		89A0DDFC17E0813400980812 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -173,6 +175,7 @@
 		89A0DDEE17E0813400980812 = {
 			isa = PBXGroup;
 			children = (
+				43BE688A17E1E88E00D5CD5F /* 原案１.png */,
 				89A0DE0017E0813400980812 /* newGummer */,
 				89A0DDF917E0813400980812 /* Frameworks */,
 				89A0DDF817E0813400980812 /* Products */,
@@ -406,6 +409,7 @@
 				89A0DECB17E15F4300980812 /* video_play_64.png in Resources */,
 				89A0DED117E1919700980812 /* button.png in Resources */,
 				89A0DED317E199A100980812 /* button2.png in Resources */,
+				43BE688B17E1E88E00D5CD5F /* 原案１.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
