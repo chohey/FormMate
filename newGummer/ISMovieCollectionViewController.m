@@ -144,7 +144,7 @@
     for (NSIndexPath *ip in selectedMoviesIndex) {
         if ([ip isEqual:indexPath]) {
             NSLog(@"selected indexpath");
-            cell.cellBackgroundView.backgroundColor = [UIColor orangeColor];
+            cell.cellBackgroundView.backgroundColor = [UIColor colorWithRed:0.8f green:0.2f blue:0.2f alpha:1.0];
             break;
         }
         else {
@@ -232,7 +232,7 @@
         
         NSLog(@"else");
         cell.selected = YES;
-        cell.cellBackgroundView.backgroundColor = [UIColor orangeColor];
+        cell.cellBackgroundView.backgroundColor = [UIColor colorWithRed:0.8f green:0.2f blue:0.2f alpha:1.0];
        // [selectedMoviesIndex addObject:]
         [selectedMovies addObject:cell.url];
         [selectedMoviesIndex addObject:indexPath];
