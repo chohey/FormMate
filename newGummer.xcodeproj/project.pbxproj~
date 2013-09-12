@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		43BE688917E1AD7100D5CD5F /* GapDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BE688817E1AD7000D5CD5F /* GapDictionary.m */; };
-		8964DB7717E1EA2900AB8F43 /* segBtnLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7517E1EA2900AB8F43 /* segBtnLeft.png */; };
-		8964DB7817E1EA2900AB8F43 /* segBtnRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7617E1EA2900AB8F43 /* segBtnRight.png */; };
 		43BE688B17E1E88E00D5CD5F /* 原案１.png in Resources */ = {isa = PBXBuildFile; fileRef = 43BE688A17E1E88E00D5CD5F /* 原案１.png */; };
 		89A0DDFB17E0813400980812 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFA17E0813400980812 /* UIKit.framework */; };
 		89A0DDFD17E0813400980812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFC17E0813400980812 /* Foundation.framework */; };
@@ -77,8 +75,6 @@
 /* Begin PBXFileReference section */
 		43BE688717E1AD6F00D5CD5F /* GapDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GapDictionary.h; sourceTree = "<group>"; };
 		43BE688817E1AD7000D5CD5F /* GapDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GapDictionary.m; sourceTree = "<group>"; };
-		8964DB7517E1EA2900AB8F43 /* segBtnLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segBtnLeft.png; sourceTree = "<group>"; };
-		8964DB7617E1EA2900AB8F43 /* segBtnRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segBtnRight.png; sourceTree = "<group>"; };
 		43BE688A17E1E88E00D5CD5F /* 原案１.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "原案１.png"; sourceTree = "<group>"; };
 		89A0DDF717E0813400980812 /* newGummer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newGummer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A0DDFA17E0813400980812 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -297,8 +293,6 @@
 		89A0DEAD17E151FD00980812 /* image */ = {
 			isa = PBXGroup;
 			children = (
-				8964DB7517E1EA2900AB8F43 /* segBtnLeft.png */,
-				8964DB7617E1EA2900AB8F43 /* segBtnRight.png */,
 				89A0DED217E199A000980812 /* button2.png */,
 				89A0DED017E1919500980812 /* button.png */,
 				89A0DEC817E15F4000980812 /* help_64.png */,
@@ -439,12 +433,11 @@
 				89A0DECB17E15F4300980812 /* video_play_64.png in Resources */,
 				89A0DED117E1919700980812 /* button.png in Resources */,
 				89A0DED317E199A100980812 /* button2.png in Resources */,
-
+<<<<<<< HEAD
 				43BE688B17E1E88E00D5CD5F /* 原案１.png in Resources */,
-
+=======
 				89A0DED917E1DC2600980812 /* SVProgressHUD.bundle in Resources */,
-				8964DB7717E1EA2900AB8F43 /* segBtnLeft.png in Resources */,
-				8964DB7817E1EA2900AB8F43 /* segBtnRight.png in Resources */,
+>>>>>>> 287f8e61f279a0e905a6aa88721d122cf2f616b4
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
