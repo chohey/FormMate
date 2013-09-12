@@ -49,15 +49,16 @@
 
 - (void)viewDidLoad
 {
-   
-    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    
+    [self.collectionView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_white.png"]]];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    if([[UINavigationBar class] respondsToSelector:@selector(appearance)]) {
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_top.png"] forBarMetrics:UIBarMetricsDefault];
+    }
     // collect the photos
     NSMutableArray *collector = [[NSMutableArray alloc] initWithCapacity:0];
     ALAssetsLibrary *al = [ISReplayCollectionViewController defaultAssetsLibrary];

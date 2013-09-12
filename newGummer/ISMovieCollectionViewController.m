@@ -52,6 +52,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [self.collectionView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_white.png"]]];
+    
     //これは複数選択をするためのもの
     selectedMovies = [[NSMutableArray alloc] init];
     
@@ -59,6 +61,9 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    if([[UINavigationBar class] respondsToSelector:@selector(appearance)]) {
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_top.png"] forBarMetrics:UIBarMetricsDefault];
+    }
     [selectedMovies removeAllObjects];
     [self refreshSelectedCell];
     // collect the photos
