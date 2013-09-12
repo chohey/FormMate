@@ -626,6 +626,8 @@
         <image name="video_previous_48.png" width="48" height="48"/>
         <image name="video_rec_64.png" width="64" height="64"/>
     </resources>
+<<<<<<< HEAD
+=======
     <classes>
         <class className="ISAVPlayerSecondView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ISAVPlayerSecondView.h"/>
@@ -737,6 +739,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
         </class>
     </classes>
+>>>>>>> ab40b98c6e483ce3dc5867026312249a3d908cef
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -175,7 +175,7 @@
 - (IBAction)processingButtonTouched:(id)sender{
     //画像のバックグラウンドをかえる
     //[self.processingbutton setTitle:@"編集中"];
-    UIColor *color = [UIColor blueColor];
+//    UIColor *color = [UIColor blueColor];
  //   self.navigationItem.rightBarButtonItem.tintColor = color;
 
     //[self.processingbutton style:UIBarButtonItemStyleDone];
