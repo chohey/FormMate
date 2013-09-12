@@ -353,7 +353,11 @@
                         <color key="backgroundColor" red="0.21755420918367352" green="0.21755420918367352" blue="0.21755420918367352" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="mCb-fJ-21V">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="AzX-OI-DEZ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="AzX-OI-DEZ">
+                            <connections>
+                                <segue destination="tRa-Xf-yhF" kind="push" identifier="pushToCheckMotionView" id="ZOo-il-lDK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="currentTimeLabel_1" destination="kO7-Dd-axG" id="DEK-Ex-3Ds"/>
@@ -369,6 +373,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nA-hU-k0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="573" y="1196"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8Kn-os-eWL">
+            <objects>
+                <viewController id="tRa-Xf-yhF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nL1-Gm-uUj">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="l4p-iF-JLx" customClass="ISAVPlayerView">
+                                <rect key="frame" x="31" y="11" width="258" height="158"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="1sW-Z4-N9t" customClass="ISAVPlayerSecondView">
+                                <rect key="frame" x="31" y="177" width="258" height="158"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="kYW-1m-uH6">
+                                <rect key="frame" x="39" y="379" width="242" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="x1A-K7-RMn">
+                                <rect key="frame" x="79" y="343" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="video_previous_48.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rSp-UG-IMS">
+                                <rect key="frame" x="146" y="343" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="video_pause_48.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o3w-D4-fN4">
+                                <rect key="frame" x="216" y="343" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="video_next_48.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21755420919999999" green="0.21755420919999999" blue="0.21755420919999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oDr-rx-gcj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onm-8k-AsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="1195"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="U8X-ZI-vTf">
@@ -523,6 +594,9 @@
     </scenes>
     <resources>
         <image name="greenbutton_off.png" width="75" height="44"/>
+        <image name="video_next_48.png" width="48" height="48"/>
+        <image name="video_pause_48.png" width="48" height="48"/>
+        <image name="video_previous_48.png" width="48" height="48"/>
         <image name="video_rec_64.png" width="64" height="64"/>
     </resources>
     <classes>
@@ -621,6 +695,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
