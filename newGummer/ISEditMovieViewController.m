@@ -93,6 +93,9 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    if([[UINavigationBar class] respondsToSelector:@selector(appearance)]) {
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_top.png"] forBarMetrics:UIBarMetricsDefault];
+    }
     [self setupSeekBar];
 }
 
