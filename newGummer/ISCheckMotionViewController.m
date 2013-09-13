@@ -190,6 +190,8 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
 - (void)playerDidPlayToEndTime:(NSNotification *)notification
 {
 	[self.videoPlayer seekToTime:kCMTimeZero];
+    [self.videoSecondPlayer pause];
+    [self.videoSecondPlayer seekToTime:kCMTimeZero];
     NSLog(@"ファースト停止");
     
     // リピートする場合は再生を実行する
@@ -198,6 +200,8 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
 - (void)playerDidPlayToEndTime_2:(NSNotification *)notification
 {
 	[self.videoSecondPlayer seekToTime:kCMTimeZero];
+    [self.videoPlayer pause];
+    [self.videoPlayer seekToTime:kCMTimeZero];
     NSLog(@"セカンド停止");
     
     // リピートする場合は再生を実行する
@@ -227,8 +231,15 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
  */
 - (void)setupSeekBar
 {
+    double tmp;
+    if (CMTimeGetSeconds(self.playerItem.currentTime) > CMTimeGetSeconds(self.playerSecondItem.currentTime)) {
+        tmp = CMTimeGetSeconds(self.playerItem.currentTime);
+    }else{
+        tmp = CMTimeGetSeconds(self.playerSecondItem.currentTime);
+    }
+    
 	self.movieSlider.minimumValue = 0;
-	self.movieSlider.maximumValue = CMTimeGetSeconds( self.playerItem.duration );
+	self.movieSlider.maximumValue = CMTimeGetSeconds( self.playerItem.duration ) - tmp;
 	self.movieSlider.value        = 0;
     
 	// 再生時間とシークバー位置を連動させるためのタイマー

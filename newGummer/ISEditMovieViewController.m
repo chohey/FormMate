@@ -221,7 +221,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 - (NSString* )timeToString:(float)value
 {
     const NSInteger time = value;
-    return [NSString stringWithFormat:@"%d.%02d", ( int )( time / 60 ), ( int )( time % 60 )];
+    return [NSString stringWithFormat:@"%d:%02d", ( int )( time / 60 ), ( int )( time % 60 )];
 }
 /**
  * 再生位置スライダーを同期
