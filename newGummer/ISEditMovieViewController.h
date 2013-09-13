@@ -40,6 +40,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *currentTimeLabel_1;
 @property (strong, nonatomic) IBOutlet UILabel *currentTimeLabel_2;
 
-+ (UIColor*) hexToUIColor: (NSString *)hex alpha: (CGFloat)a;
 
 @end
