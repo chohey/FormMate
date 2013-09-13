@@ -13,6 +13,7 @@
 		43BE688F17E2943C00D5CD5F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43BE688E17E2943C00D5CD5F /* Default@2x.png */; };
 		8964DB7717E1EA2900AB8F43 /* segBtnLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7517E1EA2900AB8F43 /* segBtnLeft.png */; };
 		8964DB7817E1EA2900AB8F43 /* segBtnRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7617E1EA2900AB8F43 /* segBtnRight.png */; };
+		8964DB7B17E1EF5000AB8F43 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7A17E1EF5000AB8F43 /* icon.png */; };
 		89A0DDFB17E0813400980812 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFA17E0813400980812 /* UIKit.framework */; };
 		89A0DDFD17E0813400980812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFC17E0813400980812 /* Foundation.framework */; };
 		89A0DDFF17E0813400980812 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFE17E0813400980812 /* CoreGraphics.framework */; };
@@ -25,7 +26,6 @@
 		89A0DE1417E0813400980812 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE1217E0813400980812 /* MainStoryboard.storyboard */; };
 		89A0DE1717E0813400980812 /* ISViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE1617E0813400980812 /* ISViewController.m */; };
 		89A0DE1F17E0835200980812 /* ichiro.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE1D17E0835200980812 /* ichiro.png */; };
-		89A0DE2017E0835200980812 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE1E17E0835200980812 /* icon.png */; };
 		89A0DE7D17E0839100980812 /* ICETutorialController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE4717E0839000980812 /* ICETutorialController_iPad.xib */; };
 		89A0DE7E17E0839100980812 /* ICETutorialController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE4817E0839000980812 /* ICETutorialController_iPhone.xib */; };
 		89A0DE7F17E0839100980812 /* ICETutorialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE4A17E0839000980812 /* ICETutorialController.m */; };
@@ -37,7 +37,6 @@
 		89A0DE8617E0839100980812 /* ISFullPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5817E0839000980812 /* ISFullPlayViewController.m */; };
 		89A0DE8717E0839100980812 /* ISMovieCollectionCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5A17E0839000980812 /* ISMovieCollectionCellView.m */; };
 		89A0DE8817E0839100980812 /* ISMovieCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5C17E0839100980812 /* ISMovieCollectionViewController.m */; };
-		89A0DE8917E0839100980812 /* ISMovieEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5E17E0839100980812 /* ISMovieEncodeViewController.m */; };
 		89A0DE8B17E0839100980812 /* ISReplayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE6217E0839100980812 /* ISReplayCollectionViewCell.m */; };
 		89A0DE8C17E0839100980812 /* ISReplayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE6417E0839100980812 /* ISReplayCollectionViewController.m */; };
 		89A0DE8E17E0849A00980812 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DE8D17E0849A00980812 /* AVFoundation.framework */; };
@@ -84,6 +83,7 @@
 		43BE688E17E2943C00D5CD5F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8964DB7517E1EA2900AB8F43 /* segBtnLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segBtnLeft.png; sourceTree = "<group>"; };
 		8964DB7617E1EA2900AB8F43 /* segBtnRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segBtnRight.png; sourceTree = "<group>"; };
+		8964DB7A17E1EF5000AB8F43 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		89A0DDF717E0813400980812 /* newGummer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newGummer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A0DDFA17E0813400980812 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		89A0DDFC17E0813400980812 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,7 +101,6 @@
 		89A0DE1517E0813400980812 /* ISViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISViewController.h; sourceTree = "<group>"; };
 		89A0DE1617E0813400980812 /* ISViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISViewController.m; sourceTree = "<group>"; };
 		89A0DE1D17E0835200980812 /* ichiro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ichiro.png; sourceTree = "<group>"; };
-		89A0DE1E17E0835200980812 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		89A0DE4717E0839000980812 /* ICETutorialController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ICETutorialController_iPad.xib; sourceTree = "<group>"; };
 		89A0DE4817E0839000980812 /* ICETutorialController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ICETutorialController_iPhone.xib; sourceTree = "<group>"; };
 		89A0DE4917E0839000980812 /* ICETutorialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICETutorialController.h; sourceTree = "<group>"; };
@@ -122,8 +121,6 @@
 		89A0DE5A17E0839000980812 /* ISMovieCollectionCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMovieCollectionCellView.m; sourceTree = "<group>"; };
 		89A0DE5B17E0839100980812 /* ISMovieCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMovieCollectionViewController.h; sourceTree = "<group>"; };
 		89A0DE5C17E0839100980812 /* ISMovieCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMovieCollectionViewController.m; sourceTree = "<group>"; };
-		89A0DE5D17E0839100980812 /* ISMovieEncodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMovieEncodeViewController.h; sourceTree = "<group>"; };
-		89A0DE5E17E0839100980812 /* ISMovieEncodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMovieEncodeViewController.m; sourceTree = "<group>"; };
 		89A0DE6117E0839100980812 /* ISReplayCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISReplayCollectionViewCell.h; sourceTree = "<group>"; };
 		89A0DE6217E0839100980812 /* ISReplayCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISReplayCollectionViewCell.m; sourceTree = "<group>"; };
 		89A0DE6317E0839100980812 /* ISReplayCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISReplayCollectionViewController.h; sourceTree = "<group>"; };
@@ -185,6 +182,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8964DB7917E1EEDE00AB8F43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43BE688717E1AD6F00D5CD5F /* GapDictionary.h */,
+				43BE688817E1AD7000D5CD5F /* GapDictionary.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		89A0DDEE17E0813400980812 = {
 			isa = PBXGroup;
 			children = (
@@ -223,14 +229,13 @@
 		89A0DE0017E0813400980812 /* newGummer */ = {
 			isa = PBXGroup;
 			children = (
-				89A0DEA117E0922500980812 /* Library */,
 				89A0DE0917E0813400980812 /* ISAppDelegate.h */,
 				89A0DE0A17E0813400980812 /* ISAppDelegate.m */,
-				43BE688717E1AD6F00D5CD5F /* GapDictionary.h */,
-				43BE688817E1AD7000D5CD5F /* GapDictionary.m */,
 				89A0DE1217E0813400980812 /* MainStoryboard.storyboard */,
+				8964DB7917E1EEDE00AB8F43 /* Model */,
 				89A0DEA217E0924600980812 /* View */,
 				89A0DEA317E0925D00980812 /* Controller */,
+				89A0DEA117E0922500980812 /* Library */,
 				89A0DE0117E0813400980812 /* Supporting Files */,
 			);
 			path = newGummer;
@@ -240,8 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				89A0DEAD17E151FD00980812 /* image */,
+				8964DB7A17E1EF5000AB8F43 /* icon.png */,
 				89A0DE1D17E0835200980812 /* ichiro.png */,
-				89A0DE1E17E0835200980812 /* icon.png */,
 				89A0DE0217E0813400980812 /* newGummer-Info.plist */,
 				89A0DE0317E0813400980812 /* InfoPlist.strings */,
 				89A0DE0617E0813400980812 /* main.m */,
@@ -288,8 +293,6 @@
 				89A0DE5817E0839000980812 /* ISFullPlayViewController.m */,
 				89A0DE5B17E0839100980812 /* ISMovieCollectionViewController.h */,
 				89A0DE5C17E0839100980812 /* ISMovieCollectionViewController.m */,
-				89A0DE5D17E0839100980812 /* ISMovieEncodeViewController.h */,
-				89A0DE5E17E0839100980812 /* ISMovieEncodeViewController.m */,
 				89A0DE6317E0839100980812 /* ISReplayCollectionViewController.h */,
 				89A0DE6417E0839100980812 /* ISReplayCollectionViewController.m */,
 				89A0DE5517E0839000980812 /* ISEditMovieViewController.h */,
@@ -416,7 +419,6 @@
 				89A0DE1117E0813400980812 /* Default-568h@2x.png in Resources */,
 				89A0DE1417E0813400980812 /* MainStoryboard.storyboard in Resources */,
 				89A0DE1F17E0835200980812 /* ichiro.png in Resources */,
-				89A0DE2017E0835200980812 /* icon.png in Resources */,
 				89A0DE7D17E0839100980812 /* ICETutorialController_iPad.xib in Resources */,
 				89A0DE7E17E0839100980812 /* ICETutorialController_iPhone.xib in Resources */,
 				89A0DE9C17E0859200980812 /* tutorial_background_00@2x.jpg in Resources */,
@@ -445,12 +447,12 @@
 				89A0DECB17E15F4300980812 /* video_play_64.png in Resources */,
 				89A0DED117E1919700980812 /* button.png in Resources */,
 				89A0DED317E199A100980812 /* button2.png in Resources */,
-				43BE688B17E1E88E00D5CD5F /* 原案１.png in Resources */,
 				89A0DED917E1DC2600980812 /* SVProgressHUD.bundle in Resources */,
 				8964DB7717E1EA2900AB8F43 /* segBtnLeft.png in Resources */,
 				8964DB7817E1EA2900AB8F43 /* segBtnRight.png in Resources */,
 				43BE688D17E2943500D5CD5F /* Default.png in Resources */,
 				43BE688F17E2943C00D5CD5F /* Default@2x.png in Resources */,
+				8964DB7B17E1EF5000AB8F43 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +475,6 @@
 				89A0DE8617E0839100980812 /* ISFullPlayViewController.m in Sources */,
 				89A0DE8717E0839100980812 /* ISMovieCollectionCellView.m in Sources */,
 				89A0DE8817E0839100980812 /* ISMovieCollectionViewController.m in Sources */,
-				89A0DE8917E0839100980812 /* ISMovieEncodeViewController.m in Sources */,
 				89A0DE8B17E0839100980812 /* ISReplayCollectionViewCell.m in Sources */,
 				89A0DE8C17E0839100980812 /* ISReplayCollectionViewController.m in Sources */,
 				89A0DECE17E15FE200980812 /* ISCheckMotionViewController.m in Sources */,
@@ -563,15 +564,15 @@
 		89A0DE1B17E0813400980812 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "905C0579-179D-494E-85EF-4183E76BDFA9";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "905C0579-179D-494E-85EF-4183E76BDFA9";
+				PROVISIONING_PROFILE = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -579,15 +580,15 @@
 		89A0DE1C17E0813400980812 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "905C0579-179D-494E-85EF-4183E76BDFA9";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "905C0579-179D-494E-85EF-4183E76BDFA9";
+				PROVISIONING_PROFILE = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
