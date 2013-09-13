@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		43BE688917E1AD7100D5CD5F /* GapDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BE688817E1AD7000D5CD5F /* GapDictionary.m */; };
+<<<<<<< HEAD
+		43BE688B17E1E88E00D5CD5F /* 原案１.png in Resources */ = {isa = PBXBuildFile; fileRef = 43BE688A17E1E88E00D5CD5F /* 原案１.png */; };
 		43BE688D17E2943500D5CD5F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 43BE688C17E2943500D5CD5F /* Default.png */; };
 		43BE688F17E2943C00D5CD5F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43BE688E17E2943C00D5CD5F /* Default@2x.png */; };
+=======
+>>>>>>> b3d0966de01fcea60524c0c44098e0c1c6863638
 		8964DB7717E1EA2900AB8F43 /* segBtnLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7517E1EA2900AB8F43 /* segBtnLeft.png */; };
 		8964DB7817E1EA2900AB8F43 /* segBtnRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7617E1EA2900AB8F43 /* segBtnRight.png */; };
 		8964DB7B17E1EF5000AB8F43 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7A17E1EF5000AB8F43 /* icon.png */; };
@@ -19,6 +23,8 @@
 		89A0DE0517E0813400980812 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE0317E0813400980812 /* InfoPlist.strings */; };
 		89A0DE0717E0813400980812 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE0617E0813400980812 /* main.m */; };
 		89A0DE0B17E0813400980812 /* ISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE0A17E0813400980812 /* ISAppDelegate.m */; };
+		89A0DE0D17E0813400980812 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE0C17E0813400980812 /* Default.png */; };
+		89A0DE0F17E0813400980812 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE0E17E0813400980812 /* Default@2x.png */; };
 		89A0DE1117E0813400980812 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE1017E0813400980812 /* Default-568h@2x.png */; };
 		89A0DE1417E0813400980812 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A0DE1217E0813400980812 /* MainStoryboard.storyboard */; };
 		89A0DE1717E0813400980812 /* ISViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE1617E0813400980812 /* ISViewController.m */; };
@@ -75,8 +81,12 @@
 /* Begin PBXFileReference section */
 		43BE688717E1AD6F00D5CD5F /* GapDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GapDictionary.h; sourceTree = "<group>"; };
 		43BE688817E1AD7000D5CD5F /* GapDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GapDictionary.m; sourceTree = "<group>"; };
-		43BE688C17E2943500D5CD5F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
-		43BE688E17E2943C00D5CD5F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		43BE688A17E1E88E00D5CD5F /* 原案１.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "原案１.png"; sourceTree = "<group>"; };
+		43BE688C17E2943500D5CD5F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		43BE688E17E2943C00D5CD5F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+=======
+>>>>>>> b3d0966de01fcea60524c0c44098e0c1c6863638
 		8964DB7517E1EA2900AB8F43 /* segBtnLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segBtnLeft.png; sourceTree = "<group>"; };
 		8964DB7617E1EA2900AB8F43 /* segBtnRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segBtnRight.png; sourceTree = "<group>"; };
 		8964DB7A17E1EF5000AB8F43 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -90,6 +100,8 @@
 		89A0DE0817E0813400980812 /* newGummer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "newGummer-Prefix.pch"; sourceTree = "<group>"; };
 		89A0DE0917E0813400980812 /* ISAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISAppDelegate.h; sourceTree = "<group>"; };
 		89A0DE0A17E0813400980812 /* ISAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISAppDelegate.m; sourceTree = "<group>"; };
+		89A0DE0C17E0813400980812 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		89A0DE0E17E0813400980812 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		89A0DE1017E0813400980812 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		89A0DE1317E0813400980812 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		89A0DE1517E0813400980812 /* ISViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISViewController.h; sourceTree = "<group>"; };
@@ -188,6 +200,12 @@
 		89A0DDEE17E0813400980812 = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				43BE688E17E2943C00D5CD5F /* Default@2x.png */,
+				43BE688C17E2943500D5CD5F /* Default.png */,
+				43BE688A17E1E88E00D5CD5F /* 原案１.png */,
+=======
+>>>>>>> b3d0966de01fcea60524c0c44098e0c1c6863638
 				89A0DE0017E0813400980812 /* newGummer */,
 				89A0DDF917E0813400980812 /* Frameworks */,
 				89A0DDF817E0813400980812 /* Products */,
@@ -242,8 +260,8 @@
 				89A0DE0317E0813400980812 /* InfoPlist.strings */,
 				89A0DE0617E0813400980812 /* main.m */,
 				89A0DE0817E0813400980812 /* newGummer-Prefix.pch */,
-				43BE688E17E2943C00D5CD5F /* Default@2x.png */,
-				43BE688C17E2943500D5CD5F /* Default.png */,
+				89A0DE0C17E0813400980812 /* Default.png */,
+				89A0DE0E17E0813400980812 /* Default@2x.png */,
 				89A0DE1017E0813400980812 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
@@ -405,6 +423,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				89A0DE0517E0813400980812 /* InfoPlist.strings in Resources */,
+				89A0DE0D17E0813400980812 /* Default.png in Resources */,
+				89A0DE0F17E0813400980812 /* Default@2x.png in Resources */,
 				89A0DE1117E0813400980812 /* Default-568h@2x.png in Resources */,
 				89A0DE1417E0813400980812 /* MainStoryboard.storyboard in Resources */,
 				89A0DE1F17E0835200980812 /* ichiro.png in Resources */,
@@ -439,9 +459,12 @@
 				89A0DED917E1DC2600980812 /* SVProgressHUD.bundle in Resources */,
 				8964DB7717E1EA2900AB8F43 /* segBtnLeft.png in Resources */,
 				8964DB7817E1EA2900AB8F43 /* segBtnRight.png in Resources */,
+<<<<<<< HEAD
 				43BE688D17E2943500D5CD5F /* Default.png in Resources */,
 				43BE688F17E2943C00D5CD5F /* Default@2x.png in Resources */,
+=======
 				8964DB7B17E1EF5000AB8F43 /* icon.png in Resources */,
+>>>>>>> b3d0966de01fcea60524c0c44098e0c1c6863638
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,15 +576,15 @@
 		89A0DE1B17E0813400980812 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9B161FCE-92CD-4A81-B804-239BFCCE791E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9B161FCE-92CD-4A81-B804-239BFCCE791E";
+				PROVISIONING_PROFILE = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -569,15 +592,15 @@
 		89A0DE1C17E0813400980812 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9B161FCE-92CD-4A81-B804-239BFCCE791E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "266FEA73-A10C-45FC-B366-A2BD60B2FF21";
+				PROVISIONING_PROFILE = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B3F8C192-0050-4CF9-A9F4-3550B590EEB8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

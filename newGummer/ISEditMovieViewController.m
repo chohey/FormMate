@@ -172,47 +172,6 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     // Dispose of any resources that can be recreated.
 }
 
-
-#pragma touch
-
-- (void)selSwipeDownGesture:(UISwipeGestureRecognizer *)sender {
-    NSLog(@"Notice Down Gesture");
-}
-
-- (void)changeSeg:(UISegmentedControl*)seg{
-    if (seg.selectedSegmentIndex == 0) {
-        // 並べて再生
-        CGRect frame = CGRectMake(90, 25-44, 180, (int)(180*1.4));
-        self.videoPlayerView.frame = frame;
-        frame = CGRectMake(90, 225-44, 180, (int)(180*1.4));
-        self.videoPlayerSecondView.frame = frame;
-        // viewを回転
-        self.videoPlayerView.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);  // 90度回転
-        self.videoPlayerSecondView.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
-        
-        self.videoPlayerView.alpha = 1.0;
-        self.videoPlayerSecondView.alpha = 1.0;
-        
-        [self.videoPlayer play];
-        [self.videoSecondPlayer play];
-        
-    }else{
-        // 重ねて再生
-        CGRect frame = CGRectMake(40, 60-44, 240, 360);
-        self.videoPlayerView.frame = frame;
-        self.videoPlayerSecondView.frame = frame;
-        // viewを回転
-        self.videoPlayerView.transform = CGAffineTransformMakeRotation(M_PI * 360 / 180.0);  // 270度回転
-        self.videoPlayerSecondView.transform = CGAffineTransformMakeRotation(M_PI * 360 / 180.0);
-        
-        self.videoPlayerView.alpha = 0.5;
-        self.videoPlayerSecondView.alpha = 0.5;
-        
-        [self.videoPlayer play];
-        [self.videoSecondPlayer play];
-    }
-}
-
 - (void)viewDidUnload {
     [self setVideoPlayerView:nil];
     [self setVideoPlayerSecondView:nil];
@@ -226,7 +185,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 }
 
 /**
- * シークバーを初期化します。
+ * シークバーを初期化
  */
 - (void)setupSeekBar
 {
@@ -265,7 +224,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     return [NSString stringWithFormat:@"%d:%02d", ( int )( time / 60 ), ( int )( time % 60 )];
 }
 /**
- * 再生位置スライダーを同期します。
+ * 再生位置スライダーを同期
  */
 - (void)syncSeekBar
 {
@@ -287,7 +246,6 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 
 - (IBAction)pushCheckBtn:(id)sender {
     // 2つの動画の現在の再生位置とview2つを渡す
-    
     [self performSegueWithIdentifier:@"pushToCheckMotionView" sender:nil];
 }
 
@@ -318,15 +276,5 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     }
 }
 
-+ (UIColor*) hexToUIColor: (NSString *)hex alpha: (CGFloat)a
-{
-    NSScanner *colorScanner = [NSScanner scannerWithString: hex];
-    unsigned int color;
-    [colorScanner scanHexInt: &color];
-    CGFloat r = ((color & 0xFF0000) >> 16) / 255.0f;
-    CGFloat g = ((color & 0x00FF00) >> 8) / 255.0f;
-    CGFloat b =  (color & 0x0000FF) / 255.0f;
-    return [UIColor colorWithRed: r green: g blue: b alpha: a];
-}
 
 @end

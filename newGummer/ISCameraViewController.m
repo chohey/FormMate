@@ -12,7 +12,6 @@
 @interface ISCameraViewController ()
 @property (strong, nonatomic) AVCaptureDeviceInput *videoInput;
 @property (strong, nonatomic) AVCaptureMovieFileOutput *videoOutput;
-//@property (strong, nonatomic) AVCaptureStillImageOutput *stillImageOutput;
 @property (strong, nonatomic) AVCaptureSession *session;
 @property (strong, nonatomic) UIView *previewView;
 @property (strong, nonatomic) UIImageView *imageView;
@@ -23,7 +22,6 @@
 @property (strong, nonatomic) MPMoviePlayerController *videoPlayer;
 @property (strong, nonatomic) MPMoviePlayerController *videoPlayer_2;
 
-//@property (strong, nonatomic) UIButton *dismissBtn, *saveBtn;
 
 @end
 
@@ -47,8 +45,6 @@
     [self setupAVCapture];
     
     [self setLayout];
-    
-    NSLog(@"view will apaer");
 }
 
 - (void)viewDidLoad
@@ -56,39 +52,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-//    [self testPlay];
     self.imageView =nil;
     
     [self setLayout];
-    
-    NSLog(@"view did load");
 
 }
 
 - (void)setLayout
 {
-    // 撮影ボタンを配置したツールバーを生成
-//    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height-44, self.view.bounds.size.width, 44)];
-//    
-//    UIBarButtonItem *takePhotoButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
-//                                                                                     target:self
-//                                                                                     action:@selector(takePhoto:)];
-//    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-//                                                                                  target:self
-//                                                                                  action:@selector(cancel:)];
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-//                                                                               target:self
-//                                                                               action:@selector(addMovie:)];
-//    
-//    // スペーサを生成する
-//    UIBarButtonItem *spacer = [[UIBarButtonItem alloc]
-//                               initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-//                               target:nil action:nil];
-//    
-//    toolbar.items = @[cancelButton,spacer,takePhotoButton, spacer, addButton];
-//    toolbar.translucent = YES;
-//    [self.view addSubview:toolbar];
-    
     // プレビュー用のビューを生成
     self.previewView = [[UIView alloc] initWithFrame:CGRectMake(0,
                                                                 0,
@@ -96,8 +67,6 @@
                                                                 self.view.bounds.size.height)];
 
     [self.view insertSubview:self.previewView belowSubview:self.layoutView];
-    
-    //self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ichiro.png"]];
     
     GapDictionary *dic = [GapDictionary sharedGapDictionary];
     if ([dic.dictionary objectForKey:@"thumbnail"]) {
@@ -184,8 +153,6 @@
     {
         WeAreRecording = YES;
         // ビデオ入力のAVCaptureConnectionを取得
-//        AVCaptureConnection *videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
-    
         AVCaptureConnection *videoConnection = [self.videoOutput connectionWithMediaType:AVMediaTypeVideo];
         if (videoConnection == nil) {
             return;
@@ -201,38 +168,21 @@
             }
         }
     
-        // ビデオ入力から画像を非同期で取得。ブロックで定義されている処理が呼び出され、画像データを引数から取得する
-//        [self.stillImageOutput
-//         captureStillImageAsynchronouslyFromConnection:videoConnection
-//         completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
-//             if (imageDataSampleBuffer == NULL) {
-//                 return;
-//             }
-        
-         // 入力された画像データからJPEGフォーマットとしてデータを取得
-//         NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
-         
-         // JPEGデータからUIImageを作成
-//         UIImage *image = [[UIImage alloc] initWithData:imageData];
-         
-         // アルバムに画像を保存
-//         UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
-        
-             //保存する先のパスを作成
-             NSString *outputPath = [[NSString alloc] initWithFormat:@"%@%@", NSTemporaryDirectory(), @"output.mov"];
-             NSURL *outputURL = [[NSURL alloc] initFileURLWithPath:outputPath];
-             NSFileManager *fileManager = [NSFileManager defaultManager];
-             if ([fileManager fileExistsAtPath:outputPath])
-             {
-                 NSError *error;
-                 if ([fileManager removeItemAtPath:outputPath error:&error] == NO)
-                 {
-                     //上書きは基本できないので、あったら削除しないとダメ
-                 }
-             }
-             //録画開始
+        //保存する先のパスを作成
+        NSString *outputPath = [[NSString alloc] initWithFormat:@"%@%@", NSTemporaryDirectory(), @"output.mov"];
+        NSURL *outputURL = [[NSURL alloc] initFileURLWithPath:outputPath];
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        if ([fileManager fileExistsAtPath:outputPath])
+        {
+            NSError *error;
+            if ([fileManager removeItemAtPath:outputPath error:&error] == NO)
+            {
+                //上書きは基本できないので、あったら削除しないとダメ
+            }
+        }
+        //録画開始
         NSLog(@"録画開始");
-             [self.videoOutput startRecordingToOutputFileURL:outputURL recordingDelegate:self];
+        [self.videoOutput startRecordingToOutputFileURL:outputURL recordingDelegate:self];
         
         [self recBlinker];
         
@@ -261,24 +211,8 @@
         }
         recFlag = !recFlag;
     }
-//    else{
-//        self.recLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 60, 40)];
-//        self.recLabel.text = @"● REC";
-//        self.recLabel.backgroundColor = [UIColor clearColor];
-//        self.recLabel.textColor = [UIColor redColor];
-//        [self.view addSubview:self.recLabel];
-//        
-//        recFlag = YES;
-//    
-//        NSTimer *recBlink = [NSTimer scheduledTimerWithTimeInterval:0.8f target:self selector:@selector(recBlinker) userInfo:nil repeats:YES];
-//        [recBlink fire];
-//    }
 }
 
-//- (void)addMovie:(id)sender
-//{
-//    [self performSegueWithIdentifier:@"modalToCollectionMovieView" sender:self];
-//}
 #pragma mark
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -371,7 +305,6 @@
     [self.recBlink invalidate];
     self.recLabel.text = @"　";
     [self.view insertSubview:self.saveMenuView belowSubview:self.previewView];
-//    self.saveMenuView.backgroundColor = [UIColor whiteColor];
     // 撮影開始
     [self setupAVCapture];
     WeAreRecording = NO;
