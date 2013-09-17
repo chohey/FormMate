@@ -170,7 +170,14 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="● REC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rbO-N3-nKo">
-                                        <rect key="frame" x="249" y="29" width="60" height="27"/>
+                                        <rect key="frame" x="260" y="29" width="60" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oIm-OO-zeB">
+                                        <rect key="frame" x="233" y="29" width="53" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -187,6 +194,7 @@
                         <outlet property="cancelBtn" destination="32c-ws-kja" id="ckX-Y3-lvb"/>
                         <outlet property="layoutView" destination="3pa-Mw-efS" id="Na2-ws-1UV"/>
                         <outlet property="recLabel" destination="rbO-N3-nKo" id="bTn-rH-GuT"/>
+                        <outlet property="recTimeLabel" destination="oIm-OO-zeB" id="QTI-dL-Ugw"/>
                         <outlet property="saveBtn" destination="qHC-ND-aVQ" id="545-1k-rAl"/>
                         <outlet property="saveMenuView" destination="7yv-2M-lsv" id="J5s-vp-uuF"/>
                         <outlet property="takeMovieBtn" destination="WGb-Am-tkR" id="kpt-GB-64z"/>
@@ -678,6 +686,7 @@
                 <relationship kind="outlet" name="cancelBtn" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="layoutView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="recLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recTimeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="saveBtn" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="saveMenuView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="takeMovieBtn" candidateClass="UIButton"/>

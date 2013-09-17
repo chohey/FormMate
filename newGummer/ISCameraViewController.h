@@ -20,12 +20,14 @@
 @interface ISCameraViewController : UIViewController <AVCaptureFileOutputDelegate, AVCaptureFileOutputRecordingDelegate>{
     BOOL WeAreRecording;
     BOOL recFlag;
+    int recCounter;
 }
 @property (strong, nonatomic) IBOutlet UIView *layoutView;
 @property (strong, nonatomic) IBOutlet UIButton *cancelBtn;
 @property (strong, nonatomic) IBOutlet UIButton *takeMovieBtn;
 @property (strong, nonatomic) IBOutlet UIButton *addBtn;
 @property (strong, nonatomic) IBOutlet UILabel *recLabel;
+@property (strong, nonatomic) IBOutlet UILabel *recTimeLabel;
 
 @property (strong, nonatomic) IBOutlet UIView *saveMenuView;
 - (IBAction)pushUndoBtn:(id)sender;

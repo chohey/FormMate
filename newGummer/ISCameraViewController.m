@@ -18,6 +18,7 @@
 
 @property (strong, nonatomic) NSURL *outputURL;
 @property (strong, nonatomic) NSTimer *recBlink;
+@property (strong, nonatomic) NSTimer *recTime;
 
 @property (strong, nonatomic) MPMoviePlayerController *videoPlayer;
 @property (strong, nonatomic) MPMoviePlayerController *videoPlayer_2;
@@ -41,6 +42,7 @@
     
     WeAreRecording = NO;
     self.recLabel.text = @"　";
+    self.recTimeLabel.text = @" ";
     // 撮影開始
     [self setupAVCapture];
     
@@ -94,6 +96,7 @@
     self.takeMovieBtn.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
     self.addBtn.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
     self.recLabel.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
+    self.recTimeLabel.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
     
     self.undoBtn.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
     self.saveBtn.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
@@ -146,71 +149,36 @@
     [self.session startRunning];
 }
 
-- (void)takePhoto:(id)sender
-{
-    NSLog(@"push");
-    if (!WeAreRecording)
-    {
-        WeAreRecording = YES;
-        // ビデオ入力のAVCaptureConnectionを取得
-        AVCaptureConnection *videoConnection = [self.videoOutput connectionWithMediaType:AVMediaTypeVideo];
-        if (videoConnection == nil) {
-            return;
-        }
-        NSLog(@"videoConnection:%@",self.videoOutput.connections);
-        for(AVCaptureConnection *connection in self.videoOutput.connections)
-        {
-            NSLog(@"connection:%@",connection);
-            if(connection.supportsVideoOrientation)
-            {
-                // ホームボタンが右にくる横向きで固定
-                connection.videoOrientation = AVCaptureVideoOrientationLandscapeRight;
-            }
-        }
-    
-        //保存する先のパスを作成
-        NSString *outputPath = [[NSString alloc] initWithFormat:@"%@%@", NSTemporaryDirectory(), @"output.mov"];
-        NSURL *outputURL = [[NSURL alloc] initFileURLWithPath:outputPath];
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        if ([fileManager fileExistsAtPath:outputPath])
-        {
-            NSError *error;
-            if ([fileManager removeItemAtPath:outputPath error:&error] == NO)
-            {
-                //上書きは基本できないので、あったら削除しないとダメ
-            }
-        }
-        //録画開始
-        NSLog(@"録画開始");
-        [self.videoOutput startRecordingToOutputFileURL:outputURL recordingDelegate:self];
-        
-        [self recBlinker];
-        
-    }else{
-        WeAreRecording = NO;
-        NSLog(@"録画終了");
-        [self.videoOutput stopRecording];
-        
-        [self.recLabel removeFromSuperview];
-        
-    }
-}
 - (void)setRecBlinkTimer
 {
     self.recBlink = [NSTimer scheduledTimerWithTimeInterval:0.8f target:self selector:@selector(recBlinker) userInfo:nil repeats:YES];
+    self.recLabel.text = @"● REC";
     [self.recBlink fire];
 }
 
 - (void)recBlinker
 {
     if (self.recLabel) {
-        if (recFlag) {
+        if (!recFlag) {
             self.recLabel.text = @"● REC";
         }else{
             self.recLabel.text = @"　";
         }
         recFlag = !recFlag;
     }
+}
+- (void)setRecTimer
+{
+    self.recTime = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(recTimer) userInfo:nil repeats:YES];
+    [self.recTime fire];
+    recCounter = 0;
+}
+- (void)recTimer
+{
+    if (self.recTimeLabel) {
+        self.recTimeLabel.text = [NSString stringWithFormat:@"00:%02d",recCounter];
+    }
+    recCounter++;
 }
 
 #pragma mark
@@ -226,6 +194,9 @@
 
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error
 {
+    [self.recTime invalidate];
+    self.recTimeLabel.text = @" ";
+    recCounter = 0;
     BOOL recordedSuccessfully = YES;
     if ([error code] != noErr) {
         // 正常に録画されたか確認するために値を取得
@@ -296,6 +267,7 @@
     [self setTakeMovieBtn:nil];
     [self setAddBtn:nil];
     [self setRecLabel:nil];
+    [self setRecTimeLabel:nil];
     [self setLayoutView:nil];
     [super viewDidUnload];
 }
@@ -377,12 +349,14 @@
         [self.videoOutput startRecordingToOutputFileURL:outputURL recordingDelegate:self];
         
         [self setRecBlinkTimer];
+        [self setRecTimer];
         
     }else{
         NSLog(@"録画終了");
         [self.videoOutput stopRecording];
         
         [self.recLabel removeFromSuperview];
+        [self.recTimeLabel removeFromSuperview];
         
     }
 }
