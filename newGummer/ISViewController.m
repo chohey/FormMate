@@ -36,21 +36,21 @@
 
 
 - (IBAction)pushTutorial:(id)sender {
-    ICETutorialPage *layer1 = [[ICETutorialPage alloc] initWithSubTitle:@"動画を撮影"
-                                                            description:@"Champs-Elysées by night"
-                                                            pictureName:@"tutorial_background_00@2x.jpg"];
-    ICETutorialPage *layer2 = [[ICETutorialPage alloc] initWithSubTitle:@"見比べたい2つの動画を選択"
-                                                            description:@"The Eiffel Tower with\n cloudy weather"
-                                                            pictureName:@"tutorial_background_01@2x.jpg"];
-    ICETutorialPage *layer3 = [[ICETutorialPage alloc] initWithSubTitle:@"並べて再生"
-                                                            description:@"An other famous street of Paris"
-                                                            pictureName:@"tutorial_background_02@2x.jpg"];
-    ICETutorialPage *layer4 = [[ICETutorialPage alloc] initWithSubTitle:@"重ねて再生"
-                                                            description:@"The Eiffel Tower with a better weather"
-                                                            pictureName:@"tutorial_background_03@2x.jpg"];
-    ICETutorialPage *layer5 = [[ICETutorialPage alloc] initWithSubTitle:@"Picture 5"
-                                                            description:@"The Louvre's Museum Pyramide"
-                                                            pictureName:@"tutorial_background_04@2x.jpg"];
+    ICETutorialPage *layer1 = [[ICETutorialPage alloc] initWithSubTitle:@""
+                                                            description:@""
+                                                            pictureName:@"Tuto_1.png"];//@"tutorial_background_00@2x.jpg"];
+    ICETutorialPage *layer2 = [[ICETutorialPage alloc] initWithSubTitle:@""
+                                                            description:@""
+                                                            pictureName:@"Tuto_2.png"];//@"tutorial_background_01@2x.jpg"];
+    ICETutorialPage *layer3 = [[ICETutorialPage alloc] initWithSubTitle:@""
+                                                            description:@""
+                                                            pictureName:@"Tuto_3.png"];//@"tutorial_background_02@2x.jpg"];
+    ICETutorialPage *layer4 = [[ICETutorialPage alloc] initWithSubTitle:@""
+                                                            description:@""
+                                                            pictureName:@"Tuto_4.png"];//@"tutorial_background_03@2x.jpg"];
+    ICETutorialPage *layer5 = [[ICETutorialPage alloc] initWithSubTitle:@""
+                                                            description:@""
+                                                            pictureName:@"Tuto_5.png"];//@"tutorial_background_04@2x.jpg"];
     
     // Set the common style for SubTitles and Description (can be overrided on each page).
     ICETutorialLabelStyle *subStyle = [[ICETutorialLabelStyle alloc] init];

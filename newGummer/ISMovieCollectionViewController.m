@@ -11,6 +11,7 @@
 //#import "ISAVPlayerViewController.h"
 #import "ISEditMovieViewController.h"
 #import "SVProgressHUD.h"
+#import <ImageIO/ImageIO.h>
 
 
 @interface ISMovieCollectionViewController (){
@@ -145,6 +146,8 @@
         ALAssetRepresentation *representation = [asset defaultRepresentation];
         NSURL *url = [representation url];
         cell.url = url;
+    
+//        cell.timeLabel.text =
         NSLog(@"url: %@", [url absoluteString]);
             
         [cell.movieImageView setImage:[UIImage imageWithCGImage:[asset thumbnail]]];

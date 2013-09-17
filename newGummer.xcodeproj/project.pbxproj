@@ -10,9 +10,20 @@
 		43BE688917E1AD7100D5CD5F /* GapDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BE688817E1AD7000D5CD5F /* GapDictionary.m */; };
 		43BE688D17E2943500D5CD5F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 43BE688C17E2943500D5CD5F /* Default.png */; };
 		43BE688F17E2943C00D5CD5F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43BE688E17E2943C00D5CD5F /* Default@2x.png */; };
+		8932E16117E8AD4C001B1F41 /* baseball003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8932E16017E8AD4C001B1F41 /* baseball003.jpg */; };
+		8932E16317E8ADD5001B1F41 /* baseball.png in Resources */ = {isa = PBXBuildFile; fileRef = 8932E16217E8ADD5001B1F41 /* baseball.png */; };
 		8964DB7717E1EA2900AB8F43 /* segBtnLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7517E1EA2900AB8F43 /* segBtnLeft.png */; };
 		8964DB7817E1EA2900AB8F43 /* segBtnRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7617E1EA2900AB8F43 /* segBtnRight.png */; };
 		8964DB7B17E1EF5000AB8F43 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7A17E1EF5000AB8F43 /* icon.png */; };
+		8964DB8417E56C8500AB8F43 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8964DB7E17E56C8500AB8F43 /* libTestFlight.a */; };
+		8964DB8517E56C8500AB8F43 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB7F17E56C8500AB8F43 /* README.md */; };
+		8964DB8617E56C8500AB8F43 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB8017E56C8500AB8F43 /* release_notes.md */; };
+		8964DB8817E575CE00AB8F43 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8964DB8717E575CE00AB8F43 /* libz.dylib */; };
+		8964DB8E17E5862500AB8F43 /* Tuto_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB8917E5862400AB8F43 /* Tuto_1.png */; };
+		8964DB8F17E5862500AB8F43 /* Tuto_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB8A17E5862400AB8F43 /* Tuto_2.png */; };
+		8964DB9017E5862500AB8F43 /* Tuto_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB8B17E5862400AB8F43 /* Tuto_3.png */; };
+		8964DB9117E5862500AB8F43 /* Tuto_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB8C17E5862400AB8F43 /* Tuto_4.png */; };
+		8964DB9217E5862500AB8F43 /* Tuto_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8964DB8D17E5862400AB8F43 /* Tuto_5.png */; };
 		89A0DDFB17E0813400980812 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFA17E0813400980812 /* UIKit.framework */; };
 		89A0DDFD17E0813400980812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFC17E0813400980812 /* Foundation.framework */; };
 		89A0DDFF17E0813400980812 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A0DDFE17E0813400980812 /* CoreGraphics.framework */; };
@@ -77,9 +88,23 @@
 		43BE688817E1AD7000D5CD5F /* GapDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GapDictionary.m; sourceTree = "<group>"; };
 		43BE688C17E2943500D5CD5F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		43BE688E17E2943C00D5CD5F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		8932E16017E8AD4C001B1F41 /* baseball003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baseball003.jpg; sourceTree = "<group>"; };
+		8932E16217E8ADD5001B1F41 /* baseball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseball.png; sourceTree = "<group>"; };
 		8964DB7517E1EA2900AB8F43 /* segBtnLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segBtnLeft.png; sourceTree = "<group>"; };
 		8964DB7617E1EA2900AB8F43 /* segBtnRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segBtnRight.png; sourceTree = "<group>"; };
 		8964DB7A17E1EF5000AB8F43 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		8964DB7E17E56C8500AB8F43 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		8964DB7F17E56C8500AB8F43 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		8964DB8017E56C8500AB8F43 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		8964DB8117E56C8500AB8F43 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		8964DB8217E56C8500AB8F43 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		8964DB8317E56C8500AB8F43 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		8964DB8717E575CE00AB8F43 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		8964DB8917E5862400AB8F43 /* Tuto_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tuto_1.png; sourceTree = "<group>"; };
+		8964DB8A17E5862400AB8F43 /* Tuto_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tuto_2.png; sourceTree = "<group>"; };
+		8964DB8B17E5862400AB8F43 /* Tuto_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tuto_3.png; sourceTree = "<group>"; };
+		8964DB8C17E5862400AB8F43 /* Tuto_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tuto_4.png; sourceTree = "<group>"; };
+		8964DB8D17E5862400AB8F43 /* Tuto_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tuto_5.png; sourceTree = "<group>"; };
 		89A0DDF717E0813400980812 /* newGummer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newGummer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A0DDFA17E0813400980812 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		89A0DDFC17E0813400980812 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -162,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8964DB8817E575CE00AB8F43 /* libz.dylib in Frameworks */,
 				89A0DE9617E084C300980812 /* CoreVideo.framework in Frameworks */,
 				89A0DE9417E084BB00980812 /* CoreMedia.framework in Frameworks */,
 				89A0DE9217E084B400980812 /* AssetsLibrary.framework in Frameworks */,
@@ -170,6 +196,7 @@
 				89A0DDFB17E0813400980812 /* UIKit.framework in Frameworks */,
 				89A0DDFD17E0813400980812 /* Foundation.framework in Frameworks */,
 				89A0DDFF17E0813400980812 /* CoreGraphics.framework in Frameworks */,
+				8964DB8417E56C8500AB8F43 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,9 +212,23 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		8964DB7D17E56C8500AB8F43 /* TestFlightSDK2.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				8964DB7E17E56C8500AB8F43 /* libTestFlight.a */,
+				8964DB7F17E56C8500AB8F43 /* README.md */,
+				8964DB8017E56C8500AB8F43 /* release_notes.md */,
+				8964DB8117E56C8500AB8F43 /* TestFlight+AsyncLogging.h */,
+				8964DB8217E56C8500AB8F43 /* TestFlight+ManualSessions.h */,
+				8964DB8317E56C8500AB8F43 /* TestFlight.h */,
+			);
+			path = TestFlightSDK2.0.0;
+			sourceTree = "<group>";
+		};
 		89A0DDEE17E0813400980812 = {
 			isa = PBXGroup;
 			children = (
+				8964DB8717E575CE00AB8F43 /* libz.dylib */,
 				89A0DE0017E0813400980812 /* newGummer */,
 				89A0DDF917E0813400980812 /* Frameworks */,
 				89A0DDF817E0813400980812 /* Products */,
@@ -235,6 +276,7 @@
 		89A0DE0117E0813400980812 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8964DB7D17E56C8500AB8F43 /* TestFlightSDK2.0.0 */,
 				89A0DEAD17E151FD00980812 /* image */,
 				8964DB7A17E1EF5000AB8F43 /* icon.png */,
 				89A0DE1D17E0835200980812 /* ichiro.png */,
@@ -297,6 +339,8 @@
 		89A0DEAD17E151FD00980812 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				8932E16217E8ADD5001B1F41 /* baseball.png */,
+				8932E16017E8AD4C001B1F41 /* baseball003.jpg */,
 				8964DB7517E1EA2900AB8F43 /* segBtnLeft.png */,
 				8964DB7617E1EA2900AB8F43 /* segBtnRight.png */,
 				89A0DED217E199A000980812 /* button2.png */,
@@ -327,6 +371,11 @@
 		89A0DED417E1DBF500980812 /* ICETutorial */ = {
 			isa = PBXGroup;
 			children = (
+				8964DB8917E5862400AB8F43 /* Tuto_1.png */,
+				8964DB8A17E5862400AB8F43 /* Tuto_2.png */,
+				8964DB8B17E5862400AB8F43 /* Tuto_3.png */,
+				8964DB8C17E5862400AB8F43 /* Tuto_4.png */,
+				8964DB8D17E5862400AB8F43 /* Tuto_5.png */,
 				89A0DE9717E0859100980812 /* tutorial_background_00@2x.jpg */,
 				89A0DE9817E0859100980812 /* tutorial_background_01@2x.jpg */,
 				89A0DE9917E0859200980812 /* tutorial_background_02@2x.jpg */,
@@ -442,6 +491,15 @@
 				43BE688D17E2943500D5CD5F /* Default.png in Resources */,
 				43BE688F17E2943C00D5CD5F /* Default@2x.png in Resources */,
 				8964DB7B17E1EF5000AB8F43 /* icon.png in Resources */,
+				8964DB8517E56C8500AB8F43 /* README.md in Resources */,
+				8964DB8617E56C8500AB8F43 /* release_notes.md in Resources */,
+				8964DB8E17E5862500AB8F43 /* Tuto_1.png in Resources */,
+				8964DB8F17E5862500AB8F43 /* Tuto_2.png in Resources */,
+				8964DB9017E5862500AB8F43 /* Tuto_3.png in Resources */,
+				8964DB9117E5862500AB8F43 /* Tuto_4.png in Resources */,
+				8964DB9217E5862500AB8F43 /* Tuto_5.png in Resources */,
+				8932E16117E8AD4C001B1F41 /* baseball003.jpg in Resources */,
+				8932E16317E8ADD5001B1F41 /* baseball.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,15 +611,19 @@
 		89A0DE1B17E0813400980812 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/newGummer/TestFlightSDK2.0.0\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "905C0579-179D-494E-85EF-4183E76BDFA9";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "905C0579-179D-494E-85EF-4183E76BDFA9";
+				PROVISIONING_PROFILE = "ECC2B616-3962-4DAE-86C0-2D7B10331E08";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ECC2B616-3962-4DAE-86C0-2D7B10331E08";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -569,15 +631,19 @@
 		89A0DE1C17E0813400980812 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ippei Otsuka (JZW5DJYPD8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiro Tanaka (A37D7ECK25)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "newGummer/newGummer-Prefix.pch";
 				INFOPLIST_FILE = "newGummer/newGummer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/newGummer/TestFlightSDK2.0.0\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "905C0579-179D-494E-85EF-4183E76BDFA9";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "905C0579-179D-494E-85EF-4183E76BDFA9";
+				PROVISIONING_PROFILE = "ECC2B616-3962-4DAE-86C0-2D7B10331E08";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ECC2B616-3962-4DAE-86C0-2D7B10331E08";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

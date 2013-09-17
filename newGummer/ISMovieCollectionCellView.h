@@ -14,4 +14,5 @@
 @property (strong, nonatomic) IBOutlet UIImageView *movieImageView;
 @property (strong, nonatomic) IBOutlet UILabel *movieNameLabel;
 @property (strong, nonatomic) NSURL *url;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @end

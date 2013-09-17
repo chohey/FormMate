@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Ux0-ku-eGf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Ux0-ku-eGf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -12,10 +12,14 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="osq-L6-b5E">
-                                <rect key="frame" x="125" y="127" width="70" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Default@2x.png" id="ebg-lD-vRr">
+                                <rect key="frame" x="0.0" y="-50" width="320" height="466"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="osq-L6-b5E">
+                                <rect key="frame" x="68" y="66" width="70" height="70"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="カメラ">
+                                <state key="normal" title="カメラ" backgroundImage="baseball.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,10 +31,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mVz-oH-fNb">
-                                <rect key="frame" x="126" y="228" width="70" height="44"/>
+                                <rect key="frame" x="68" y="190" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="データ">
+                                <state key="normal" title="データ" backgroundImage="baseball.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -42,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6FQ-iQ-pLQ">
-                                <rect key="frame" x="109" y="353" width="106" height="44"/>
+                                <rect key="frame" x="107" y="377" width="106" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="チュートリアル">
@@ -269,6 +273,13 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="▶ 00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I0Y-LG-wtK">
+                                            <rect key="frame" x="10" y="79" width="80" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -277,6 +288,7 @@
                                     <outlet property="cellBackgroundView" destination="X7m-c7-ISJ" id="PuQ-8s-rV8"/>
                                     <outlet property="movieImageView" destination="ZE7-8H-s7T" id="zLV-yF-FdD"/>
                                     <outlet property="movieNameLabel" destination="VoU-DA-5GN" id="Dob-2c-JP7"/>
+                                    <outlet property="timeLabel" destination="I0Y-LG-wtK" id="9BL-qi-tPY"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -572,9 +584,16 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cxm-yd-Vx5">
-                                            <rect key="frame" x="0.0" y="89" width="96" height="21"/>
+                                            <rect key="frame" x="0.0" y="83" width="96" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="▶" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S9v-Ez-etB">
+                                            <rect key="frame" x="2" y="83" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -626,6 +645,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Default@2x.png" width="640" height="960"/>
+        <image name="baseball.png" width="400" height="400"/>
         <image name="button2.png" width="512" height="512"/>
         <image name="video_next_48.png" width="48" height="48"/>
         <image name="video_play_64.png" width="64" height="64"/>
@@ -695,6 +716,7 @@
                 <relationship kind="outlet" name="cellBackgroundView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="movieImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="movieNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="ISMovieCollectionViewController" superclassName="UICollectionViewController">
@@ -705,9 +727,6 @@
                 <relationship kind="outlet" name="processingBtn" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="processingbutton" candidateClass="UIBarButtonItem"/>
             </relationships>
-        </class>
-        <class className="ISMovieEncodeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ISMovieEncodeViewController.h"/>
         </class>
         <class className="ISReplayCollectionViewCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ISReplayCollectionViewCell.h"/>

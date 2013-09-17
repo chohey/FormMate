@@ -7,12 +7,14 @@
 //
 
 #import "ISAppDelegate.h"
+#define TESTFLIGHT_TEAM_TOKEN @"3304453c-3633-4b28-bc72-243985f78540"
 
 @implementation ISAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [TestFlight takeOff:TESTFLIGHT_TEAM_TOKEN];
     
     if([[UIBarButtonItem class] respondsToSelector:@selector(appearance)]) {
         [[UIBarButtonItem appearance] setBackgroundImage:
