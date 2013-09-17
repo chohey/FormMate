@@ -189,20 +189,24 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
  */
 - (void)playerDidPlayToEndTime:(NSNotification *)notification
 {
-	[self.videoPlayer seekToTime:kCMTimeZero];
+	[self.videoPlayer seekToTime:self.timer_1];
     [self.videoSecondPlayer pause];
-    [self.videoSecondPlayer seekToTime:kCMTimeZero];
+    [self.videoSecondPlayer seekToTime:self.timer_2];
     NSLog(@"ファースト停止");
+    self.isPlaying = NO;
+    [self syncPlayButton];
     
     // リピートする場合は再生を実行する
     //[self.videoPlayer play];
 }
 - (void)playerDidPlayToEndTime_2:(NSNotification *)notification
 {
-	[self.videoSecondPlayer seekToTime:kCMTimeZero];
+	[self.videoSecondPlayer seekToTime:self.timer_2];
     [self.videoPlayer pause];
-    [self.videoPlayer seekToTime:kCMTimeZero];
+    [self.videoPlayer seekToTime:self.timer_1];
     NSLog(@"セカンド停止");
+    self.isPlaying = NO;
+    [self syncPlayButton];
     
     // リピートする場合は再生を実行する
     //[self.videoPlayer play];
@@ -301,6 +305,22 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
     //Responderをセット
     [self.text becomeFirstResponder];
     self.text.delegate = self;
+}
+
+- (IBAction)nextFrame:(id)sender {
+    NSLog(@"CurrentTime_1: %f",CMTimeGetSeconds([self.videoPlayer currentTime]));
+    NSLog(@"CurrentTime_2: %f",CMTimeGetSeconds([self.videoSecondPlayer currentTime]));
+    int time_1 = CMTimeGetSeconds([self.videoPlayer currentTime]);
+    int time_2 = CMTimeGetSeconds([self.videoSecondPlayer currentTime]);
+    [self.videoSecondPlayer seekToTime:CMTimeMake((int)((float)time_2+1.0)*600, 600)];
+    [self.videoPlayer seekToTime:CMTimeMake((int)((float)time_1+1.0)*600, 600)];
+}
+
+- (IBAction)previousFrame:(id)sender {
+    int time_1 = CMTimeGetSeconds([self.videoPlayer currentTime]);
+    int time_2 = CMTimeGetSeconds([self.videoSecondPlayer currentTime]);
+    [self.videoSecondPlayer seekToTime:CMTimeMake((int)((float)time_2-1.0)*600, 600)];
+    [self.videoPlayer seekToTime:CMTimeMake((int)((float)time_1-1.0)*600, 600)];
 }
 
 //OKボタンが押されたときのメソッド

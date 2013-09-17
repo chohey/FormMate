@@ -13,11 +13,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Default@2x.png" id="ebg-lD-vRr">
-                                <rect key="frame" x="0.0" y="-50" width="320" height="466"/>
+                                <rect key="frame" x="0.0" y="-60" width="320" height="476"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="osq-L6-b5E">
-                                <rect key="frame" x="68" y="66" width="70" height="70"/>
+                                <rect key="frame" x="68" y="62" width="70" height="70"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="カメラ" backgroundImage="baseball.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mVz-oH-fNb">
-                                <rect key="frame" x="68" y="190" width="70" height="70"/>
+                                <rect key="frame" x="68" y="173" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="データ" backgroundImage="baseball.png">
@@ -273,8 +273,8 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="▶ 00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I0Y-LG-wtK">
-                                            <rect key="frame" x="10" y="79" width="80" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="▶" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I0Y-LG-wtK">
+                                            <rect key="frame" x="2" y="79" width="80" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -436,6 +436,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="previousFrame:" destination="tRa-Xf-yhF" eventType="touchUpInside" id="ZeL-8y-eva"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rSp-UG-IMS">
                                 <rect key="frame" x="146" y="343" width="28" height="28"/>
@@ -463,6 +466,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextFrame:" destination="tRa-Xf-yhF" eventType="touchUpInside" id="XSA-Kp-nwq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1vb-2z-AeB">
                                 <rect key="frame" x="284" y="379" width="37" height="21"/>
@@ -681,6 +687,8 @@
         <class className="ISCheckMotionViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ISCheckMotionViewController.h"/>
             <relationships>
+                <relationship kind="action" name="nextFrame:"/>
+                <relationship kind="action" name="previousFrame:"/>
                 <relationship kind="action" name="pushPlayBtn:"/>
                 <relationship kind="action" name="pushSaveBtn:"/>
                 <relationship kind="outlet" name="currentTimeLabel" candidateClass="UILabel"/>

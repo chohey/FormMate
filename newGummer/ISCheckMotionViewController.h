@@ -30,6 +30,9 @@
 @property (nonatomic, assign) BOOL isPlaying;
 - (IBAction)pushPlayBtn:(id)sender;
 - (IBAction)pushSaveBtn:(id)sender;
+- (IBAction)nextFrame:(id)sender;
+- (IBAction)previousFrame:(id)sender;
+@property (nonatomic, assign) CMTime timer_1, timer_2;
 
 @property (strong, nonatomic) NSArray *playStartPointArr;
 @property (strong, nonatomic) NSMutableString *titleStr;

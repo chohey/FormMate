@@ -267,6 +267,8 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
         ISCheckMotionViewController *cv = (ISCheckMotionViewController *)[segue destinationViewController];
         [self removePlayerTimeObserver];
         [self removeSecondPlayerTimeObserver];
+        cv.timer_1 = self.playerItem.currentTime;
+        cv.timer_2 = self.playerSecondItem.currentTime;
         cv.videoPlayerView = self.videoPlayerView;
         cv.videoPlayerSecondView = self.videoPlayerSecondView;
         cv.videoPlayer = self.videoPlayer;
