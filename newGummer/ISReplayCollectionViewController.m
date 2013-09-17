@@ -8,7 +8,6 @@
 
 #import "ISReplayCollectionViewController.h"
 #import "ISFullPlayViewController.h"
-//#import "ISAVPlayerViewController.h"
 #import "SVProgressHUD.h"
 
 @interface ISReplayCollectionViewController ()

@@ -73,18 +73,6 @@
     [self.videoPlayer prepareToPlay];
     [self.view addSubview:self.videoPlayer.view];
     
-//    self.videoPlayer_2 = [[MPMoviePlayerController alloc] initWithContentURL:[[NSURL alloc] initFileURLWithPath:@"assets-library://asset/asset.mov?id=78939A0A-B120-4977-BC7C-D9FCBB11CAE7&ext=mov"]];
-//    self.videoPlayer_2.controlStyle             = MPMovieControlStyleDefault;
-//    self.videoPlayer_2.scalingMode              = MPMovieScalingModeAspectFit;
-//    self.videoPlayer_2.shouldAutoplay           = YES;
-//    self.videoPlayer_2.view.autoresizingMask    = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//    self.videoPlayer_2.view.autoresizesSubviews = YES;
-//    self.videoPlayer_2.view.frame               = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-//    self.videoPlayer_2.view.alpha               = 0.5;
-//    
-//    [self.videoPlayer_2 prepareToPlay];
-//    [self.view addSubview:self.videoPlayer_2.view];
-    
 }
 
 - (void)finishPreload:(NSNotification *)aNotification {

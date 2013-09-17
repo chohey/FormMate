@@ -192,8 +192,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 	self.movieSlider_1.minimumValue = 0;
 	self.movieSlider_1.maximumValue = CMTimeGetSeconds( self.playerItem.duration );
 	self.movieSlider_1.value        = 0;
-	//[self.movieSlider_1 addTarget:self action:@selector(seekBarValueChanged:) forControlEvents:UIControlEventValueChanged];
-    
+	   
 	// 再生時間とシークバー位置を連動させるためのタイマー
 	const double interval = ( 0.5f * self.movieSlider_1.maximumValue ) / self.movieSlider_1.bounds.size.width;
 	const CMTime time     = CMTimeMakeWithSeconds( interval, NSEC_PER_SEC );

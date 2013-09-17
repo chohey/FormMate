@@ -48,8 +48,6 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
     UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:arr];
     [seg setBackgroundImage:[UIImage imageNamed:@"btn.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
-     //[UIImage imageNamed:@"segBtnLeft.png"] forSegmentAtIndex:0];
-    //[seg setImage:[UIImage imageNamed:@"segBtnRight.png"] forSegmentAtIndex:1];
     seg.segmentedControlStyle = UISegmentedControlStyleBar;
     seg.selectedSegmentIndex = 0;
     [seg addTarget:self action:@selector(changeSeg:) forControlEvents:UIControlEventValueChanged];
@@ -93,7 +91,6 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_top.png"] forBarMetrics:UIBarMetricsDefault];
     }
     // 遷移前に保存した再生位置をセット たぶん向こうで再生すると変わってしまうと思うので
-    //    NSLog(@"seekTime:\n%@",self.timer_1);
     
     self.isPlaying = NO;
     [self setupSeekBar];
@@ -355,21 +352,6 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
     NSLog(@"入力：%@",self.titleStr);
     return YES;
 }
-//- (void)viewDidUnload {
-//    [self setVideoPlayerView:nil];
-//    [self setVideoPlayerSecondView:nil];
-//    [self setCurrentTimeLabel:nil];
-//    [self setDurationLabel:nil];
-//    [self setPlayBtn:nil];
-//    [self setPlayerItem:nil];
-//    [self setPlayerSecondItem:nil];
-//    [self setText:nil];
-//    [self setTitleStr:nil];
-//    [self setVideoPlayer:nil];
-//    [self setVideoPlayerSecondView:nil];
-//    [self setVideoPlayerView:nil];
-//    [self setVideoSecondPlayer:nil];
-//    [super viewDidUnload];
-//}
+
 
 @end

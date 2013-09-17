@@ -11,15 +11,12 @@
 #import "ISMovieCollectionCellView.h"
 
 @interface ISMovieCollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
-//このphotoと言うのは、撮ってきた動画、画像データのことを指す
-
 
 @property (nonatomic, strong) NSArray *photos;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *processingbutton;
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 - (IBAction)processingButtonTouched:(id)sender;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *processingBtn;
-//@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
 
 @property UILabel *navititle;
 
