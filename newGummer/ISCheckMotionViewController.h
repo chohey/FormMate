@@ -12,7 +12,7 @@
 #import "ISAVPlayerView.h"
 #import "ISAVPlayerSecondView.h"
 
-@interface ISCheckMotionViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
+@interface ISCheckMotionViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet ISAVPlayerView *videoPlayerView;
 @property (strong, nonatomic) IBOutlet ISAVPlayerSecondView *videoPlayerSecondView;

@@ -1,0 +1,10 @@
+PODS:
+  - SSGentleAlertView (1.0.1)
+
+DEPENDENCIES:
+  - SSGentleAlertView
+
+SPEC CHECKSUMS:
+  SSGentleAlertView: e0125bbbf78938be5426546d2cde6128936ceef8
+
+COCOAPODS: 0.26.2

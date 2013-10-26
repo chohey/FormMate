@@ -7,6 +7,7 @@
 //
 
 #import "ISCheckMotionViewController.h"
+#import "SSGentleAlertView.h"
 
 //NSString* const kStatusOfCheckKey_1 = @"status_of_check_1";
 //NSString* const kStatusOfCheckKey_2 = @"status_of_check_2";
@@ -284,19 +285,20 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
 
 - (IBAction)pushSaveBtn:(id)sender {
     //表示メッセージを空けたAlertを作成
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"名前を入力"
+    SSGentleAlertView *alert = [[SSGentleAlertView alloc] initWithTitle:@"名前を入力"
                                                     message:@"\n"
                                                    delegate:self
                                           cancelButtonTitle:@"Cancel"
                                           otherButtonTitles:@"OK", nil];
     
-    //Alertに乗せる入力テキストを作成
-    self.text = [[UITextField alloc] initWithFrame:CGRectMake(20.0, 46.0, 245.0, 25.0)];
+    //Alertに乗せる入力テキストを作成 TODO:高さを自動調整
+    self.text = [[UITextField alloc] initWithFrame:CGRectMake(40.0, 212.0, 235.0, 25.0)];
     self.text.backgroundColor=[UIColor whiteColor];
     [alert addSubview:self.text];
 
     //Alertを表示
     [alert show];
+    alert.transform = CGAffineTransformMakeTranslation(0, -70);
 //    [alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
     
     //Responderをセット
@@ -321,7 +323,7 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
 }
 
 //OKボタンが押されたときのメソッド
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+- (void)alertView:(SSGentleAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     //OKボタンの処理（Cancelボタンの処理は標準でAlertを終了する処理が設定されている）
     if (buttonIndex == 1) {
         /*Okボタンの処理*/
@@ -335,7 +337,7 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
 }
 - (void)backRoot
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"保存しました！！"
+    SSGentleAlertView *alert = [[SSGentleAlertView alloc] initWithTitle:@"保存しました！！"
                                                     message:self.titleStr
                                                    delegate:self
                                           cancelButtonTitle:@"OK"

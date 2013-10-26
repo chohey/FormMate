@@ -8,6 +8,7 @@
 
 #import "ISReplayCollectionViewController.h"
 #import "ISFullPlayViewController.h"
+#import "SSGentleAlertView.h"
 #import "SVProgressHUD.h"
 
 @interface ISReplayCollectionViewController ()
@@ -163,15 +164,15 @@
     [selectedMovies addObject:@"1"];
     
     NSString *selectmsg = @"この動画を重ねますか？";
-    UIAlertView *alert;
-    alert = [[UIAlertView alloc] initWithTitle:@"処理を選択" message:selectmsg delegate:self cancelButtonTitle:@"キャンセル" otherButtonTitles:@"重ねる", nil];
+    SSGentleAlertView *alert;
+    alert = [[SSGentleAlertView alloc] initWithTitle:@"処理を選択" message:selectmsg delegate:self cancelButtonTitle:@"キャンセル" otherButtonTitles:@"重ねる", nil];
     [alert addButtonWithTitle:@"再生"];
     [alert show];
     
 }
 
 
--(void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)buttonIndex {
+-(void)alertView:(SSGentleAlertView*)alert clickedButtonAtIndex:(NSInteger)buttonIndex {
     ISReplayCollectionViewCell *cell = (ISReplayCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:cellindex];
 
     GapDictionary *dic = [GapDictionary sharedGapDictionary];
