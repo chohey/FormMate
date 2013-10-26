@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-#import "ISMovieCollectionCellView.h"
+#import "ISMovieCollectionViewCell.h"
 #import "ISAVPlayerView.h"
 #import "ISAVPlayerSecondView.h"
 

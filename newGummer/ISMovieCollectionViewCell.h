@@ -1,5 +1,5 @@
 //
-//  ISMovieCollectionCellView.h
+//  ISMovieCollectionViewCell.h
 //  Gummer
 //
 //  Created by 閑野 伊織 on 13/09/09.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ISMovieCollectionCellView : UICollectionViewCell
+@interface ISMovieCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIView *cellBackgroundView;
 
 @property (strong, nonatomic) IBOutlet UIImageView *movieImageView;

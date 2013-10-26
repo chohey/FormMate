@@ -10,19 +10,9 @@
 #import "ISReplayCollectionViewCell.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
-
-
-
 @interface ISReplayCollectionViewCell : UICollectionViewCell
-
-
-
 @property (strong, nonatomic) IBOutlet UIImageView *replayImageView;
-
 @property (strong, nonatomic) IBOutlet UILabel *label;
-
 @property (weak, nonatomic) IBOutlet UIView *cellBackgroundView;
-
-
 @property (strong, nonatomic) NSURL *url;
 @end

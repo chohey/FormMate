@@ -251,7 +251,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="ViF-Um-pCF" customClass="ISMovieCollectionCellView">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="ViF-Um-pCF" customClass="ISMovieCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -726,15 +726,6 @@
         </class>
         <class className="ISFullPlayViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ISFullPlayViewController.h"/>
-        </class>
-        <class className="ISMovieCollectionCellView" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ISMovieCollectionCellView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="cellBackgroundView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="movieImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="movieNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
-            </relationships>
         </class>
         <class className="ISMovieCollectionViewController" superclassName="UICollectionViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ISMovieCollectionViewController.h"/>

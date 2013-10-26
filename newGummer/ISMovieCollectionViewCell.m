@@ -1,14 +1,14 @@
 //
-//  ISMovieCollectionCellView.m
+//  ISMovieCollectionViewCell.m
 //  Gummer
 //
 //  Created by 閑野 伊織 on 13/09/09.
 //  Copyright (c) 2013年 IPLAB-Kanno. All rights reserved.
 //
 
-#import "ISMovieCollectionCellView.h"
+#import "ISMovieCollectionViewCell.h"
 
-@implementation ISMovieCollectionCellView
+@implementation ISMovieCollectionViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {

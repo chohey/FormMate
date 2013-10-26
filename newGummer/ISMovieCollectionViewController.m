@@ -8,7 +8,6 @@
 
 #import "ISMovieCollectionViewController.h"
 #import "ISFullPlayViewController.h"
-//#import "ISAVPlayerViewController.h"
 #import "ISEditMovieViewController.h"
 #import "SVProgressHUD.h"
 #import <ImageIO/ImageIO.h>
@@ -19,16 +18,11 @@
     BOOL processingEnabled;
     NSMutableArray *selectedMovies;
     NSMutableArray *selectedMoviesIndex;
-    
 }
-
-
 @end
 
 
 @implementation ISMovieCollectionViewController
-
-
 @synthesize photos = _photos;
 
 
@@ -134,7 +128,7 @@
 {
      //self.collectionView.allowsMultipleSelection = YES;
     NSString* identifier = @"movieCell";
-    ISMovieCollectionCellView *cell = [cv dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    ISMovieCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     if (!cell) {
         NSLog(@"Not exist");
     }
@@ -146,9 +140,6 @@
         ALAssetRepresentation *representation = [asset defaultRepresentation];
         NSURL *url = [representation url];
         cell.url = url;
-    
-//        cell.timeLabel.text =
-        NSLog(@"url: %@", [url absoluteString]);
             
         [cell.movieImageView setImage:[UIImage imageWithCGImage:[asset thumbnail]]];
     } else {
@@ -156,9 +147,6 @@
         [cell.movieImageView setImage:nil];
     }
     
-    
-    
-    //for(int i=0;i<self.photos.count;i++){
     NSLog(@"selectedMovieIndex %@", selectedMoviesIndex);
     for (NSIndexPath *ip in selectedMoviesIndex) {
         if ([ip isEqual:indexPath]) {
@@ -220,7 +208,7 @@
     for (int i=0; i<count; i++) {
         NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:i];
         
-        ISMovieCollectionCellView *cell = (ISMovieCollectionCellView *)[self.collectionView cellForItemAtIndexPath:indexPath];
+        ISMovieCollectionViewCell *cell = (ISMovieCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
         
         cell.selected = NO;
         cell.cellBackgroundView.backgroundColor = [UIColor whiteColor];
@@ -237,7 +225,7 @@
 
     NSLog(@"didSelectItemAtIndexPath");
     
-    ISMovieCollectionCellView *cell = (ISMovieCollectionCellView *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    ISMovieCollectionViewCell *cell = (ISMovieCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
     
     if (!processingEnabled) {
 
@@ -280,7 +268,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"diddeSelectItemAtIndexPath");
     
-    ISMovieCollectionCellView *cell = (ISMovieCollectionCellView *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    ISMovieCollectionViewCell *cell = (ISMovieCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
     
     if (!processingEnabled) {
         

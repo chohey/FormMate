@@ -77,7 +77,6 @@
         self.imageView = [[UIImageView alloc] initWithImage:image];
         self.imageView.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0);
         self.imageView.autoresizingMask = 0;
-        NSLog(@"thumbnail");
     }
     
     [self.imageView setFrame:CGRectMake(0,
@@ -104,7 +103,6 @@
 
 - (void)setupAVCapture
 {
-    NSLog(@"キャプチャ");
     NSError *error = nil;
     
     // 入力と出力からキャプチャーセッションを作成

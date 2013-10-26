@@ -43,7 +43,7 @@
 		89A0DE8417E0839100980812 /* ISCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5417E0839000980812 /* ISCameraViewController.m */; };
 		89A0DE8517E0839100980812 /* ISEditMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5617E0839000980812 /* ISEditMovieViewController.m */; };
 		89A0DE8617E0839100980812 /* ISFullPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5817E0839000980812 /* ISFullPlayViewController.m */; };
-		89A0DE8717E0839100980812 /* ISMovieCollectionCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5A17E0839000980812 /* ISMovieCollectionCellView.m */; };
+		89A0DE8717E0839100980812 /* ISMovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5A17E0839000980812 /* ISMovieCollectionViewCell.m */; };
 		89A0DE8817E0839100980812 /* ISMovieCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE5C17E0839100980812 /* ISMovieCollectionViewController.m */; };
 		89A0DE8B17E0839100980812 /* ISReplayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE6217E0839100980812 /* ISReplayCollectionViewCell.m */; };
 		89A0DE8C17E0839100980812 /* ISReplayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A0DE6417E0839100980812 /* ISReplayCollectionViewController.m */; };
@@ -136,8 +136,8 @@
 		89A0DE5617E0839000980812 /* ISEditMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISEditMovieViewController.m; sourceTree = "<group>"; };
 		89A0DE5717E0839000980812 /* ISFullPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISFullPlayViewController.h; sourceTree = "<group>"; };
 		89A0DE5817E0839000980812 /* ISFullPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISFullPlayViewController.m; sourceTree = "<group>"; };
-		89A0DE5917E0839000980812 /* ISMovieCollectionCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMovieCollectionCellView.h; sourceTree = "<group>"; };
-		89A0DE5A17E0839000980812 /* ISMovieCollectionCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMovieCollectionCellView.m; sourceTree = "<group>"; };
+		89A0DE5917E0839000980812 /* ISMovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMovieCollectionViewCell.h; sourceTree = "<group>"; };
+		89A0DE5A17E0839000980812 /* ISMovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMovieCollectionViewCell.m; sourceTree = "<group>"; };
 		89A0DE5B17E0839100980812 /* ISMovieCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISMovieCollectionViewController.h; sourceTree = "<group>"; };
 		89A0DE5C17E0839100980812 /* ISMovieCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMovieCollectionViewController.m; sourceTree = "<group>"; };
 		89A0DE6117E0839100980812 /* ISReplayCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISReplayCollectionViewCell.h; sourceTree = "<group>"; };
@@ -307,8 +307,8 @@
 				89A0DE4E17E0839000980812 /* ISAVPlayerSecondView.m */,
 				89A0DE4F17E0839000980812 /* ISAVPlayerView.h */,
 				89A0DE5017E0839000980812 /* ISAVPlayerView.m */,
-				89A0DE5917E0839000980812 /* ISMovieCollectionCellView.h */,
-				89A0DE5A17E0839000980812 /* ISMovieCollectionCellView.m */,
+				89A0DE5917E0839000980812 /* ISMovieCollectionViewCell.h */,
+				89A0DE5A17E0839000980812 /* ISMovieCollectionViewCell.m */,
 				89A0DE6117E0839100980812 /* ISReplayCollectionViewCell.h */,
 				89A0DE6217E0839100980812 /* ISReplayCollectionViewCell.m */,
 			);
@@ -520,7 +520,7 @@
 				89A0DE8417E0839100980812 /* ISCameraViewController.m in Sources */,
 				89A0DE8517E0839100980812 /* ISEditMovieViewController.m in Sources */,
 				89A0DE8617E0839100980812 /* ISFullPlayViewController.m in Sources */,
-				89A0DE8717E0839100980812 /* ISMovieCollectionCellView.m in Sources */,
+				89A0DE8717E0839100980812 /* ISMovieCollectionViewCell.m in Sources */,
 				89A0DE8817E0839100980812 /* ISMovieCollectionViewController.m in Sources */,
 				89A0DE8B17E0839100980812 /* ISReplayCollectionViewCell.m in Sources */,
 				89A0DE8C17E0839100980812 /* ISReplayCollectionViewController.m in Sources */,

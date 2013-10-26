@@ -53,14 +53,12 @@
     NSLog(@"query:%@",[self.url query]);
     
     NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:@"/var/mobile/Media/Photos/DCIM/IMG_0011.MOV"];
-//    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:@"file://localhost/private/var/mobile/Applications/7390562D-10B1-48A5-BB89-B1803B793CEC"];
     [self screenLayout:fileURL];
 }
 
 
 - (void)screenLayout:(NSURL *)url
 {
-    // file://localhost/private/var/mobile/Applications/25FC58E1-4946-46FA-BDF1-C264EA1EC6AC/tmp/output.mov
     self.videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
     self.videoPlayer.controlStyle             = MPMovieControlStyleDefault;
     self.videoPlayer.scalingMode              = MPMovieScalingModeAspectFit;
@@ -89,9 +87,6 @@
                                                   object:player];
     [player stop];
 }
-
-
-
 
 
 @end

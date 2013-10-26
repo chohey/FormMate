@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-#import "ISMovieCollectionCellView.h"
+#import "ISMovieCollectionViewCell.h"
 
 @interface ISMovieCollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
