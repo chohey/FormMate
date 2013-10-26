@@ -12,6 +12,7 @@
 @interface ISViewController : UIViewController{
     UIImageView *imageView;
 }
+@property (strong, nonatomic) IBOutlet UIImageView *backImageView;
 
 @property (nonatomic, strong)ICETutorialController *tc;
 

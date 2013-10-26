@@ -7,6 +7,7 @@
 //
 
 #import "ISCameraViewController.h"
+#import "SVProgressHUD.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface ISCameraViewController ()
@@ -360,6 +361,7 @@
 }
 
 - (IBAction)pushAddBtn:(id)sender {
+    [SVProgressHUD showWithStatus:@"ロード中..."];
     //[self performSegueWithIdentifier:@"modalToCollectionMovieView" sender:self];
 }
 
