@@ -180,26 +180,16 @@
 
 
 - (IBAction)processingButtonTouched:(id)sender{
-    //画像のバックグラウンドをかえる
-    //[self.processingbutton setTitle:@"編集中"];
-//    UIColor *color = [UIColor blueColor];
- //   self.navigationItem.rightBarButtonItem.tintColor = color;
-
-    //[self.processingbutton style:UIBarButtonItemStyleDone];
-    
-    //[self.processingbutton style:UIBarButtonItemStyleDone];
      self.processingbutton.style = UIBarButtonItemStyleDone;
      if (processingEnabled) {
         [self refreshSelectedCell];
-   // self.processingbutton.style = UIBarButtonItemStyleDone;
-     self.navititle.text = @"再生モード"; //好きな文字を入れる
+     self.navititle.text = @"再生モード";
     }
     
     processingEnabled = !processingEnabled;
     self.collectionView.allowsMultipleSelection = processingEnabled;
-   // self.processingbutton.style = UIBarButtonItemStyleDone;
     if (processingEnabled) {
-         self.navititle.text = @"編集モード"; //好きな文字を入れる
+         self.navititle.text = @"編集モード";
     }
 
 }
@@ -236,31 +226,17 @@
         [self.navigationController pushViewController:ifpvc animated:YES];
     }
     else{
-        
-        NSLog(@"else");
         cell.selected = YES;
         cell.cellBackgroundView.backgroundColor = [UIColor colorWithRed:0.8f green:0.2f blue:0.2f alpha:1.0];
-       // [selectedMoviesIndex addObject:]
         [selectedMovies addObject:cell.url];
         [selectedMoviesIndex addObject:indexPath];
         NSLog(@"indexpathを書かせる%@",indexPath);
         if ([selectedMovies count] >= 2) {
-//            ISMovieCollectionCellView *cell = (ISMovieCollectionCellView *)[self.collectionView cellForItemAtIndexPath:indexPath];
-//            NSIndexPath *nextPath = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:indexPath.section];
-//            ISMovieCollectionCellView *nextCell = (ISMovieCollectionCellView *)[self.collectionView cellForItemAtIndexPath:nextPath];
-//            NSArray *urlArray = @[cell.url, nextCell.url];
-            
-        //    [self performSegueWithIdentifier:@"pushToAVPlayerView" sender:selectedMovies];
-          selectedMoviesIndex = nil;
-           // selectedMovies = nil;
-            
-            
-            
+            selectedMoviesIndex = nil;
             [self performSegueWithIdentifier:@"pushToEditMovieView" sender:selectedMovies];
             processingEnabled = !processingEnabled;
         }
     }
-
 }
 
 
@@ -298,19 +274,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    if([segue.identifier isEqualToString:@"pushToFullPlayView"]) {
-//        
-//        ISFullPlayViewController *fv = (ISFullPlayViewController *)[segue destinationViewController];
-//        fv.url = sender;
-//        NSLog(@"################\nurl:%@",sender);
-//    }
-//    if([segue.identifier isEqualToString:@"pushToAVPlayerView"]) {
-//        ISAVPlayerViewController *av = (ISAVPlayerViewController *)[segue destinationViewController];
-//        NSURL *url = [sender objectAtIndex:0];
-//        av.url = url;
-//        url = [sender objectAtIndex:1];
-//        av.urlSecond = url;
-//    }
     if([segue.identifier isEqualToString:@"pushToEditMovieView"]) {
         ISEditMovieViewController *ev = (ISEditMovieViewController *)[segue destinationViewController];
         NSURL *url = [sender objectAtIndex:0];
@@ -319,7 +282,6 @@
         ev.urlSecond = url;
     }
 }
-
 
 - (void)viewDidUnload {
     [self setProcessingBtn:nil];

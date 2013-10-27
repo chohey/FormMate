@@ -12,8 +12,13 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Default@2x.png" id="ebg-lD-vRr">
-                                <rect key="frame" x="0.0" y="-60" width="320" height="476"/>
+                            <view contentMode="scaleToFill" id="rSn-Gt-JsH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="backImage.png" id="ebg-lD-vRr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="osq-L6-b5E">
@@ -63,9 +68,33 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nbC-VM-ykp"/>
+                    <navigationItem key="navigationItem" id="nbC-VM-ykp">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="2Hc-qn-bd8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Fs-n3-Wo2">
+                                <rect key="frame" x="282" y="5" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="gear_48.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushCustomBtn:" destination="2" eventType="touchUpInside" id="CX3-XV-zSQ"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="pushCustomBtn:" destination="2" id="SNc-35-8DN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backImageView" destination="ebg-lD-vRr" id="TjT-O0-ehX"/>
+                        <outlet property="cameraBtn" destination="osq-L6-b5E" id="Fvo-bg-a1l"/>
+                        <outlet property="dataBtn" destination="mVz-oH-fNb" id="1Ob-jh-mhT"/>
+                        <outlet property="hideBtnView" destination="rSn-Gt-JsH" id="MLX-TL-peo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -662,9 +691,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Default@2x.png" width="640" height="960"/>
+        <image name="backImage.png" width="640" height="832"/>
         <image name="baseball.png" width="400" height="400"/>
         <image name="button2.png" width="512" height="512"/>
+        <image name="gear_48.png" width="48" height="48"/>
         <image name="video_next_48.png" width="48" height="48"/>
         <image name="video_play_64.png" width="64" height="64"/>
         <image name="video_previous_48.png" width="48" height="48"/>
@@ -767,8 +797,12 @@
         <class className="ISViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ISViewController.h"/>
             <relationships>
+                <relationship kind="action" name="pushCustomBtn:"/>
                 <relationship kind="action" name="pushTutorial:"/>
                 <relationship kind="outlet" name="backImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cameraBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="dataBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="hideBtnView" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">

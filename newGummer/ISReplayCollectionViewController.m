@@ -151,14 +151,9 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     NSLog(@"didSelectItemAtIndexPath");
     cellindex = indexPath;
-    
     ISReplayCollectionViewCell *cell = (ISReplayCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:cellindex];
-    
-           
-    NSLog(@"else");
     cell.selected = YES;
     cell.cellBackgroundView.backgroundColor = [UIColor blueColor];
     [selectedMovies addObject:@"1"];
