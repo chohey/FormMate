@@ -188,21 +188,13 @@
 {
     CGPoint p = [[touches anyObject] locationInView:self.view];
     if ([self checkInBtn:self.cameraBtn point:p]) {
-        if (abs(beginPoint.x-p.x) > 10) {
-            self.currentCameraX = p.x;
-        }
-        if (abs(beginPoint.y-p.y) > 10){
-            self.currentCameraY = p.y;
-        }
+        self.currentCameraX = p.x;
+        self.currentCameraY = p.y;
         self.cameraBtn.center = CGPointMake(self.currentCameraX, self.currentCameraY);
     }
     if ([self checkInBtn:self.dataBtn point:p]) {
-        if (abs(beginPoint.x-p.x) > 10) {
-            self.currentDataX = p.x;
-        }
-        if (abs(beginPoint.y-p.y) > 10){
-            self.currentDataY = p.y;
-        }
+        self.currentDataX = p.x;
+        self.currentDataY = p.y;
         self.dataBtn.center = CGPointMake(self.currentDataX, self.currentDataY);
     }
 }
