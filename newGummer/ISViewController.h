@@ -11,7 +11,6 @@
 
 @interface ISViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>{
     UIImageView *imageView;
-    CGPoint beginPoint;
 }
 @property (strong, nonatomic) IBOutlet UIView *hideBtnView;
 @property (strong, nonatomic) IBOutlet UIImageView *backImageView;

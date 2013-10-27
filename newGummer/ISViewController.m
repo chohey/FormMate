@@ -12,8 +12,9 @@
 
 @interface ISViewController ()
 @property (nonatomic,strong) NSMutableString *caseString;
-@property int currentCameraX, currentCameraY, currentDataX, currentDataY;
+@property int currentCameraX, currentCameraY, currentDataX, currentDataY, reverse;
 @property (nonatomic, strong) UILabel *naviTitleLabel;
+@property (strong, nonatomic) NSTimer *shakeTimer;
 @end
 
 @implementation ISViewController
@@ -106,6 +107,9 @@
             // ボタン位置変更
             [self.view bringSubviewToFront:self.hideBtnView];
             self.naviTitleLabel.text = @"ボタン移動モード";
+            self.shakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.14f target:self selector:@selector(shake) userInfo:nil repeats:YES];
+            self.reverse = 1;
+            [self.shakeTimer fire];
             break;
         }
         case 3:{
@@ -161,19 +165,34 @@
             NSLog(@"UIGestureRecognizerStateBegan");
             [self.view bringSubviewToFront:self.hideBtnView];
             self.naviTitleLabel.text = @"ボタン移動モード";
+            self.shakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.14f target:self selector:@selector(shake) userInfo:nil repeats:YES];
+            self.reverse = 1;
+            [self.shakeTimer fire];
         }
             break;
         default:
             break;
     }
 }
+-(void)shake{
+    [UIView animateWithDuration:0.07f
+                          delay:0.0f
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         //TODO: 揺らす
+                         self.cameraBtn.transform = CGAffineTransformMakeRotation(self.reverse * M_PI * 3 / 180.0);
+                         self.dataBtn.transform = CGAffineTransformMakeRotation(self.reverse * M_PI * 3 / 180.0);
+                         self.reverse *= -1;
+                     } completion:^(BOOL finished) {
+                         // アニメーションが終わった後実行する処理
+                     }];
+}
 
 // 画面に指を一本以上タッチしたときに実行されるメソッド
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    // タッチ点がボタン上でなければ解除 ポイントを記録する
+    // タッチ点がボタン上でなければ移動モード解除 ポイントを記録する
     CGPoint p = [[touches anyObject] locationInView:self.view];
-    beginPoint = p;
     if (![self checkInBtn:self.cameraBtn point:p] && ![self checkInBtn:self.dataBtn point:p]) {
         [self.view sendSubviewToBack:self.hideBtnView];
         self.naviTitleLabel.text = @"　　　　　　　　";
@@ -181,11 +200,15 @@
         NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
         [ud setObject:pointDict forKey:@"btnPoint"];
         NSLog(@"ポイント保存！！:%@",pointDict);
+        [self.shakeTimer invalidate];
+        self.cameraBtn.transform = CGAffineTransformMakeRotation(0.0 / 180.0);
+        self.dataBtn.transform = CGAffineTransformMakeRotation(0.0 / 180.0);
     }
 }
 // 画面に触れている指が一本以上移動したときに実行されるメソッド
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    // ボタン上であればボタンを移動させる
     CGPoint p = [[touches anyObject] locationInView:self.view];
     if ([self checkInBtn:self.cameraBtn point:p]) {
         self.currentCameraX = p.x;
