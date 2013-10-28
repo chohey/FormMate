@@ -15,6 +15,7 @@
 @property int currentCameraX, currentCameraY, currentDataX, currentDataY, reverse;
 @property (nonatomic, strong) UILabel *naviTitleLabel;
 @property (strong, nonatomic) NSTimer *shakeTimer;
+@property BOOL canMove;
 @end
 
 @implementation ISViewController
@@ -63,6 +64,7 @@
     self.currentCameraY = self.cameraBtn.frame.origin.y+self.cameraBtn.frame.size.height/2;
     self.currentDataX = self.dataBtn.frame.origin.x+self.dataBtn.frame.size.width/2;
     self.currentDataY = self.dataBtn.frame.origin.y+self.dataBtn.frame.size.height/2;
+    self.canMove = NO;
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -105,11 +107,7 @@
         }
         case 2:{
             // ボタン位置変更
-            [self.view bringSubviewToFront:self.hideBtnView];
-            self.naviTitleLabel.text = @"ボタン移動モード";
-            self.shakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.14f target:self selector:@selector(shake) userInfo:nil repeats:YES];
-            self.reverse = 1;
-            [self.shakeTimer fire];
+            [self setMoveBtn];
             break;
         }
         case 3:{
@@ -163,17 +161,25 @@
         case UIGestureRecognizerStateBegan://長押しを検知開始
         {
             NSLog(@"UIGestureRecognizerStateBegan");
-            [self.view bringSubviewToFront:self.hideBtnView];
-            self.naviTitleLabel.text = @"ボタン移動モード";
-            self.shakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.14f target:self selector:@selector(shake) userInfo:nil repeats:YES];
-            self.reverse = 1;
-            [self.shakeTimer fire];
+            [self setMoveBtn];
         }
             break;
         default:
             break;
     }
 }
+
+-(void)setMoveBtn{
+    if (!self.canMove) {
+        [self.view bringSubviewToFront:self.hideBtnView];
+        self.naviTitleLabel.text = @"ボタン移動モード";
+        self.shakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.14f target:self selector:@selector(shake) userInfo:nil repeats:YES];
+        self.reverse = 1;
+        [self.shakeTimer fire];
+        self.canMove = YES;
+    }
+}
+
 -(void)shake{
     [UIView animateWithDuration:0.07f
                           delay:0.0f
@@ -203,22 +209,25 @@
         [self.shakeTimer invalidate];
         self.cameraBtn.transform = CGAffineTransformMakeRotation(0.0 / 180.0);
         self.dataBtn.transform = CGAffineTransformMakeRotation(0.0 / 180.0);
+        self.canMove = NO;
     }
 }
 // 画面に触れている指が一本以上移動したときに実行されるメソッド
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    // ボタン上であればボタンを移動させる
-    CGPoint p = [[touches anyObject] locationInView:self.view];
-    if ([self checkInBtn:self.cameraBtn point:p]) {
-        self.currentCameraX = p.x;
-        self.currentCameraY = p.y;
-        self.cameraBtn.center = CGPointMake(self.currentCameraX, self.currentCameraY);
-    }
-    if ([self checkInBtn:self.dataBtn point:p]) {
-        self.currentDataX = p.x;
-        self.currentDataY = p.y;
-        self.dataBtn.center = CGPointMake(self.currentDataX, self.currentDataY);
+    if (self.canMove) {
+        // ボタン上であればボタンを移動させる
+        CGPoint p = [[touches anyObject] locationInView:self.view];
+        if ([self checkInBtn:self.cameraBtn point:p]) {
+            self.currentCameraX = p.x;
+            self.currentCameraY = p.y;
+            self.cameraBtn.center = CGPointMake(self.currentCameraX, self.currentCameraY);
+        }
+        if ([self checkInBtn:self.dataBtn point:p]) {
+            self.currentDataX = p.x;
+            self.currentDataY = p.y;
+            self.dataBtn.center = CGPointMake(self.currentDataX, self.currentDataY);
+        }
     }
 }
 - (BOOL)checkInBtn:(UIButton *)btn point:(CGPoint)point
