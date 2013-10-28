@@ -16,7 +16,8 @@ Project_Gummer
 
 対象
 =========
-iPhone 3.5 inch ディスプレイ (iOS 6.x)
+iPhone 3.5 inch ディスプレイ (iOS 6.x)に対応しています。
+
 4 inchでは大幅に崩れる、iOS 7では未確認
 
 
