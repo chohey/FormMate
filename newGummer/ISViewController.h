@@ -6,7 +6,6 @@
 //  Copyright (c) 2013年 IPLAB-Kanno. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "ICETutorialController.h"
 
 @interface ISViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>{

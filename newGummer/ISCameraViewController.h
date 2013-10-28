@@ -6,14 +6,10 @@
 //  Copyright (c) 2013年 IPLAB-Kanno. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
 #import <CoreMedia/CoreMedia.h>
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
-
 #import "GapDictionary.h"
-
 #import <AssetsLibrary/AssetsLibrary.h>
 #define CAPTURE_FRAMES_PER_SECOND       20
 

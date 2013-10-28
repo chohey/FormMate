@@ -6,7 +6,6 @@
 //  Copyright (c) 2013年 IPLAB-Kanno. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface ISFullPlayViewController : UIViewController 
