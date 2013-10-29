@@ -93,10 +93,10 @@
                           
                           self.photos = collector;
                           [self.collectionView reloadData];
-                          NSLog(@"photo count = %d",self.photos.count);
-                          NSLog(@"photo = %@",self.photos);
+                          LOG(@"photo count = %d",self.photos.count);
+                          LOG(@"photo = %@",self.photos);
                       }
-                    failureBlock:^(NSError *error) { NSLog(@"ERROR!!!");}
+                    failureBlock:^(NSError *error) { LOG(@"ERROR!!!");}
      ];
     [super viewWillAppear:animated];
 }
@@ -130,12 +130,12 @@
     NSString* identifier = @"movieCell";
     ISMovieCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     if (!cell) {
-        NSLog(@"Not exist");
+        LOG(@"Not exist");
     }
     
     ALAsset *asset = [self.photos objectAtIndex:indexPath.row];
     if (asset) {
-        NSLog(@"at index = %d", indexPath.row);
+        LOG(@"at index = %d", indexPath.row);
             
         ALAssetRepresentation *representation = [asset defaultRepresentation];
         NSURL *url = [representation url];
@@ -143,19 +143,19 @@
             
         [cell.movieImageView setImage:[UIImage imageWithCGImage:[asset thumbnail]]];
     } else {
-        NSLog(@"not found");
+        LOG(@"not found");
         [cell.movieImageView setImage:nil];
     }
     
-    NSLog(@"selectedMovieIndex %@", selectedMoviesIndex);
+    LOG(@"selectedMovieIndex %@", selectedMoviesIndex);
     for (NSIndexPath *ip in selectedMoviesIndex) {
         if ([ip isEqual:indexPath]) {
-            NSLog(@"selected indexpath");
+            LOG(@"selected indexpath");
             cell.cellBackgroundView.backgroundColor = [UIColor colorWithRed:0.8f green:0.2f blue:0.2f alpha:1.0];
             break;
         }
         else {
-             NSLog(@"unselected indexpath");
+             LOG(@"unselected indexpath");
             cell.cellBackgroundView.backgroundColor = [UIColor whiteColor];
         }
     }
@@ -166,7 +166,7 @@
 //これも複数選択のためのメソッド
 /*- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"didSelectItemAtIndexPath");
+    LOG(@"didSelectItemAtIndexPath");
     
     if (!processingEnabled) {
         // Determine the selected items by using the indexPath
@@ -203,7 +203,7 @@
         cell.selected = NO;
         cell.cellBackgroundView.backgroundColor = [UIColor whiteColor];
         
-        NSLog(@"%d", i);
+        LOG(@"%d", i);
     }
 }
 
@@ -213,13 +213,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    NSLog(@"didSelectItemAtIndexPath");
+    LOG(@"didSelectItemAtIndexPath");
     
     ISMovieCollectionViewCell *cell = (ISMovieCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
     
     if (!processingEnabled) {
 
-        NSLog(@"cell: %@",cell.url);
+        LOG(@"cell: %@",cell.url);
     
         ISFullPlayViewController *ifpvc = [self.storyboard instantiateViewControllerWithIdentifier:@"FullPlayView"];
         ifpvc.url = cell.url;
@@ -230,7 +230,7 @@
         cell.cellBackgroundView.backgroundColor = [UIColor colorWithRed:0.8f green:0.2f blue:0.2f alpha:1.0];
         [selectedMovies addObject:cell.url];
         [selectedMoviesIndex addObject:indexPath];
-        NSLog(@"indexpathを書かせる%@",indexPath);
+        LOG(@"indexpathを書かせる%@",indexPath);
         if ([selectedMovies count] >= 2) {
             selectedMoviesIndex = nil;
             [self performSegueWithIdentifier:@"pushToEditMovieView" sender:selectedMovies];
@@ -242,13 +242,13 @@
 
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"diddeSelectItemAtIndexPath");
+    LOG(@"diddeSelectItemAtIndexPath");
     
     ISMovieCollectionViewCell *cell = (ISMovieCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
     
     if (!processingEnabled) {
         
-        NSLog(@"decell: %@",cell.url);
+        LOG(@"decell: %@",cell.url);
         
         ISFullPlayViewController *ifpvc = [self.storyboard instantiateViewControllerWithIdentifier:@"FullPlayView"];
         ifpvc.url = cell.url;
@@ -256,7 +256,7 @@
     }
     else{
         
-        NSLog(@"deelse");
+        LOG(@"deelse");
         cell.selected = NO;
         cell.cellBackgroundView.backgroundColor = [UIColor whiteColor];
     }

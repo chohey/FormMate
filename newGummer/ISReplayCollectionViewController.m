@@ -79,10 +79,10 @@
                           
                           self.photos = collector;
                           [self.collectionView reloadData];
-                          NSLog(@"photo count = %d",self.photos.count);
-                          NSLog(@"photo = %@",self.photos);
+                          LOG(@"photo count = %d",self.photos.count);
+                          LOG(@"photo = %@",self.photos);
                       }
-                    failureBlock:^(NSError *error) { NSLog(@"ERROR!!!");}
+                    failureBlock:^(NSError *error) { LOG(@"ERROR!!!");}
      ];
     [super viewWillAppear:animated];
     
@@ -122,21 +122,21 @@
     ISReplayCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
 
     if (!cell) {
-        NSLog(@"Not exist");
+        LOG(@"Not exist");
     }
     
     ALAsset *asset = [self.photos objectAtIndex:indexPath.row];
     if (asset) {
-        NSLog(@"at index = %d", indexPath.row);
+        LOG(@"at index = %d", indexPath.row);
         
         ALAssetRepresentation *representation = [asset defaultRepresentation];
   NSURL *url = [representation url];
         cell.url = url;
-        NSLog(@"url: %@", [url absoluteString]);
+        LOG(@"url: %@", [url absoluteString]);
         
         [cell.replayImageView setImage:[UIImage imageWithCGImage:[asset thumbnail]]];
     } else {
-        NSLog(@"not found");
+        LOG(@"not found");
         [cell.replayImageView setImage:nil];
     }    
     cell.label.text = @"　";
@@ -151,7 +151,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"didSelectItemAtIndexPath");
+    LOG(@"didSelectItemAtIndexPath");
     cellindex = indexPath;
     ISReplayCollectionViewCell *cell = (ISReplayCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:cellindex];
     cell.selected = YES;
@@ -175,7 +175,7 @@
     switch (buttonIndex) {
         case 0:
             //1番目のボタン（cancelButtonTitle）が押されたときのアクション
-            NSLog(@"1番目");
+            LOG(@"1番目");
           
             cell.selected = NO;
             cell.cellBackgroundView.backgroundColor = [UIColor whiteColor];
@@ -184,7 +184,7 @@
             
         case 1:
             //2番目のボタンが押されたときのアクション
-            NSLog(@"重ねる");
+            LOG(@"重ねる");
             
             //GapDictionary *dic = [GapDictionary sharedGapDictionary];
             [dic.dictionary removeAllObjects];
@@ -202,8 +202,8 @@
             
         case 2:
             //3番目のボタンが押されたときのアクション
-            NSLog(@"3番目");
-            NSLog(@"decell: %@",cell.url);
+            LOG(@"3番目");
+            LOG(@"decell: %@",cell.url);
             
             //[self performSegueWithIdentifier:@"pushToFullPlayView" sender:cell.url];
             

@@ -41,7 +41,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     self.videoPlayerSecondView.backgroundColor = alphaColor;
     
     
-    NSLog(@"===================\n%@",self.url);
+    LOG(@"===================\n%@",self.url);
     self.playerItem = [[AVPlayerItem alloc] initWithURL:self.url];
     [self.playerItem addObserver:self
                       forKeyPath:kStatusKey
@@ -62,7 +62,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     
     
     //----------------------------- SecondPlayer
-    NSLog(@"===================\n%@",self.url);
+    LOG(@"===================\n%@",self.url);
     self.playerSecondItem = [[AVPlayerItem alloc] initWithURL:self.urlSecond];
     [self.playerSecondItem addObserver:self
                             forKeyPath:kStatusKey
@@ -100,7 +100,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     
     
     // 遷移前に保存した再生位置をセット たぶん向こうで再生すると変わってしまうと思うので
-//    NSLog(@"seekTime:\n%@",self.timer_1);
+//    LOG(@"seekTime:\n%@",self.timer_1);
     
     [self setupSeekBar];
 }
@@ -133,7 +133,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 - (void)playerDidPlayToEndTime:(NSNotification *)notification
 {
 	[self.videoPlayer seekToTime:kCMTimeZero];
-    NSLog(@"ファースト停止");
+    LOG(@"ファースト停止");
     
     // リピートする場合は再生を実行する
     //[self.videoPlayer play];
@@ -141,7 +141,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 - (void)playerDidPlayToEndTime_2:(NSNotification *)notification
 {
 	[self.videoSecondPlayer seekToTime:kCMTimeZero];
-    NSLog(@"セカンド停止");
+    LOG(@"セカンド停止");
     
     // リピートする場合は再生を実行する
     //[self.videoPlayer play];

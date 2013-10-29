@@ -50,7 +50,7 @@
 - (void)urlParser
 {
     
-    NSLog(@"query:%@",[self.url query]);
+    LOG(@"query:%@",[self.url query]);
     
     NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:@"/var/mobile/Media/Photos/DCIM/IMG_0011.MOV"];
     [self screenLayout:fileURL];

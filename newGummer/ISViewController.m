@@ -160,7 +160,7 @@
     switch (gestureRecognizer.state) {
         case UIGestureRecognizerStateBegan://長押しを検知開始
         {
-            NSLog(@"UIGestureRecognizerStateBegan");
+            LOG(@"UIGestureRecognizerStateBegan");
             [self setMoveBtn];
         }
             break;
@@ -205,7 +205,7 @@
         NSDictionary *pointDict = [[NSDictionary alloc] initWithObjects:@[[NSNumber numberWithInt:self.currentCameraX], [NSNumber numberWithInt:self.currentCameraY], [NSNumber numberWithInt:self.currentDataX], [NSNumber numberWithInt:self.currentDataY]] forKeys:@[@"cameraX",@"cameraY",@"dataX",@"dataY"]];
         NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
         [ud setObject:pointDict forKey:@"btnPoint"];
-        NSLog(@"ポイント保存！！:%@",pointDict);
+        LOG(@"ポイント保存！！:%@",pointDict);
         [self.shakeTimer invalidate];
         self.cameraBtn.transform = CGAffineTransformMakeRotation(0.0 / 180.0);
         self.dataBtn.transform = CGAffineTransformMakeRotation(0.0 / 180.0);
@@ -288,15 +288,15 @@
     // Set button 1 action.
     __unsafe_unretained typeof(self) weakSelf_1 = self;
     [self.tc setButton1Block:^(UIButton *button){
-        NSLog(@"Button 1 pressed.");
+        LOG(@"Button 1 pressed.");
         [weakSelf_1.tc dismissModalViewControllerAnimated:YES];
     }];
     
     // Set button 2 action, stop the scrolling.
     __unsafe_unretained typeof(self) weakSelf = self;
     [self.tc setButton2Block:^(UIButton *button){
-        NSLog(@"Button 2 pressed.");
-        NSLog(@"Auto-scrolling stopped.");
+        LOG(@"Button 2 pressed.");
+        LOG(@"Auto-scrolling stopped.");
         
         [weakSelf.tc stopScrolling];
     }];

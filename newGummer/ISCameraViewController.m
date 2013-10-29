@@ -183,10 +183,10 @@
 #pragma mark
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"segue identfier: %@", segue.identifier);
+    LOG(@"segue identfier: %@", segue.identifier);
     
     if([segue.identifier isEqualToString:@"modalToCollectionMovieView"]) {
-        NSLog(@"%@", [[segue destinationViewController] class]);
+        LOG(@"%@", [[segue destinationViewController] class]);
     }
 }
 
@@ -204,7 +204,7 @@
             recordedSuccessfully = [value boolValue];
         }
         // 以下でチェック
-        recordedSuccessfully ? NSLog(@"アプリ内保存成功"):NSLog(@"アプリ内保存失敗");
+        recordedSuccessfully ? LOG(@"アプリ内保存成功"):LOG(@"アプリ内保存失敗");
         self.outputURL = outputFileURL;
         [self play:self.outputURL];
     }
@@ -222,7 +222,7 @@
 
 - (void)play:(NSURL *)outputFileURL
 {
-    NSLog(@"fileURL:%@",outputFileURL);
+    LOG(@"fileURL:%@",outputFileURL);
     self.videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:outputFileURL];
     self.videoPlayer.controlStyle             = MPMovieControlStyleDefault;
     self.videoPlayer.scalingMode              = MPMovieScalingModeAspectFit;
@@ -291,9 +291,9 @@
          {
              if (error)
              {
-                 NSLog(@"カメラロール保存失敗");
+                 LOG(@"カメラロール保存失敗");
              }else{
-                 NSLog(@"カメラロール保存成功");
+                 LOG(@"カメラロール保存成功");
                  [self removeView];
                  
              }
@@ -311,7 +311,7 @@
 }
 
 - (IBAction)pushTakeMoviewBtn:(id)sender {
-    NSLog(@"push");
+    LOG(@"push");
     if (!WeAreRecording)
     {
         WeAreRecording = YES;
@@ -320,10 +320,10 @@
         if (videoConnection == nil) {
             return;
         }
-        NSLog(@"videoConnection:%@",self.videoOutput.connections);
+        LOG(@"videoConnection:%@",self.videoOutput.connections);
         for(AVCaptureConnection *connection in self.videoOutput.connections)
         {
-            NSLog(@"connection:%@",connection);
+            LOG(@"connection:%@",connection);
             if(connection.supportsVideoOrientation)
             {
                 // ホームボタンが右にくる横向きで固定
@@ -344,14 +344,14 @@
             }
         }
         //録画開始
-        NSLog(@"録画開始");
+        LOG(@"録画開始");
         [self.videoOutput startRecordingToOutputFileURL:outputURL recordingDelegate:self];
         
         [self setRecBlinkTimer];
         [self setRecTimer];
         
     }else{
-        NSLog(@"録画終了");
+        LOG(@"録画終了");
         [self.videoOutput stopRecording];
         
         [self.recLabel removeFromSuperview];

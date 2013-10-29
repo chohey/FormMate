@@ -8,6 +8,7 @@
 
 #import "ISCheckMotionViewController.h"
 #import "SSGentleAlertView.h"
+#import <QuartzCore/QuartzCore.h>
 
 //NSString* const kStatusOfCheckKey_1 = @"status_of_check_1";
 //NSString* const kStatusOfCheckKey_2 = @"status_of_check_2";
@@ -66,7 +67,7 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
                                                  name:AVPlayerItemDidPlayToEndTimeNotification
                                                object:self.playerItem];
     
-    NSLog(@"videoPlayer:\n%@",self.videoPlayer);
+    LOG(@"videoPlayer:\n%@",self.videoPlayer);
     AVPlayerLayer* layer = ( AVPlayerLayer* )self.videoPlayerView.layer;
     layer.player       = self.videoPlayer;
     
@@ -190,7 +191,7 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
 	[self.videoPlayer seekToTime:self.timer_1];
     [self.videoSecondPlayer pause];
     [self.videoSecondPlayer seekToTime:self.timer_2];
-    NSLog(@"ファースト停止");
+    LOG(@"ファースト停止");
     self.isPlaying = NO;
     [self syncPlayButton];
     
@@ -202,7 +203,7 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
 	[self.videoSecondPlayer seekToTime:self.timer_2];
     [self.videoPlayer pause];
     [self.videoPlayer seekToTime:self.timer_1];
-    NSLog(@"セカンド停止");
+    LOG(@"セカンド停止");
     self.isPlaying = NO;
     [self syncPlayButton];
     
@@ -304,11 +305,13 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
     //Responderをセット
     [self.text becomeFirstResponder];
     self.text.delegate = self;
+    
+    [self screenshotOfView:self.view];
 }
 
 - (IBAction)nextFrame:(id)sender {
-    NSLog(@"CurrentTime_1: %f",CMTimeGetSeconds([self.videoPlayer currentTime]));
-    NSLog(@"CurrentTime_2: %f",CMTimeGetSeconds([self.videoSecondPlayer currentTime]));
+    LOG(@"CurrentTime_1: %f",CMTimeGetSeconds([self.videoPlayer currentTime]));
+    LOG(@"CurrentTime_2: %f",CMTimeGetSeconds([self.videoSecondPlayer currentTime]));
     int time_1 = CMTimeGetSeconds([self.videoPlayer currentTime]);
     int time_2 = CMTimeGetSeconds([self.videoSecondPlayer currentTime]);
     [self.videoSecondPlayer seekToTime:CMTimeMake((int)((float)time_2+1.0)*600, 600)];
@@ -327,7 +330,7 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
     //OKボタンの処理（Cancelボタンの処理は標準でAlertを終了する処理が設定されている）
     if (buttonIndex == 1) {
         /*Okボタンの処理*/
-        NSLog(@"OK !!");
+        LOG(@"OK !!");
 //        self.text.delegate = nil;
         NSTimer *backTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(backRoot) userInfo:nil repeats:NO];
         [backTimer fire];
@@ -351,8 +354,39 @@ static void* AVPlayerViewControllerStatusObservationContextCheckView = &AVPlayer
 {
     self.titleStr = [textField.text mutableCopy];
     [self.titleStr replaceCharactersInRange:range withString:string];
-    NSLog(@"入力：%@",self.titleStr);
+    LOG(@"入力：%@",self.titleStr);
     return YES;
+}
+
+
+- (UIImage *)screenshotOfView:(UIView *)view{
+    CGSize imageSize = view.bounds.size;
+    CGPoint anchorPoint = view.layer.anchorPoint;
+    
+    if ( NULL != UIGraphicsBeginImageContextWithOptions ) {
+        UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    }else{
+        UIGraphicsBeginImageContext(imageSize);
+    }
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSaveGState(context);
+    CGContextTranslateCTM(context, [view center].x, [view center].y);
+    CGContextConcatCTM(context, [view transform]);
+    CGFloat tx = -imageSize.width * anchorPoint.x - view.frame.origin.x;
+    CGFloat ty = -imageSize.height * anchorPoint.y - view.frame.origin.y;
+    CGContextTranslateCTM(context, tx, ty);
+    
+    [view.layer renderInContext:context];
+    
+    CGContextRestoreGState(context);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImageWriteToSavedPhotosAlbum([UIImage imageWithCGImage:UIGetScreenImage()], self, nil, NULL);
+    return image;
 }
 
 
